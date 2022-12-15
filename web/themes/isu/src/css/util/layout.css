@@ -1,0 +1,100 @@
+.wrapper {
+  @mixin container;
+}
+
+.invert {
+  /* ↓ Dark becomes light, and light becomes dark */
+  --outline-color: rgb(var(--light));
+  color: rgb(var(--light));
+  /* background-color: var(--color-blue); */
+
+  h1, h2, h3, h4, h5, h6,
+  a h1, a h2, a h3, a h4, a h5, a h6 {
+    color: rgb(var(--light));
+  }
+}
+
+.column-2 {
+  @media (--md) {
+    column-count: 2;
+    gap: var(--gap);
+  }
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 4px solid var(--color-primary);
+  outline: none;
+
+  position: relative;
+  cursor: pointer;
+}
+details {
+  box-sizing: border-box;
+}
+details summary::-webkit-details-marker {
+  display:none;
+}
+details[open] {
+  > summary {
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+}
+summary:after {
+  content: '';
+  font-family: 'Material Symbols Outlined';
+  font-size: var(--size-step-3);
+  line-height: 0;
+  content: '\e5c5';
+  position: relative;
+  margin-left: auto;
+  transform: rotate(0deg);
+  transition: .25s transform ease;
+}
+
+hr {
+  width: 100%;
+  border-color: rgb(var(--blue-dark));
+  border-width: .0625rem;
+
+  .invert & {
+    border-color: rgba(var(--light), 0.45);
+  }
+}
+
+.bordered {
+  & > * + * {
+    border-top: .0625rem solid var(--color-gray);
+    padding-top: var(--flow-space);
+    margin-top: var(--flow-space);
+  }
+}
+
+.l-page-sidebar {
+  gap: var(--space-m);
+  display: flex;
+  flex-direction: column;
+
+  @media (--lg) {
+    gap: var(--space-xl);
+    flex-direction: row;
+
+    > :first-child {
+      position: relative;
+      min-width: 22rem;
+      max-width: 22rem;
+      width: 100%;
+      flex: 1;
+    }
+
+    > :nth-child(2){
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+}

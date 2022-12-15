@@ -1,0 +1,123 @@
+.feature-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+
+  color: rgb(var(--blue));
+  
+  @media (--lg) {
+    /* padding: 4rem 0; */
+    align-items: center;
+    gap: 8rem;
+    flex-direction: row;
+  }
+  .content__blue &,
+  .invert & {
+    color: rgb(var(--white));
+  }
+}
+
+.feature-panel--swap {
+  @media (--lg) {
+    flex-direction: row-reverse;
+    /* align-items: flex-end; */
+  }
+}
+
+.feature-panel__img {
+  position: relative;
+  
+  display: flex;
+  align-self: flex-start;
+
+  /* margin-left: -2.5rem;
+  margin-right: 20vw; */
+
+  .feature-panel--swap & {
+    /* margin-left: 20vw;
+    margin-right: -2.5rem; */
+
+    /* @media (--lg) {
+      margin-left: -2rem;
+      margin-right: -4.75rem;
+    } */
+  }
+
+  @media (--lg) {
+    /* margin-left: -4.75rem;
+    margin-right: -2rem; */
+    width: 50%;
+  }
+}
+
+.feature-panel__img--pull {
+  /* align-self: flex-start; */
+  /* margin: -6rem -1rem 0 -1rem; */
+  @media (--lg) {
+    margin: -7rem -2rem 0 -2rem;
+  }
+  + .feature-panel__content {
+    @media (--lg) {
+      padding: var(--space-xl) 0;
+    }
+  }
+}
+
+/* .feature-panel__img--wide {
+  margin-left: -1rem;
+  margin-right: -1rem;
+  @media (--lg) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+} */
+
+.feature-panel__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 4.875rem;
+  height: 4.875rem;
+  border-radius: 50%;
+  background-color: rgb(var(--light));
+  text-decoration: none;
+  color: rgb(var(--blue));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform var(--transition);
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  & .material-symbols-outlined {
+    font-size: 76px;
+  }
+}
+
+.feature-panel__content {
+  flex: 1;
+  @media (--lg) {
+    /* padding: var(--space-xl) 0; */
+  }
+}
+
+.feature-panel__content {
+  > * {
+    margin: 1rem 0 0;
+  }
+  .button {
+    width: 100%;
+    @media (--lg) {
+      width: auto;
+    }
+  }
+}
+
+/* .feature-panel__heading {
+  font-size: 2.938rem;
+} */

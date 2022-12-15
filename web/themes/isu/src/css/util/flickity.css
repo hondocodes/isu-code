@@ -1,0 +1,37 @@
+.flickity-viewport {
+  position: relative;
+}
+
+.flickity-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  & > * {
+    flex-shrink: 0;
+    position: relative !important;
+    left: auto !important;
+    transform: none !important;
+  }
+}
+
+.flickity-page-dots li:only-child{
+  display: none;
+}
+
+.flickity-page-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background: rgb(var(--gray-light));
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  color: transparent;
+}
+
+.flickity-page-dots .is-selected {
+  background: rgb(var(--blue));
+}

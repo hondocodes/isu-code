@@ -1,0 +1,121 @@
+.routing-panel__container {
+  @mixin clear;
+  @mixin container;
+  /* padding: 4rem 0; */
+}
+
+.routing-panel {
+  list-style: none;
+  /* margin: 0 1rem; */
+  padding: 4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (--lg) {
+    flex-direction: row;
+  }
+}
+
+.routing-panel__heading {
+  color: rgb(var(--white));
+  text-align: center;
+  margin: 0;
+}
+
+.routing-panel__block {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  flex: 1;
+}
+
+.routing-panel__link--blue-light,
+.routing-panel__link--blue-dark,
+.routing-panel__link--blue-robins-egg {
+  --flow-space: 0;
+  height: 1.375rem;
+  width: 100%;
+  transition: background-color 1000ms;
+}
+
+.routing-panel__link--blue-light {
+  background: linear-gradient(90deg, rgb(var(--blue-light)), transparent) rgb(var(--blue-light));
+}
+
+.routing-panel__link--blue-dark {
+  background: linear-gradient(90deg, rgb(var(--blue-dark)), transparent) rgb(var(--blue-dark));
+}
+
+.routing-panel__link--blue-robins-egg {
+  background: linear-gradient(90deg, rgb(var(--blue-robins-egg)), transparent) rgb(var(--blue-robins-egg));
+}
+
+.routing-panel__link {
+  display: block;
+  color: rgb(var(--blue));
+  text-decoration: none;
+  h3 {
+    font-size: var(--size-step-1);
+    color: rgb(var(--blue));
+    text-decoration: underline;
+    /* margin: 2rem 1rem 0 1rem; */
+    /* text-align: center; */
+  }
+
+  img {
+    transition: opacity var(--transition);
+  }
+
+  &:hover,
+  &:focus {
+
+    h3 {
+      text-decoration: none;
+    }
+
+    img {
+      opacity: .8;
+    }
+    .routing-panel__link--blue-light {
+      background-color: rgb(var(--blue-light));
+    }
+
+    .routing-panel__link--blue-dark {
+      background-color: rgb(var(--blue-dark));
+    }
+
+    .routing-panel__link--blue-robins-egg {
+      background-color: rgb(var(--blue-robins-egg));
+    }
+
+    .routing-panel__box {
+      border-color: rgb(var(--white));
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+
+    }
+  }
+}
+
+.routing-panel__frame {
+  position: relative;
+  background-color: rgb(var(--white));
+}
+
+.routing-panel__box {
+  border: 1px solid transparent;
+  height: calc(100% - 100px);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: calc(100% - 100px);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.routing-panel__content {
+  /* margin: 0 1rem 2rem 1rem; */
+  /* text-align: center; */
+}

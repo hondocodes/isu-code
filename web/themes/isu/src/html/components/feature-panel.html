@@ -1,0 +1,46 @@
+<div class="feature-panel{% if swap %} feature-panel--swap{% endif %}">
+  <div class="feature-panel__img{% if imgWide %} feature-panel__img--wide {% endif %}{% if imgPull %} feature-panel__img--pull {% endif %}{% if overlayWhite %} overlay-gradient-white {% endif %}">
+    {% if square %}
+    <div class="frame relative" data-ratio="1:1">
+      <img src="{{ image ?? '//placehold.mstoner.com/600' }}" alt="placeholder">
+    </div>
+    {% else %}
+    <div class="frame relative" data-ratio="3:2">
+      <img src="{{ image ?? '//placehold.mstoner.com/612x478' }}" alt="placeholder">
+    </div>
+    {% endif %}
+    {% if video %}
+      <a href="https://www.youtube.com/watch?v=oklVBLlQs5k" class="feature-panel__video" data-minimodal-title="Placeholder" data-minimodal>
+        <span class="material-symbols-outlined icon-fill">
+          play_arrow
+        </span>
+      </a>
+    {% endif %}
+    {% if videoAlt %}
+      <a class="button-arrow absolute z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        <span class="material-symbols-outlined" aria-hidden="true">
+          arrow_forward
+        </span>
+        Watch Video
+      </a>
+    {% endif %}
+  </div>
+  <div class="feature-panel__content">
+    <h2 class="feature-panel__heading">{{ item }}</h2>
+    {% if intro %}
+    <p class="intro">
+       The Indiana State Advantage is a commitment to affordability — it's a guarantee that incoming, first-time, full-time students
+      will graduate in four years and will enjoy the world-class, Indiana State college experience.
+    </p>
+    {% else %}
+    <p>Experience a world-class education without compromise. More than 100 majors, 70+ online programs, and endless opportunity.</p>
+    {% endif %}
+
+    <a href="#" class="button-arrow{% if whiteBtn %} button-arrow--white {% endif %}">
+      <span class="material-symbols-outlined icon-fill" aria-hidden="true">
+        arrow_forward
+      </span>
+      Explore More Programs
+    </a>
+  </div>
+</div>

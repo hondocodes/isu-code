@@ -1,0 +1,95 @@
+/* 
+SIDEBAR
+More info: https://every-layout.dev/layouts/sidebar/
+A layout that allows you to have a flexible main content area
+and a "fixed" width sidebar that sits on the left or right.
+If there is not enough viewport space to fit both the sidebar
+width *and* the main content minimum width, they will stack
+on top of each other
+
+CUSTOM PROPERTIES AND CONFIGURATION
+--gutter (var(--space-size-1)): This defines the space
+between the sidebar and main content.
+
+--sidebar-target-width (20rem): How large the sidebar should be
+
+--sidebar-content-min-width(50%): The minimum size of the main content area
+
+EXCEPTIONS
+.sidebar[data-direction='rtl']: flips the sidebar to be on the right 
+*/
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, var(--space-s-l));
+}
+
+.sidebar > :first-child {
+  flex-basis: var(--sidebar-target-width, 20rem);
+  flex-grow: 1;
+}
+
+.sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: var(--sidebar-content-min-width, 65%);
+}
+
+/* 
+A flipped version where the sidebar is on the right
+*/
+.sidebar[data-direction='rtl'] {
+  flex-direction: row-reverse;
+}
+
+
+/* TODO Move this to proper place */
+.split-heading {
+  --gutter: var(--space-l);
+  --sidebar-target-width: 20rem;
+  --sidebar-content-min-width: 50%;
+
+  > :last-child {
+    align-self: flex-end;
+    display: flex;
+    /* justify-content: flex-end; */
+  }
+
+  &--home {
+    --sidebar-target-width: 38rem;
+    --sidebar-content-min-width: 50%;
+
+    > :last-child {
+      display: unset;
+    }
+  }
+}
+
+
+.sidebar--border-light {
+  > :first-child {
+    border-bottom: 1px solid rgb(var(--light));
+
+    @media (--lg) {
+      border-bottom: none;
+      border-right: 1px solid rgb(var(--light));
+    }
+  }
+}
+
+
+
+
+.c-program-feature-search {
+  --gutter: var(--space-l);
+  --sidebar-target-width: 62rem;
+  --sidebar-content-min-width: 20%;
+
+  align-items: center;
+
+  input,
+  input::placeholder {
+    color: var(--color-dark);
+    letter-spacing: -0.35px;
+  }
+}

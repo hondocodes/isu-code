@@ -1,0 +1,158 @@
+.image-carousel__container {
+  position: relative;
+  /* margin: 5rem 0; */
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+
+  @media (--xl) {
+    /* margin: 5rem 0 10rem 0; */
+    /* padding-left: 0;
+    padding-right: 0; */
+  }
+  h2 {
+    color: rgb(var(--blue));
+  }
+}
+
+.image-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  color: rgb(var(--white));
+
+  & .flickity-viewport {
+    overflow: hidden;
+    width: 100%;
+
+    @media (--md) {
+      margin: 0;
+    }
+  }
+
+  & .flickity-page-dots {
+    flex-grow: 1;
+    order: 1;
+    height: 4.688rem;
+    background-color: rgb(var(--blue-dark));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (--md) {
+      justify-content: flex-start;
+      flex-grow: 0;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  @media (--lg) {
+    margin: 0;
+  }
+}
+
+.image-carousel__nav {
+  order: 1;
+  display: flex;
+}
+
+.image-carousel__nav__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.688rem;
+  width: 4.688rem;
+  border: 0;
+  padding: 0;
+
+  background-color: rgba(var(--blue), .75);
+  transition: var(--transition);
+
+  @media (--xl) {
+    width: 6.375rem;
+  }
+
+  &:hover {
+    background-color: rgb(var(--blue));
+  }
+
+  span {
+    width: 1.25rem;
+    height: 1rem;
+  }
+}
+
+.image-carousel__previous {
+  & span {
+    transform: rotate(180deg);
+  }
+}
+
+.image-carousel__item {
+  @mixin zero;
+
+  display: flex;
+  width: 100%;
+  transition: width 500ms ease;
+  img {
+    object-fit: cover;
+    width: 100%;
+    transform: scale(1.4);
+  }
+
+  @media (--xl) {
+    height: 37.5rem;
+  }
+}
+
+.image-carousel__item.is-selected {
+  z-index: 1;
+  @media (--xl) {
+    width: 56.25rem;
+    .l-page-sidebar & {
+      width: 100%;
+    }
+  }
+  img {
+    transform: scale(1);
+    min-height: 60vh;
+  }
+}
+
+.image-carousel__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(18, 51, 93, 0.75);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1000ms ease, visibility 1000ms ease;
+
+  .is-selected & {
+    opacity: 1;
+    visibility: visible;
+  }
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+.image-carousel__arrow {
+  position: absolute;
+  top: 2rem;
+  right: 5%;
+  z-index: 1;
+  width: 5rem;
+  color: rgb(var(--blue));
+  transform: rotate(-90deg);
+
+  @media (--lg) {
+    width: 20rem;
+    top: -14%;
+    right: 20%;
+  }
+}

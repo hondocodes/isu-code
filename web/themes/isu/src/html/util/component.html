@@ -1,0 +1,4 @@
+{% macro component(name, opts = {}) %}
+  {% from "util/inline-svg.html" import inlineSvg %}
+  {% include "components/" + name + ".html" %}
+{% endmacro %}

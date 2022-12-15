@@ -1,0 +1,203 @@
+{% set page = { title: 'Student Life' } %}
+{% extends '@layouts/base.html' %}
+
+{% block body %}
+
+<main id="main-content">
+  <div class="hero hero--sub invert">
+    <div class="wrapper">
+      <div class="hero__container">
+        {% include '@components/breadcrumbs.html' %}
+        <div class="overlay-gradient-blue lg:mb-3xl">
+          <img src="../img/cost-hero.jpg" alt="placeholder">
+        </div>
+        <div class="lg:mt-[-25rem] lg:z-10 lg:flex lg:items-center lg:gap-xl">
+          <div class="flow flow-space-2xl">
+            <div class="flow lg:flex lg:items-center">
+              <h2 class="hero__headline">
+                Student Life
+              </h2>
+            </div>
+            <div>
+              <div class="flow flow-space-m">
+                <p class="intro lg:w-75">Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan.</p>
+                {% include '@components/secondary-menu.html' %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content__blue invert py-[75px] lg:mt-2xl">
+    <div class="wrapper">
+      <div class="feature-panel">
+        <div
+          class="feature-panel__img feature-panel__img--wide feature-panel__img--pull overlay-gradient-blue"
+        >
+          <img src="../img/feature-panel1.jpg" alt="placeholder">
+          <a
+            class="button-arrow button-arrow--white button-arrow--play absolute z-10 bottom-xs left-xs"
+            href="https://www.youtube.com/watch?v=oklVBLlQs5k"
+            data-minimodal=""
+            data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+            <span class="material-symbols-outlined icon-fill" aria-hidden="true">
+              play_arrow
+            </span>
+            Watch Video
+          </a>
+        </div>
+        <div class="feature-panel__content">
+          <h2 class="feature-panel__heading">Feature Panel Variation 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+  
+          <a href="#" class="button"> CTA </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="region bg-white">
+    <div class="wrapper">
+      {% include '@components/image-carousel.html' %}
+    </div>
+  </div>
+
+  <div class="region bg-blue invert">
+    <div class="routing-panel__container">
+      <h2 class="routing-panel__heading">
+        Visual Router Grid Variation 1
+      </h2>
+      <ul class="routing-panel grid" data-layout="1/3">
+        <li class="routing-panel__block flow">
+          <a href="#" class="routing-panel__link flow flow-space-m">
+            <div class="routing-panel__frame">
+              <img src="../img/image1.jpg" alt="placehold">
+              <div class="routing-panel__box"></div>
+            </div>
+            <h3>First Year</h3>
+          </a>
+          <div class="routing-panel__content flow-space-3xs">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </li>
+        <li class="routing-panel__block flow">
+          <a href="#" class="routing-panel__link flow flow-space-m">
+            <div class="routing-panel__frame">
+              <img src="../img/image2.jpg" alt="placehold">
+              <div class="routing-panel__box"></div>
+            </div>
+            <h3>Graduate</h3>
+          </a>
+          <div class="routing-panel__content flow-space-3xs">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </li>
+        <li class="routing-panel__block flow">
+          <a href="#" class="routing-panel__link flow flow-space-m">
+            <div class="routing-panel__frame">
+              <img src="../img/image3.jpg" alt="placehold">
+              <div class="routing-panel__box"></div>
+            </div>
+            <h3>Transfer</h3>
+          </a>
+          <div class="routing-panel__content flow-space-3xs">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="region bg-white">
+    <div class="wrapper">
+      <div class="flow flow-space-l">
+        <div class="flex flex-col gap-s lg:flex-row lg:justify-between lg:items-center" data-animation="fade-in-up" data-animate>
+          <h2>Headline (Events) Variation 1</h2>
+          <div class="lg:text-right">
+            <a class="button button--primary" href="#">Explore All Events</a>
+          </div>
+        </div>
+        <div class="grid grid--events gap-m" data-layout="1/3">
+          <a href="#" class="event flow bg-blue invert py-l px-m">
+            <div class="event__date h3">May 10</div>
+            <h3 class="event__title font-base text-step-0">
+              Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit
+            </h3>
+            <div class="event__details">
+              <div class="event flex items-center gap-xs">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  schedule
+                </span>
+                10:00 am - 3:00 pm
+              </div>
+              <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  location_on
+                </span>
+                Location Information
+              </div>
+            </div>
+          </a>
+          <a href="#" class="event flow bg-blue-light py-l px-l">
+            <div class="event__date h3">May 10</div>
+            <h3 class="event__title font-base text-step-0">
+              Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit
+            </h3>
+            <div class="event__details">
+              <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  schedule
+                </span>
+                10:00 am - 3:00 pm
+              </div>
+              <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  location_on
+                </span>
+                Location Information
+              </div>
+            </div>
+          </a>
+          <a href="#" class="event flow bg-blue invert py-l px-l">
+            <div class="event__date h3">May 10</div>
+            <h3 class="event__title font-base text-step-0">
+              Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit
+            </h3>
+            <div class="event__details">
+              <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  schedule
+                </span>
+                10:00 am - 3:00 pm
+              </div>
+              <div class="flex items-center gap-xs">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  location_on
+                </span>
+                Location Information
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include '@components/cta-panel.html' %}
+</main>
+{% endblock %}

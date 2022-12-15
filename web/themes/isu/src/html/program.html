@@ -1,0 +1,335 @@
+{% set page = { title: 'Program' } %} {% extends '@layouts/base.html' %} {%
+block body %}
+
+{% set vars = { 'pageTitle': 'Tertiary Inventory', 'image':
+'../img/Tertiary-Page-Header.jpg', 'form': 'true' } %} {% include
+'@components/hero-sub.html' with vars %}
+
+<main id="main-content">
+  <div class="wrapper">
+    <div class="l-page-sidebar mb-xl lg:my-l">
+      <div>
+        <div class="flow flow-space-l">
+          <div data-animation="fade-in-up" data-animate>
+            {% include '@components/menu-sidebar.html' %}
+          </div>
+
+          <div class="hidden flow flow-space-l lg:block">
+            <div data-animation="fade-in-up" data-animate>
+              <div class="text-center flow flow-space-xs">
+                <a href="#" class="button w-full">Call to Action</a>
+              </div>
+            </div>
+
+            <div
+              class="box bg-blue-robins-egg text-blue-dark border-radius shadow-md p-l"
+              data-animation="fade-in-up"
+              data-animate
+            >
+              <div class="flow">
+                <div class="h4 font-bold underline-full underline-orange">
+                  Contact Card
+                </div>
+
+                <div class="bordered">
+                  <div class="flow flow-space-m">
+                    <div>
+                      <strong>Biology: Microbiology (PhD)</strong>
+                      <div>
+                        Department of Biology
+                      </div>
+                    </div>
+                    <div>
+                      <a
+                        href="mailto:abc@google.com"
+                        class="button-arrow button-arrow--blue-dark"
+                        >
+                        <span class="material-symbols-outlined" aria-hidden="true">
+                          arrow_forward
+                        </span>
+                        Email Us
+                        </a>
+                    </div>
+                    <div>
+                      <div><strong>Phone:</strong> 800-555-5555</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flow flow-space-2xl">
+        <div>
+          <div class="flow flow-space-s">
+            <h2>Why This Program</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+              faucibus nisl tincidunt eget nullam non nisi est. Ullamcorper sit amet
+              risus nullam eget. Nunc id cursus metus aliquam eleifend mi in nulla
+              posuere. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Laoreet id
+              donec ultrices tincidunt arcu non sodales neque sodales.
+            </p>
+            <p>
+              Ut porttitor leo a diam sollicitudin tempor id. Tristique risus nec
+              feugiat in. Cursus mattis molestie a iaculis at erat pellentesque.
+              Tortor at auctor urna nunc id. Semper quis lectus nulla at volutpat
+              diam. Nibh mauris cursus mattis molestie.
+            </p>
+            <p>
+              Pellentesque habitant morbi tristique senectus et netus.
+              <a href="#">Inline Link</a> posuere ac ut consequat semper viverra nam
+              libero. Ac felis donec et odio pellentesque diam volutpat. Non
+              curabitur gravida arcu ac tortor.
+            </p>
+            <a href="#" class="button">CTA</a>
+          </div>
+        </div>
+
+        <div>   
+          <div class="flow flow-space-s">
+            <h2>What You’ll Learn</h2>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </li>
+              <li>
+                Id faucibus nisl tincidunt eget nullam non nisi est. Ullamcorper sit
+                amet risus nullam eget. Nunc id cursus metus aliquam eleifend mi in
+                nulla posuere.
+              </li>
+              <li>
+                Id eu nisl nunc mi ipsum faucibus vitae aliquet. Laoreet id donec
+                ultrices tincidunt arcu non sodales neque sodales.
+              </li>
+              <li>
+                Ut porttitor leo a diam sollicitudin tempor id. Tristique risus nec
+                feugiat in. Cursus mattis molestie a iaculis at erat pellentesque.
+              </li>
+            </ul>
+          </div>       
+        </div>
+
+        <div>
+          <div class="flow flow-space-s">
+            <h2>Career Possibilities</h2>
+            <div class="column-2 flow">
+              <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor incididunt</li>
+                <li>Ut labore et dolore magna aliqua</li>
+                <li>Id faucibus nisl tincidunt eget nullam</li>
+              </ul>
+              <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Sed do eiusmod tempor incididunt</li>
+                <li>Ut labore et dolore magna aliqua</li>
+                <li>Id faucibus nisl tincidunt eget nullam</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="feature feature--xs" data-direction="rtl">
+            <div class="frame relative overlay-gradient-white" data-ratio="1:1">
+              <img src="../img/image1.jpg" alt="placeholder">
+              <a
+                class="button-arrow button-arrow--blue-dark button-arrow--play absolute z-10 bottom-xs left-xs"
+                href="https://www.youtube.com/watch?v=oklVBLlQs5k"
+                data-minimodal=""
+                data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              >
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  play_arrow
+                </span>
+                Watch Video
+              </a>
+            </div>
+            <div class="flow flow-space-s">
+              <h2 class="h4">Optional Special Feature</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div>
+          <div class="flow flow-space-s">
+            <h2>Accreditation</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+              faucibus nisl tincidunt eget nullam non nisi est. Ullamcorper sit amet
+              risus nullam eget. Nunc id cursus metus aliquam eleifend mi in nulla
+              posuere.
+            </p>
+            <div class="cluster gap-l">
+              <div>
+                <a href="#" class="flow">
+                  <div class="bg-blue w-[140px] h-[140px] p-m">{{ inline_svg('Logo-Leaf') }}</div>
+                  <p class="text-step-s">Accreditation Name</p>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="flow">
+                  <div class="bg-blue w-[140px] h-[140px] p-m">{{ inline_svg('Logo-Leaf') }}</div>
+                  <p class="text-step-s">Accreditation Name</p>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="flow">
+                  <div class="bg-blue w-[140px] h-[140px] p-m">{{ inline_svg('Logo-Leaf') }}</div>
+                  <p class="text-step-s">Accreditation Name</p>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="flow">
+                  <div class="bg-blue w-[140px] h-[140px] p-m">{{ inline_svg('Logo-Leaf') }}</div>
+                  <p class="text-step-s">Accreditation Name</p>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="flow">
+                  <div class="bg-blue w-[140px] h-[140px] p-m">{{ inline_svg('Logo-Leaf') }}</div>
+                  <p class="text-step-s">Accreditation Name</p>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="flow">
+                  <div class="bg-blue w-[140px] h-[140px] p-m">{{ inline_svg('Logo-Leaf') }}</div>
+                  <p class="text-step-s">Accreditation Name</p>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="flow">
+                  <div class="bg-blue w-[140px] h-[140px] p-m">{{ inline_svg('Logo-Leaf') }}</div>
+                  <p class="text-step-s">Accreditation Name</p>
+                </a>
+              </div>
+              <div>
+                <a href="#" class="flow">
+                  <div class="bg-blue w-[140px] h-[140px] p-m">{{ inline_svg('Logo-Leaf') }}</div>
+                  <p class="text-step-s">Accreditation Name</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2>Additional Information</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+            faucibus nisl tincidunt eget nullam non nisi est. Ullamcorper sit amet
+            risus nullam eget. Nunc id cursus metus aliquam eleifend mi in nulla
+            posuere.
+          </p>
+        </div>
+      </div>
+      <div class="mt-l lg:hidden">
+        <div class="flow flow-space-l">
+          <div
+          class="box bg-blue-robins-egg text-blue-dark border-radius shadow-md p-l"
+          data-animation="fade-in-up"
+          data-animate
+        >
+          <div class="flow">
+            <div class="h4 font-bold underline-full underline-orange">
+              Contact Card
+            </div>
+
+            <div class="bordered">
+              <div class="flow flow-space-m">
+                <div>
+                  <strong>Biology: Microbiology (PhD)</strong>
+                  <div>
+                    Department of Biology
+                  </div>
+                </div>
+                <div>
+                  <a
+                    href="mailto:abc@google.com"
+                    class="button-arrow button-arrow--blue-dark"
+                    >
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      arrow_forward
+                    </span>
+                    Email Us
+                    </a>
+                </div>
+                <div>
+                  <div><strong>Phone:</strong> 800-555-5555</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="region bg-blue invert">
+    <div class="routing-panel__container">
+      <h2 class="routing-panel__heading">
+        Related Programs
+      </h2>
+      <ul class="routing-panel grid" data-layout="1/3">
+        <li class="routing-panel__block flow">
+          <a href="#" class="routing-panel__link flow flow-space-md">
+            <div class="routing-panel__frame overlay-gradient-blue">
+              <img src="../img/image1.jpg" alt="placehold">
+              <div class="routing-panel__box"></div>
+            </div>
+            <h3>Program Name</h3>
+          </a>
+          <div class="routing-panel__content flow-space-3xs">
+            <p>
+              Degree Type
+            </p>
+          </div>
+        </li>
+        <li class="routing-panel__block flow">
+          <a href="#" class="routing-panel__link flow flow-space-m">
+            <div class="routing-panel__frame overlay-gradient-blue">
+              <img src="../img/image2.jpg" alt="placehold">
+              <div class="routing-panel__box"></div>
+            </div>
+            <h3>Program Name</h3>
+          </a>
+          <div class="routing-panel__content flow-space-3xs">
+            <p>
+              Degree Type
+            </p>
+          </div>
+        </li>
+        <li class="routing-panel__block flow">
+          <a href="#" class="routing-panel__link flow flow-space-m">
+            <div class="routing-panel__frame overlay-gradient-blue">
+              <img src="../img/image3.jpg" alt="placehold">
+              <div class="routing-panel__box"></div>
+            </div>
+            <h3>Program Name</h3>
+          </a>
+          <div class="routing-panel__content flow-space-3xs">
+            <p>
+              Degree Type
+            </p>
+          </div>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,440 @@
+<div class="wrapper">
+  <div class="l-page-sidebar mb-xl lg:my-l">
+    <div>
+      <div class="flow flow-space-l">
+
+        <div data-animation="fade-in-up" data-animate>
+          {% include '@components/menu-sidebar.html' %}
+        </div>
+
+        <div class="hidden flow flow-space-l lg:block">
+
+          <div data-animation="fade-in-up" data-animate>
+            <div class="text-center flow flow-space-xs">
+              <a href="#" class="button w-full">Call to Action</a>
+            </div>
+          </div>
+
+          <div class="box bg-blue-robins-egg text-blue-dark border-radius shadow-md p-l" data-animation="fade-in-up" data-animate>
+            <div class="flow">
+              <div class="h4 font-bold underline-full underline-orange">
+                Contact Card
+              </div>
+
+              <div class="bordered">
+                <div class="flow flow-space-m">
+                  <div><strong>Title/Position</strong></div>
+                  <div>Body Text (8-12 words) — Contact card can be used for featuring a specific person.</div>
+                  <div>
+                    <a href="mailto:abc@google.com" class="button-arrow button-arrow--blue-dark">
+                      <span class="material-symbols-outlined" aria-hidden="true">
+                        arrow_forward
+                      </span>
+                      Send Email
+                    </a>
+                  </div>
+                  <div>
+                    <div><strong>Phone:</strong> 800-555-5555</div>
+                    <div><strong>Fax:</strong> 800-555-5555</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div>
+            <div class="flow flow-space-s">
+              <a href="#" class="button-arrow button-arrow--blue-dark">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward
+                </span>
+                Related Link - Lorem Ipsum Dolor Sit Amet Consectetur
+              </a>
+              <a href="#" class="button-arrow button-arrow--blue-dark">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward
+                </span>
+                Related Link - Lorem Ipsum Dolor Sit Amet Consectetur
+              </a>
+              <a href="#" class="button-arrow button-arrow--blue-dark">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward
+                </span>
+                Related Link - Lorem Ipsum Dolor Sit Amet Consectetur
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div>
+      <div class="flow relative">
+        <div class="flow flow-space-2xl">
+
+
+            <div>
+              <div class="flow flow-space-s">
+                <h2 class="h3">Headline</h2>
+                <p>
+                  Paragraph Text (3-5 Sentences)— Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum turpis <a href="#">inline link</a> in augue consectetur, non cursus massa vestibulum. Aenean et augue suscipit, ultrices augue vel, faucibus velit. Fusce pellentesque elit non felis commodo, non tempus urna gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="flow flow-space-s">
+                <h2 class="h3">Split Column</h2>
+                <div class="column-2 flow">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="pullquote__container">
+                <div class="content__img content__img-alt">
+                  <img src="//placehold.mstoner.com/1440x16:9" alt="">
+                  <div class="blue-gradient"></div>
+                  {# {% include '@components/pullquote.html' with {blue: true, whiteBtn: true} %} #}
+                  {% include '@components/pullquote.html' with {white: true} %}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="feature-panel feature-panel--swap">
+                <div class="feature-panel__img overlay-gradient-white ">
+                      <img src="//placehold.mstoner.com/612x478" alt="placeholder">
+                      <a class="button-arrow button-arrow--blue-dark button-arrow--play absolute z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+                        <span class="material-symbols-outlined" aria-hidden="true">
+                          play_arrow
+                        </span>
+                        Watch Video
+                      </a>
+                    </div>
+                <div class="feature-panel__content">
+                  <h2 class="feature-panel__heading">Feature Panel</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  
+                  <a href="#" class="button">
+                    Explore More Programs
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          <hr>
+
+          <div data-animation="fade-in-up" data-animate>
+            <div class="flow flow-space-s">
+              <h2 class="h3">Inline Images</h2>
+              {% include '@components/media.html' with { mods: ['right'] } %}
+              <p>
+                Paragraph Text — Long-form content with option to feature images
+                inline. Voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit. Nemo
+                enim ipsam voluptatem quia. Sed ut perspiciatis unde omnis iste
+                natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam sunt explicabo. Sed ut perspiciatis unde omnis
+                iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                sed quia consequuntur magni dolores eos qui ratione voluptatem
+                sequi nesciunt. Nemo enim ipsam voluptatem quia voluptas sit
+                aspernatur aut odit aut fugit, sed quia.
+              </p>
+              <p>
+                Voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                voluptas sit aspernatur aut odit aut fugit. Nemo enim ipsam
+                voluptatem quia.
+              </p>
+              <p>
+                Voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                voluptas sit aspernatur aut odit aut fugit. Nemo enim ipsam
+                voluptatem quia.
+              </p>
+              {% include '@components/media.html' with { mods: ['left'] } %}
+              <p>
+                Voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                voluptas sit aspernatur aut odit aut fugit. Nemo enim ipsam
+                voluptatem quia. Sed ut perspiciatis unde omnis iste natus error
+                sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam sunt explicabo. Sed ut perspiciatis unde omnis iste natus
+                error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis
+                iste natus error.
+              </p>
+              <p>
+                Voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto
+                beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                voluptas sit aspernatur aut odit aut fugit. Nemo enim ipsam
+                voluptatem quia. Sed ut perspiciatis unde omnis iste natus error
+                sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam sunt explicabo. Sed ut perspiciatis unde omnis iste natus
+                error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis
+                iste natus error.
+              </p>
+            </div>
+          </div>
+
+          <div data-animation="fade-in-up" data-animate>
+            <div class="flow flow-space-s">
+              <h2 class="h3">Full-Width Image</h2>
+              <div class="frame border-radius" data-ratio="3:2">
+                <img src="../img/feature1.jpg" alt="placeholder">
+              </div>
+              <p class="text-step-s font-bold">Nunc lacinia egestas luctus. Phasellus placerat convallis sapien ac tristique. </p>
+            </div>
+          </div>
+
+          <div data-animation="fade-in-up" data-animate>
+            <div class="flow flow-space-s">
+              <h2 class="h3">Video Embed</h2>
+              <div class="frame border-radius relative overlay-gradient-white" data-ratio="3:2">
+                <img src="../img/feature1.jpg" alt="placeholder">
+                <a class="button-arrow button-arrow--play button-arrow--blue-dark absolute z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+                  <span class="material-symbols-outlined" aria-hidden="true">
+                    play_arrow
+                  </span>
+                  Watch Video
+                </a>
+              </div>
+              <p class="text-step-s font-bold">Nunc lacinia egestas luctus. Phasellus placerat convallis sapien ac tristique. </p>
+            </div>
+          </div>
+
+          <div>
+            {% include '@components/image-carousel.html' %}
+          </div>
+
+          <div>
+            <h2 class="h3">Accordion</h2>
+            {% include '@components/accordion.html' %}
+          </div>
+
+          <div>
+            <h2 class="h3">Table</h2>
+            <div>
+              {% include '@components/table.html' %}
+            </div>
+          </div>
+
+          <div class="flow flow-space-l">
+            <h2 class="h3">Router List</h2>
+            <ul class="reset flow flow-space-xs invert">
+              <li data-animation="fade-in-up" data-animate>
+                <a class="button-router" href="#">Router List</a>
+              </li>
+              <li data-animation="fade-in-up" data-animate>
+                <a class="button-router" href="#">Router List</a>
+              </li>
+              <li data-animation="fade-in-up" data-animate>
+                <a class="button-router" href="#">Router List</a>
+              </li>
+              <li data-animation="fade-in-up" data-animate>
+                <a class="button-router" href="#">Router List</a>
+              </li>
+            </ul>
+          </div>
+
+          <div data-animation="fade-in-up" data-animate>
+            <h2 class="h3">Headline (Ordered List)</h2>
+            <ol>
+              <li>Lorem ipsum dolor</li>
+              <li>Sit amet consectetur</li>
+              <li>Adipiscing elit morbi interdum</li>
+              <li>Turpis in augue consectetur</li>
+              <li>Non cursus massa</li>
+            </ol>
+          </div>
+
+          <div data-animation="fade-in-up" data-animate>
+            <h2 class="h3">Headline (Unordered List)</h2>
+            <ul>
+              <li>Lorem ipsum dolor</li>
+              <li>Sit amet consectetur</li>
+              <li>Adipiscing elit morbi interdum</li>
+              <li>Turpis in augue consectetur</li>
+              <li>Non cursus massa</li>
+            </ul>
+          </div>
+
+          <div>
+            {% include '@components/testimonial.html' with {color: "blue"} %}
+          </div>
+
+          <div>
+            {% include '@components/testimonial.html' with {color: "blue-light"} %}
+          </div>
+
+          <div class="flow flow-space-l">
+            <h2 class="h3">Faculty Listing</h2>
+            <div class="flow flow-space-l">
+              <div class="feature feature--xs bg-blue-lightest p-xl" data-direction='rtl' data-animation="fade-in-up" data-animate>
+                <div class="frame" data-ratio="2:3">
+                  <img src="../img/faculty.jpg" alt="placeholder">
+                </div>
+                <div class="flow flow-space-2xs">
+                  <h4><a href="#" class="font-base text-blue">Jillian Bontjes</a></h4>
+                  <div>
+                    <p><strong>Admissions Counselor</strong></p>
+                    <p><strong>Office:</strong> Office of Admissions</p>
+                    <p><strong>Phone:</strong> 1 (234)-567-8910</p>
+                    <p><strong>Email:</strong> <a href="mailto:faculty@email.com" class="button-cta">faculty@email.com</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="feature feature--xs bg-blue-lightest p-l" data-direction='rtl' data-animation="fade-in-up" data-animate>
+                <div class="frame" data-ratio="2:3">
+                  <img src="../img/faculty.jpg" alt="placeholder">
+                </div>
+                <div class="flow flow-space-2xs">
+                  <h4><a href="#" class="font-base text-blue">Jillian Bontjes</a></h4>
+                  <div>
+                    <p><strong>Admissions Counselor</strong></p>
+                    <p><strong>Office:</strong> Office of Admissions</p>
+                    <p><strong>Phone:</strong> 1 (234)-567-8910</p>
+                    <p><strong>Email:</strong> <a href="mailto:faculty@email.com" class="button-cta">faculty@email.com</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow flow-space-l">
+            <h3 data-animation="fade-in-up" data-animate>Headline (List of Posts)</h3>
+            <div class="flow flow-space-l bordered">
+              <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
+                <div class="frame" data-ratio="3:2">
+                  <img src="../img/feature1.jpg" alt="placeholder">
+                </div>
+                <div class="flow flow-space-s">
+                  <p class="font-bold">Friday, May 22, 2020</p>
+                  <h4><a href="#" class="font-base text-blue">Subheading (8-10 Words) — Lorem Ipsum dolor Sit Amet Odio Lucilius Eam</a></h4>
+                  <p>One Sentence Teaser — Lorem ipsum dolor sit amet cetero aliquam feugiat id sea, ea case nullam consulatu qui, autem abhorreant elaboraret et sit.</p>
+                </div>
+              </div>
+              <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
+                <div>
+                </div>
+                <div class="flow flow-space-s">
+                  <p class="font-bold">Friday, May 22, 2020</p>
+                  <h4><a href="#" class="font-base text-blue">Subheading (8-10 Words) — Lorem Ipsum dolor Sit Amet Odio Lucilius Eam</a></h4>
+                  <p>One Sentence Teaser — Lorem ipsum dolor sit amet cetero aliquam feugiat id sea, ea case nullam consulatu qui, autem abhorreant elaboraret et sit.</p>
+                </div>
+              </div>
+              <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
+                <div class="frame" data-ratio="3:2">
+                  <img src="../img/feature1.jpg" alt="placeholder">
+                </div>
+                <div class="flow flow-space-s">
+                  <p class="font-bold">Friday, May 22, 2020</p>
+                  <h4><a href="#" class="font-base text-blue">Subheading (8-10 Words) — Lorem Ipsum dolor Sit Amet Odio Lucilius Eam</a></h4>
+                  <p>One Sentence Teaser — Lorem ipsum dolor sit amet cetero aliquam feugiat id sea, ea case nullam consulatu qui, autem abhorreant elaboraret et sit.</p>
+                </div>
+              </div>
+            </div>
+            {% include '@components/pagination.html' %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="mt-l lg:hidden">
+      <div class="flow flow-space-l">
+
+        <div data-animation="fade-in-up" data-animate>
+          <div class="text-center flow flow-space-xs">
+            <a href="#" class="button w-full">Call to Action</a>
+          </div>
+        </div>
+
+        <div class="box bg-blue-robins-egg text-blue-dark border-radius shadow-md p-l" data-animation="fade-in-up" data-animate>
+          <div class="flow">
+            <div class="h4 font-bold underline-full underline-orange">
+              Contact Card
+            </div>
+
+            <div class="bordered">
+              <div class="flow flow-space-m">
+                <div><strong>Title/Position</strong></div>
+                <div>Body Text (8-12 words) — Contact card can be used for featuring a specific person.</div>
+                <div>
+                  <div><strong>Phone:</strong> 800-555-5555</div>
+                  <div><strong>Fax:</strong> 800-555-5555</div>
+                </div>
+                <div>
+                  <a href="mailto:abc@google.com" class="button-cta button-cta--blue-dark">Send Email</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <div class="flow flow-space-s">
+            <a href="#" class="button-arrow button-arrow--blue-dark">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                arrow_forward
+              </span>
+              Related Link - Lorem Ipsum Dolor Sit Amet Consectetur
+            </a>
+            <a href="#" class="button-arrow button-arrow--blue-dark">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                arrow_forward
+              </span>
+              Related Link - Lorem Ipsum Dolor Sit Amet Consectetur
+            </a>
+            <a href="#" class="button-arrow button-arrow--blue-dark">
+              <span class="material-symbols-outlined" aria-hidden="true">
+                arrow_forward
+              </span>
+              Related Link - Lorem Ipsum Dolor Sit Amet Consectetur
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

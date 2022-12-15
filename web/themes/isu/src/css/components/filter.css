@@ -1,0 +1,273 @@
+.filter__form {
+  position: relative;
+  display: flex;
+
+  @media (--lg) {
+    gap: var(--space-s);
+  }
+}
+.filter__input {
+  width: 100%;
+  flex: 1;
+  font-weight: 900;
+  line-height: 1;
+  padding: 1rem;
+  border: none;
+  background: rgb(var(--light));
+  color: rgb(var(--blue-dark));
+  &::placeholder {
+    color: rgb(var(--blue-dark));
+  }
+}
+.filter__item {
+  position: relative;
+  flex: 1;
+  border: 1px solid rgba(var(--white),0.5);
+
+  @media(--lg) {
+    border: none;
+  }
+}
+.filter__toggle {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  border: 0;
+  color: rgb(var(--blue-dark));
+  font-weight: 900;
+  background-color: rgb(var(--aqua));
+  line-height: inherit;
+  text-align: left;
+  line-height: 1;
+
+  &.focus-visible {
+    outline-style: dashed;
+    outline-offset: 0.35rem;
+    outline-width: 2px;
+    outline-color: rgb(var(--white));
+  }
+
+  &::after {
+    content: '';
+    @mixin inline-svg arrow_drop_down, rgb(root-var(--blue-dark));
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-size: 2rem;
+    margin-top: 0.25rem;
+    margin-left: 0.5rem;
+    float: right;
+  }
+  &[aria-expanded='true'] {
+    background-color: rgb(var(--white));
+      &::after {
+          transform: rotate(180deg);
+      }
+  }
+
+  &:hover {
+    &::before {
+      /* @mixin inline-svg plus, rgba(root-var(--red)), 1rem 1rem; */
+    }
+  }
+}
+
+.filter__list {
+  display: none;
+  position: relative;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  /* padding: 0 1.5rem; */
+  border-top: none;
+  background: rgb(var(--white));
+  box-shadow: var(--shadow);
+  z-index: 1;
+
+  [aria-expanded='true'] + & {
+    display: block;
+  }
+
+  .filter__label-c-alt {
+    cursor: pointer;
+    &.college-of-arts-and-sciences {
+      border-left: 1rem solid rgb(var(--blue));
+    }
+    &.bayh-college-of-education {
+      border-left: 1rem solid #00bff3;
+    }
+    &.college-of-technology {
+      border-left: 1rem solid #2e4393;
+    }
+    &.graduate-and-professional-studies {
+      border-left: 1rem solid rgb(var(--gray));
+    }
+    &.health-and-human-services {
+      border-left: 1rem solid rgb(var(--blue-robins-egg));
+    }
+    &.scott-college-of-business {
+      border-left: 1rem solid #2a4098;
+    }
+    &.university-college {
+      border-left: 1rem solid #35c0cb;
+    }
+  }
+
+  @media (--lg) {
+    position: absolute;
+  }
+}
+
+.filter__label-c {
+  display: block;
+  position: relative;
+  padding-left: 2.5rem;
+  color: rgb(var(--light));
+  font-weight: 900;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: 0;
+    opacity: 0;
+
+    &:focus + .filter__checkbox::after {
+      outline: rgb(var(--light)) dashed 2px;
+      outline-offset: 0.35rem;
+    }
+  }
+}
+
+.filter__label-c-alt {
+  --ouline-color: rgb(var(--white));
+  display: block;
+  position: relative;
+  padding: 1rem 0 1rem 1rem;
+  border-top: 0.0625rem solid rgb(var(--gray));
+  font-size: var(--size-step-s);
+  color: rgb(var(--blue-dark));
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: 0;
+    opacity: 0;
+
+    &.focus-visible + .filter__checkbox-alt {
+      outline: rgb(var(--blue-light)) dashed 2px;
+      outline-offset: 0.35rem;
+    }
+  }
+}
+
+.filter__checkbox {
+  display: block;
+  background-color: rgb(var(--light));
+  color: rgb(var(--blue-dark));
+  padding-left: 0.5rem;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  :checked+& {
+    color: rgb(var(--blue-dark));
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    left: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: rgb(var(--blue-dark));
+
+    :checked+& {
+      font-family: 'Material Symbols Outlined';
+      font-size: 1.5rem;
+      content: "\e5ca";
+      background-position: center center;
+      color: rgb(var(--light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &::after {
+    left: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+.filter__checkbox-alt {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: inherit;
+  z-index: -1;
+
+  .focus-visible+& {
+    --ouline-color: rgb(var(--blue));
+    outline-offset: 2px;
+  }
+
+  :checked+& {
+    background-color: rgb(var(--gray-light));
+  }
+}
+
+.filter-search__submit {
+  @mixin button;
+  background-color: rgb(var(--white));
+  color: rgb(var(--blue));
+
+  position: absolute;
+  right: 1rem;
+  padding: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  /* height: 20px; */
+
+
+  @media (--lg) {
+    position: static;
+    width: unset;
+    height: unset;
+    transform: none;
+    @mixin button;
+    background-color: rgb(var(--blue-dark));
+  }
+
+  & .material-symbols-outlined {
+    @media (--lg) {
+      display: none;
+    }
+  }
+}
+
+.filter-search__submit-text {
+  display: none;
+  @media (--lg) {
+    display: inline-block;
+  }
+}

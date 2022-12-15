@@ -1,0 +1,142 @@
+@keyframes slide-in {
+  0% {
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bounce {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-fade {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left-fade-absolute {
+  0% {
+    transform: translate(-100%,-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0,-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right-fade {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes background-zoom{
+  0% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media not print {
+
+  [data-animation='fade-in-up'] {
+    animation: fade-in-up 700ms ease both;
+  }
+
+  [data-animation='fade-in-bounce'] {
+    animation: fade-in-bounce 700ms cubic-bezier(0.5, -0.25, 0.5, 2) both;
+  }
+
+  [data-animation='fade-in'] {
+    animation: fade-in 700ms ease both;
+  }
+
+  [data-animation='slide-left-fade'] {
+    animation: slide-left-fade 700ms ease both;
+  }
+
+  @media (--xl) {
+    [data-animation='slide-left-fade-absolute'] {
+      animation: slide-left-fade-absolute 700ms ease both;
+    }
+  }
+
+  [data-animation='slide-right-fade'] {
+    animation: slide-right-fade 700ms ease both;
+  }
+
+  [data-animation='background-zoom'] {
+    &::before {
+      animation: background-zoom 700ms ease both;
+    }
+  }
+
+  [data-animate] {
+    animation-play-state: paused;
+  }
+
+  [data-animate='true'] {
+    animation-play-state: running;
+  }
+
+}

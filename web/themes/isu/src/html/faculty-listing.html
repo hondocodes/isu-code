@@ -1,0 +1,109 @@
+{% set page = { title: 'Faculty Listing' } %} {% extends '@layouts/base.html' %}
+{% block body %}
+
+<div class="hero hero--sub invert">
+  <div class="wrapper">
+    <div class="hero__container">
+      {% include '@components/breadcrumbs.html' %}
+      <div><h2 class="hero__headline">Listing</h2></div>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="wrapper">
+    <div class="l-page-sidebar mb-xl lg:my-l">
+      <div>
+        <div class="flow flow-space-l">
+  
+          <div data-animation="fade-in-up" data-animate>
+            {% include '@components/menu-sidebar.html' %}
+          </div>
+  
+        </div>
+      </div>
+      <div>
+        <div class="flow flow-space-2xl">
+
+          <div>
+            <div class="flow flow-space-l">
+              <h3>Faculty Listing</h3>
+              <div class="flow flow-space-l">
+                <div class="feature feature--xs bg-blue-lightest p-xl" data-direction='rtl' data-animation="fade-in-up" data-animate>
+                  <div class="frame" data-ratio="2:3">
+                    <img src="../img/faculty.jpg" alt="placeholder">
+                  </div>
+                  <div class="flow flow-space-2xs">
+                    <h4><a href="#" class="font-base text-blue">Jillian Bontjes</a></h4>
+                    <div>
+                      <p><strong>Admissions Counselor</strong></p>
+                      <p><strong>Office:</strong> Office of Admissions</p>
+                      <p><strong>Phone:</strong> 1 (234)-567-8910</p>
+                      <p><strong>Email:</strong> <a href="mailto:faculty@email.com" class="button-cta">faculty@email.com</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="feature feature--xs bg-blue-lightest p-l" data-direction='rtl' data-animation="fade-in-up" data-animate>
+                  <div class="frame" data-ratio="2:3">
+                    <img src="../img/faculty.jpg" alt="placeholder">
+                  </div>
+                  <div class="flow flow-space-2xs">
+                    <h4><a href="#" class="font-base text-blue">Jillian Bontjes</a></h4>
+                    <div>
+                      <p><strong>Admissions Counselor</strong></p>
+                      <p><strong>Office:</strong> Office of Admissions</p>
+                      <p><strong>Phone:</strong> 1 (234)-567-8910</p>
+                      <p><strong>Email:</strong> <a href="mailto:faculty@email.com" class="button-cta">faculty@email.com</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {% include '@components/pagination.html' %}
+            </div>
+          </div>
+  
+          <div>
+            <div class="flow flow-space-l">
+              <h3 data-animation="fade-in-up" data-animate>Headline (List of Posts)</h3>
+              <div class="flow flow-space-l bordered">
+                <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
+                  <div class="frame" data-ratio="3:2">
+                    <img src="../img/feature1.jpg" alt="placeholder">
+                  </div>
+                  <div class="flow flow-space-s">
+                    <p class="font-bold">Friday, May 22, 2020</p>
+                    <h4><a href="#" class="font-base text-blue">Subheading (8-10 Words) — Lorem Ipsum dolor Sit Amet Odio Lucilius Eam</a></h4>
+                    <p>One Sentence Teaser — Lorem ipsum dolor sit amet cetero aliquam feugiat id sea, ea case nullam consulatu qui, autem abhorreant elaboraret et sit.</p>
+                  </div>
+                </div>
+                <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
+                  <div>
+                  </div>
+                  <div class="flow flow-space-s">
+                    <p class="font-bold">Friday, May 22, 2020</p>
+                    <h4><a href="#" class="font-base text-blue">Subheading (8-10 Words) — Lorem Ipsum dolor Sit Amet Odio Lucilius Eam</a></h4>
+                    <p>One Sentence Teaser — Lorem ipsum dolor sit amet cetero aliquam feugiat id sea, ea case nullam consulatu qui, autem abhorreant elaboraret et sit.</p>
+                  </div>
+                </div>
+                <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
+                  <div class="frame" data-ratio="3:2">
+                    <img src="../img/feature1.jpg" alt="placeholder">
+                  </div>
+                  <div class="flow flow-space-s">
+                    <p class="font-bold">Friday, May 22, 2020</p>
+                    <h4><a href="#" class="font-base text-blue">Subheading (8-10 Words) — Lorem Ipsum dolor Sit Amet Odio Lucilius Eam</a></h4>
+                    <p>One Sentence Teaser — Lorem ipsum dolor sit amet cetero aliquam feugiat id sea, ea case nullam consulatu qui, autem abhorreant elaboraret et sit.</p>
+                  </div>
+                </div>
+              </div>
+              {% include '@components/pagination.html' %}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

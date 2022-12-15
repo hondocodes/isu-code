@@ -1,0 +1,211 @@
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @mixin text-md;
+  color: rgb(var(--black));
+  font-family: var(--body);
+
+  word-wrap: break-word;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &.search-active,
+  &.menu-active {
+    overflow: hidden;
+    @media (--xl) {
+      overflow: visible;
+    }
+  }
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul.reset,
+ol.reset,
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+.reset,
+[role='list'] {
+  padding: 0;
+  margin: 0;
+}
+
+/* Prevent zooming when orientation changes on some iOS devices */
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  scroll-behavior: smooth;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+
+iframe {
+  border: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  fill: currentcolor;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  border-radius: 0;
+  color: inherit;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+
+[type="search"] {
+  appearance: none;
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+
+/* Take out default address Italic styling */
+address {
+  font-style: inherit;
+}
+
+/*
+Removes the default search icon on inputs with search type
+*/
+[type='search'] {
+  appearance: none;
+}
+
+/* Remove default webkit based "clear" button on search inputs */
+::-webkit-search-cancel-button {
+  display: none;
+}
+
+
+:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+h1, .h1 {
+  @mixin h1;
+}
+
+h2, .h2 {
+  @mixin h2;
+}
+
+h3, .h3 {
+  @mixin h3;
+}
+
+h4, .h4 {
+  @mixin h4;
+}
+
+h5, .h5 {
+  @mixin h5;
+}
+
+h6, .h6 {
+  @mixin h6;
+}
+
+.text-sm {
+  @mixin text-sm;
+}
+
+.intro {
+  @mixin intro;
+}
+
+a {
+  text-underline-offset: 0.2em;
+  color: currentColor;
+  .content &:not([class]) {
+    color: rgb(var(--blue));
+    text-decoration: underline;
+    text-decoration-color: rgb(var(--blue));
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+*:focus { 
+	outline: dashed;
+  outline-offset: 1px;
+  outline-width: 3px;
+}
+/* Remove outline for non-keyboard :focus */
+*:focus:not(.focus-visible) {
+  outline: none;
+}
+
+:target {
+  scroll-margin-top: 2ex;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* Base selection styles that invert whatever colours are rendered */
+::selection {
+  background: var(--color-dark);
+  color: var(--color-light);
+}

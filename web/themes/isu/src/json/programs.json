@@ -1,0 +1,94 @@
+{
+    "programs": [
+        {
+            "name": "Accelerated Biology: Non-Thesis",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest A"],
+            "college": ["College of Arts and Sciences"],
+            "degree": ["MS"],
+            "location": ["On Campus", "Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image1.jpg"
+        },
+        {
+            "name": "Accelerated Communication",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest B"],
+            "college": ["College of Arts and Sciences"],
+            "degree": ["MA"],
+            "location": ["On Campus", "Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image2.jpg"
+        },
+        {
+            "name": "Accelerated Earth and Quaternary Sciences: Thesis Option",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest B"],
+            "college": ["College of Technology"],
+            "degree": ["MS"],
+            "location": ["On Campus", "Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image3.jpg"
+        },
+        {
+            "name": "Accelerated Geography and Sustainability",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest B"],
+            "college": ["Scott College of Business"],
+            "degree": ["MA"],
+            "location": ["On Campus", "Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image4.jpg"
+        },
+        {
+            "name": "Accelerated Mathematics",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest B"],
+            "college": ["Bayh College of Education"],
+            "degree": ["MS"],
+            "location": ["On Campus", "Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image5.jpg"
+        },
+        {
+            "name": "Accelerated Occupational Safety Management",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest B"],
+            "college": ["Graduate and Professional Studies"],
+            "degree": ["MS"],
+            "location": ["On Campus", "Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image6.jpg"
+        },
+        {
+            "name": "Accelerated Technology Management",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest C"],
+            "college": ["Health and Human Services"],
+            "degree": ["MS"],
+            "location": ["On Campus", "Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image1.jpg"
+        },
+        {
+            "name": "Accounting - Online",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest C"],
+            "college": ["University College"],
+            "degree": ["BS"],
+            "location": ["Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image2.jpg"
+        },
+        {
+            "name": "Accounting",
+            "search": ["Custom search field"],
+            "interest": ["Area of Interest B"],
+            "college": ["College of Arts and Sciences"],
+            "degree": ["BS"],
+            "location": ["On Campus", "Online"],
+            "url": "/program.html?program=",
+            "image": "../img/image3.jpg"
+        }
+    ]
+}

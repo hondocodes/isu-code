@@ -1,0 +1,14 @@
+{% set page = { title: 'Program Finder' } %}
+{% extends '@layouts/base.html' %}
+
+{% block body %}
+
+  <script>
+    var jsonUrl = "/json/programs.json";
+  </script>
+
+  <main id="main-content" class="programs-finder flow" data-program-finder data-grid>
+
+  </main>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% set page = { title: 'Tertiary No Hero' } %}
+
+{% extends '@layouts/base.html' %} {%
+block body %}
+
+<div class="hero hero--sub invert">
+  <div class="wrapper">
+    <div class="hero__container">
+      {% include '@components/breadcrumbs.html' %}
+      <div>
+        <h2 class="hero__headline">Tertiary Inventory</h2>
+        <p class="intro">
+          Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+  {% include '@components/tertiary-components.html' %}
+</main>
+
+{% endblock %}

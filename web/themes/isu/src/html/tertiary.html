@@ -1,0 +1,18 @@
+{% set page = { title: 'Tertiary' } %}
+
+{% extends '@layouts/base.html' %} {%
+block body %}
+
+{%
+  set vars = {
+    'pageTitle': 'Tertiary Inventory',
+    'image': '../img/Tertiary-Page-Header.jpg'
+  }
+%}
+{% include '@components/hero-sub.html' with vars %}
+
+<main id="main-content">
+  {% include '@components/tertiary-components.html' %}
+</main>
+
+{% endblock %}

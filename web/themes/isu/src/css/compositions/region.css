@@ -1,0 +1,44 @@
+/**
+ * REGION 
+ * Add consistent vertical padding to create regions of content 
+ * Can either be configured by setting --region-space or use a default from the space scale
+ */
+.region {
+  overflow: hidden;
+  padding-top: var(--region-space, var(--space-xl));
+  padding-bottom: var(--region-space, var(--space-xl));
+
+  @media (--lg) {
+    padding-top: var(--region-space, var(--space-3xl));
+    padding-bottom: var(--region-space, var(--space-3xl));
+  }
+
+  &.region--first {
+    padding-top: var(--region-space, var(--space-xl));
+  }
+  &.region--pull {
+    overflow: visible;
+    padding: 0;
+    padding-bottom: 3rem;
+  }
+}
+
+
+.region.bg-light + .region.bg-light {
+  padding-top: 0;
+}
+.region.bg-white + .region.bg-white {
+  padding-top: 0;
+}
+.region.bg-blue + .region.bg-blue {
+  padding-top: 0;
+}
+.region.bg-blue-dark + .region.bg-blue-dark {
+  padding-top: 0;
+}
+.region.content__top-blue + .region.bg-blue {
+  padding-top: 0;
+}
+.region.bg-blue + .region.content__top-blue {
+  padding-top: 0;
+}

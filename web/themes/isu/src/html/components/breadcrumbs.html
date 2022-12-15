@@ -1,0 +1,27 @@
+<div class="breadcrumbs invert{% if not (mobile is empty) %} breadcrumbs--mobile{% endif %}">
+  <div class="py-s">
+    <ul class="reset cluster">
+      <li class="breadcrumbs__home">
+        <a href="#" aria-label="Home page"></a>
+      </li>
+      <li>
+        <a href="#">
+          Parent Page
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Parent Page
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          Parent Page
+        </a>
+      </li>
+      <li>
+        {{ pageTitle ?? 'Current Page' }}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="pullquote{% if blue %} pullquote--blue{% endif %}{% if white %} pullquote--white{% endif %}">
+  <blockquote>
+    <p>The academics at Indiana State University are top tier. It's evident from your first day on campus that all of the faculty
+      and professors at ISU are committed to helping you succeed in any way they can.
+    </p>
+    <p class="pullquote__author">
+       Mark Smith | Psychology | ’20
+    </p>
+    {% if link %}
+    <a href="#" class="button-arrow{% if whiteBtn %} button-arrow--white {% endif %}">
+      <span class="material-symbols-outlined">
+        arrow_forward
+      </span>
+       Read Mark’s Story
+    </a>
+    {% else %}
+    <a href="https://www.youtube.com/watch?v=oklVBLlQs5k" class="button-arrow button-arrow--play{% if whiteBtn %} button-arrow--white {% else %} button-arrow--blue-dark{% endif %}" data-minimodal-title="Placeholder" data-minimodal>
+      <span class="material-symbols-outlined">
+        play_arrow
+      </span>
+      Watch Video
+    </a>
+    {% endif %}
+  </blockquote>
+</div>

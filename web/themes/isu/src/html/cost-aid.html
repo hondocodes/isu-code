@@ -1,0 +1,216 @@
+{% set page = { title: 'Cost & Aid' } %}
+{% extends '@layouts/base.html' %}
+
+{% block body %}
+
+<main id="main-content">
+  <div class="hero hero--sub invert">
+    <div class="wrapper">
+      <div class="hero__container">
+        {% include '@components/breadcrumbs.html' %}
+        <div class="overlay-gradient-blue lg:mb-3xl">
+          <img src="../img/cost-hero.jpg" alt="placeholder">
+        </div>
+        <div class="lg:mt-[-25rem] lg:z-10 lg:flex lg:items-center lg:gap-xl">
+          <div class="flow flow-space-2xl">
+            <div class="flow lg:flex lg:items-center">
+              <h2 class="hero__headline">
+                Cost &amp; Aid
+              </h2>
+              <div class="announcement">
+                <div class="announcement__details">
+                  <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</a>
+                </div>
+                {{ inline_svg('Large-Arrow','announcement__arrow') }}
+              </div>
+            </div>
+            <div>
+              <div class="flow flow-space-m">
+                <p class="intro lg:w-75">Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan.</p>
+                {% include '@components/secondary-menu.html' %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include '@components/stats-panel.html' %}
+
+  <div class="content__blue bg-blue-dark invert py-[75px] lg:py-[200px]">
+    <div class="wrapper">
+      <div class="feature-panel">
+        <div class="feature-panel__img">
+          <div class="frame relative" data-ratio="1:1">
+            <img src="../img/router-panel2.jpg" alt="placeholder">
+          </div>
+          <div class="image__arrow" data-animation="slide-left-fade" data-animate>
+            {{ inline_svg('Large-Arrow') }}
+          </div>
+        </div>
+        <div class="feature-panel__content">
+          <h2 class="feature-panel__heading">Router Panel Variation 2</h2>
+          <ul class="reset router-list">
+            <li>
+              <a href="#" class="button-arrow button-arrow--white">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward
+                </span>
+                Grants
+              </a>
+            </li>
+            <li>
+              <a href="#" class="button-arrow button-arrow--white">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward
+                </span>
+                Scholarships
+              </a>
+            </li>
+            <li>
+              <a href="#" class="button-arrow button-arrow--white">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward
+                </span>
+                Loans
+              </a>
+            </li>
+            <li>
+              <a href="#" class="button-arrow button-arrow--white">
+                <span class="material-symbols-outlined" aria-hidden="true">
+                  arrow_forward
+                </span>
+                Work Study
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="region bg-white">
+    <div class="wrapper">
+      <div class="flow flow-space-l">
+        <h2 data-animation="fade-in-up" data-animate>
+          Key Dates & Deadlines
+        </h2>
+        <div class="grid gap-m" data-layout="1/2">
+          <div class="event event--alt invert">
+            <div class="event__date">
+              May
+              <span>10</span>
+            </div>
+            <div class="event__details">
+              <h3 class="event__title font-base text-step-0">
+                <a href="#">Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit</a>
+              </h3>
+            </div>
+          </div>
+          <div class="event event--alt invert">
+            <div class="event__date event__date--range">
+              Jul 19
+              <span>—</span>
+              Aug 3
+            </div>
+            <div class="event__details">
+              <h3 class="event__title font-base text-step-0">
+                <a href="#">Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit</a>
+              </h3>
+            </div>
+          </div>
+          <div class="event event--alt invert">
+            <div class="event__date">
+              Sep
+              <span>24</span>
+            </div>
+            <div class="event__details">
+              <h3 class="event__title font-base text-step-0">
+                <a href="#">Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit</a>
+              </h3>
+            </div>
+          </div>
+          <div class="event event--alt invert">
+            <div class="event__date">
+              Dec
+              <span>13</span>
+            </div>
+            <div class="event__details">
+              <h3 class="event__title font-base text-step-0">
+                <a href="#">Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content__blue invert py-[75px] lg:mt-2xl">
+    <div class="wrapper">
+      <div class="feature-panel">
+        <div
+          class="feature-panel__img feature-panel__img--wide feature-panel__img--pull overlay-gradient-blue"
+        >
+          <img src="../img/feature-panel1.jpg" alt="placeholder">
+          <a
+            class="button-arrow button-arrow--white button-arrow--play absolute z-10 bottom-xs left-xs"
+            href="https://www.youtube.com/watch?v=oklVBLlQs5k"
+            data-minimodal=""
+            data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+            <span class="material-symbols-outlined icon-fill" aria-hidden="true">
+              play_arrow
+            </span>
+            Watch Video
+          </a>
+        </div>
+        <div class="feature-panel__content">
+          <h2 class="feature-panel__heading">Feature Panel Variation 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+  
+          <a href="#" class="button"> CTA </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content__blue-dark bg-blue-dark invert py-[75px] lg:mt-2xl">
+    <div class="wrapper">
+      <div class="feature-panel feature-panel--swap">
+        <div
+          class="feature-panel__img feature-panel__img--wide feature-panel__img--pull overlay-gradient-blue-dark"
+        >
+          <img src="../img/feature-panel2.jpg" alt="placeholder">
+          <a
+            class="button-arrow button-arrow--white button-arrow--play absolute z-10 bottom-xs left-xs"
+            href="https://www.youtube.com/watch?v=oklVBLlQs5k"
+            data-minimodal=""
+            data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+            <span class="material-symbols-outlined icon-fill" aria-hidden="true">
+              play_arrow
+            </span>
+            Watch Video
+          </a>
+        </div>
+        <div class="feature-panel__content">
+          <h2 class="feature-panel__heading">Feature Panel Variation 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+  
+          <a href="#" class="button button--blue"> CTA </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include '@components/cta-panel.html' %}
+</main>
+{% endblock %}

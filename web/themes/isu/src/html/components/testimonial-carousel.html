@@ -1,0 +1,40 @@
+<div class="testimonial-carousel__container">
+  <div class="testimonial-carousel">
+    {% for i in range(1, 5) %}
+    <div class="testimonial-carousel__item">
+      <div class="pullquote__container">
+        <div class="content__half-blue">
+          <div class="content__img content__img-alt">
+            <img src="../img/image7.jpg" alt="placeholder">
+            <div class="blue-gradient"></div>
+            <div class="pullquote pullquote--white">
+              <blockquote>
+                <p>The academics at Indiana State University are top tier. It's evident from your first day on campus that all of the faculty
+                  and professors at ISU are committed to helping you succeed in any way they can.
+                </p>
+                <p class="pullquote__author">
+                  Mark Smith | Psychology | ’20
+                </p>
+                    <a href="#" class="button-arrow">
+                  <span class="material-symbols-outlined">
+                    arrow_forward
+                  </span>
+                  Read Mark’s Story
+                </a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="testimonial-carousel__nav">
+      <button class="testimonial-carousel__nav__btn testimonial-carousel__previous" aria-label="Previous Slide">
+        {{ inline_svg('icon-arrow') }}
+      </button>
+      <button class="testimonial-carousel__nav__btn testimonial-carousel__next" aria-label="Next Slide">
+        {{ inline_svg('icon-arrow') }}
+      </button>
+    </div>
+  </div>
+</div>

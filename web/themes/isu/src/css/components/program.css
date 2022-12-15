@@ -1,0 +1,154 @@
+.program {
+  &__name-wrapper {
+    @media(--lg) {
+      width: 50%;
+      margin-right: 5rem;
+
+      [data-grid] & {
+        width: 100%;
+        margin-right: unset;
+      }
+    }
+  }
+  &__name {
+    font-size: var(--size-step-0);
+    font-family: var(--body);
+    font-weight: 900;
+    text-decoration: underline;
+    color: rgb(var(--blue));
+
+    [data-grid] & {
+      font-size: var(--size-step-0);
+    }
+  }
+  &__options {
+    --gutter: var(--space-s);
+
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 700,
+      'GRAD' 0,
+      'opsz' 48;
+      margin-inline-end: 0.1em;
+      font-size: 16px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
+    @media (--lg) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    [data-grid] & {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      @media(--lg) {
+        min-height: 130px;
+      }
+    }
+  }
+  &__grid {
+    --grid-min-item-size-custom: clamp(5rem, 30vw, 16rem);
+    
+    @media (--md) {
+      --grid-min-item-size-custom: clamp(20rem, 50vw, 16rem);
+    }
+  }
+}
+
+.button-program {
+  box-shadow: 0 2px 6px 2px rgba(0,0,0,0.08);
+  margin-bottom: var(--space-s);
+
+
+  &.college-of-arts-and-sciences {
+    border-left: 1rem solid rgb(var(--blue));
+  }
+  &.bayh-college-of-education {
+    border-left: 1rem solid #00bff3;
+  }
+  &.college-of-technology {
+    border-left: 1rem solid #2e4393;
+  }
+  &.graduate-and-professional-studies {
+    border-left: 1rem solid rgb(var(--gray));
+  }
+  &.health-and-human-services {
+    border-left: 1rem solid rgb(var(--blue-robins-egg));
+  }
+  &.scott-college-of-business {
+    border-left: 1rem solid #2a4098;
+  }
+  &.university-college {
+    border-left: 1rem solid #35c0cb;
+  }
+
+
+
+
+  .bayh-college-of-education & {
+    border-left: 1rem solid #00bff3;
+    [data-grid] & {
+      border-left: none;
+      border-bottom: 1rem solid #00bff3;
+    }
+  }
+  .college-of-arts-and-sciences & {
+    border-left: 1rem solid rgb(var(--blue));
+    [data-grid] & {
+      border-left: none;
+      border-bottom: 1rem solid rgb(var(--blue));
+    }
+  }
+  .college-of-technology & {
+    border-left: 1rem solid #2e4393;
+    [data-grid] & {
+      border-left: none;
+      border-bottom: 1rem solid #2e4393;
+    }
+  }
+  .graduate-and-professional-studies & {
+    border-left: 1rem solid rgb(var(--gray));
+    [data-grid] & {
+      border-left: none;
+      border-bottom: 1rem solid rgb(var(--gray));
+    }
+  }
+  .health-and-human-services & {
+    border-left: 1rem solid rgb(var(--blue-robins-egg));
+    [data-grid] & {
+      border-left: none;
+      border-bottom: 1rem solid rgb(var(--blue-robins-egg));
+    }
+  }
+  .scott-college-of-business & {
+    border-left: 1rem solid #2a4098;
+    [data-grid] & {
+      border-left: none;
+      border-bottom: 1rem solid #2a4098;
+    }
+  }
+  .university-college & {
+    border-left: 1rem solid #35c0cb;
+    [data-grid] & {
+      border-left: none;
+      border-bottom: 1rem solid #35c0cb;
+    }
+  }
+  [data-grid] & {
+    margin-bottom: none;
+
+    .program__content {
+      padding: 0 var(--space-s) var(--space-s);
+    }
+  }
+}

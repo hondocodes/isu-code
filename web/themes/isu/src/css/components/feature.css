@@ -1,0 +1,144 @@
+.feature {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-m-l);
+}
+
+.feature > :last-child {
+  flex-basis: 300px; 
+  flex-grow: 1;
+  order: 0;
+
+  @media (--lg) {
+    order: 1;
+  }
+}
+
+.feature--home {
+  > :last-child {
+    flex-basis: 500px;
+  }
+}
+
+/* .feature--home {
+  margin: var(--space-xl) 0;
+  flex-direction: row-reverse;
+  > :first-child {
+    flex-basis: unset;
+    margin-right: var(--space-2xl);
+    margin-bottom: var(--space-l);
+    order: 2 !important;
+
+    @media (--lg) {
+      padding-right: var(--space-3xl);
+    }
+   }
+   > :last-child {
+    flex-basis: unset;
+   }
+
+ @media (--lg) {
+  align-items: center;
+  padding: var(--space-l) 0;
+  margin: 0;
+ }
+} */
+
+.feature > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+  order: 0;
+
+  @media (--lg) {
+    order: unset;
+  }
+}
+
+/* 
+  A flipped version where the sidebar is on the right
+*/
+.feature[data-direction='rtl'] {
+  flex-direction: row-reverse;
+}
+
+
+/* 
+  Small version
+*/
+.feature--s {
+  > :last-child {
+    flex-basis: 35%;
+  }
+  > :first-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 20%;
+  }
+}
+
+/* 
+  Extra Small version
+*/
+.feature--xs {
+  > :last-child {
+    flex-basis: 60%; 
+  }
+  > :first-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 33%;
+
+    @media (--lg) {
+      min-inline-size: 30%;
+    }
+  }
+}
+
+
+.feature-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  gap: var(--space-xs);
+
+  .frame {
+    width: 90vw;
+    max-width: 25rem;
+    flex: 1;
+
+    @media (--lg) {
+      max-width: unset;
+    }
+  }
+
+  > :last-child {
+    > * {
+      max-width: 50ch;
+    }
+    @media (--lg) {
+      max-width: 45vw;
+      flex: 1;
+    }
+  }
+
+  @media (--lg) {
+    flex-direction: row;
+    gap: var(--space-3xl);
+
+    p {
+      font-size: var(--size-step-1);
+    }
+
+    .frame {
+      width: 40vw;
+      margin-right: unset;
+    }
+
+    &[data-direction='rtl'] {
+      flex-direction: row-reverse;
+    }
+  }
+}

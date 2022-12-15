@@ -1,0 +1,62 @@
+{
+  "title": "Colors",
+  "description": "Hex color codes that can be shared, cross-platform. They can be converted at point of usage, such as HSL for web or CMYK for print.",
+  "items": [
+    {
+      "name": "Dark",
+      "value": "rgb(0, 0, 0)"
+    },
+    {
+      "name": "Light",
+      "value": "rgb(255, 255, 255)"
+    },
+    {
+      "name": "Blue Lightest",
+      "value": "rgb(229, 239, 247)"
+    },
+    {
+      "name": "Blue Light",
+      "value": "rgb(0, 191, 243)"
+    },
+    {
+      "name": "Blue",
+      "value": "rgb(0, 102, 179)"
+    },
+    {
+      "name": "Blue Dark",
+      "value": "rgb(22, 50, 92)"
+    },
+    {
+      "name": "Blue Robins Egg",
+      "value": "rgb(135, 211, 225)"
+    },
+    {
+      "name": "Teal",
+      "value": "rgb(134, 211, 25)"
+    },
+    {
+      "name": "Aqua",
+      "value": "rgb(14, 191, 243)"
+    },
+    {
+      "name": "Red",
+      "value": "rgb(255, 90, 90)"
+    },
+    {
+      "name": "Orange",
+      "value": "rgb(255, 159, 25)"
+    },
+    {
+      "name": "Green",
+      "value": "rgb(181, 190, 0)"
+    },
+    {
+      "name": "Gray",
+      "value": "rgb(110, 99, 89)"
+    },
+    {
+      "name": "Pink",
+      "value": "rgb(255, 90, 90)"
+    }
+  ]
+}

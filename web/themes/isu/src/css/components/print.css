@@ -1,0 +1,20 @@
+@media print {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, a, .button, button {
+    color: #000000 !important;
+    background: transparent !important;
+  }
+
+
+  header, footer, svg {
+    display: none;
+  }
+
+  img {
+    max-width: 500px;
+  }
+
+  .menu-sidebar {
+    display: none;
+  }
+
+}

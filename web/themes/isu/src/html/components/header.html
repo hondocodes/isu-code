@@ -1,0 +1,123 @@
+<header class="header">
+  <nav class="header__interior" id="main-nav">
+    <div class="header__mobile__nav">
+      <a href="#" class="header__logo header__logo--mobile">
+        <span class="screen-reader-text">Indiana State University</span>
+        {{ inline_svg('logo') }}
+      </a>
+      <button class="header__toggle header__toggle--search search--open" aria-expanded="false">
+        <span class="screen-reader-text">Toggle Search</span>
+      </button>
+      <button class="header__toggle header__toggle--menu menu--open" aria-expanded="false" data-popup>
+        <span class="screen-reader-text">Toggle Navigation</span>
+        <span class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </span>
+      </button>
+    </div>
+    <div class="header__flyout header__flyout--menu">
+      <div class="header__nav__wrapper">
+        <a href="#" class="header__logo header__logo--desktop">
+          <span class="screen-reader-text">Indiana State University</span>
+          {{ inline_svg('logo') }}
+        </a>
+        <div class="header__nav header__nav--menu">
+          <ul class="primary__nav">
+            {% for item in ['Academics', 'Admissions', 'Cost & Aid', 'Student Life', 'About',] %}
+            <li class="primary__nav__item">
+              <button class="header__nav__toggle header__nav__toggle--menu" aria-expanded="false" data-popup>{{ item }}
+
+              </button>
+              <ul class="primary__nav--sub">
+                <li class="header__nav__featured">
+                  <a href="#">{{ item }} Overview Link</a><span class="material-symbols-outlined">
+                    arrow_right
+                  </span>
+                </li>
+                {% for child in range(0, 0) %}
+                <li>
+                  <ul class="primary__nav--sub-columns">
+                    {% for gchild in range(1, 6) %}
+                    <li class="primary__nav__item--sub">
+                      <a href="#" class="primary__nav__link--sub">Secondary Navigation {{ gchild }}</a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+            <li class="primary__nav__item">
+              <a href="#" class="header__nav__link">Athletics</a>
+            </li>
+            <li class="primary__nav__item">
+              <button class="header__toggle header__toggle--desktop search--open" aria-expanded="false">
+                <span class="screen-reader-text">Toggle Search</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="header__topbar">
+        <ul class="header__pre-nav">
+          <li>
+            <a href="#">Current Students</a>
+          </li>
+          <li>
+            <a href="#">Faculty &amp; Staff</a>
+          </li>
+          <li>
+            <a href="#">Parents &amp; Families</a>
+          </li>
+          <li>
+            <a href="#">Alumni</a>
+          </li>
+          <li>
+            <a href="#">Give</a>
+          </li>
+          <li>
+            <a href="#">News</a>
+          </li>
+        </ul>
+
+        <ul class="header__action-nav">
+          <li>
+            <a href="#">Request Info</a>
+          </li>
+          <li>
+            <a href="#">Visit</a>
+          </li>
+          <li>
+            <a href="#">Apply</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div class="header__flyout header__flyout--search">
+    {% include '@components/search.html' %}
+  </div>
+</header>
+<header class="sticky-header">
+  <nav aria-label="Main Navigation">
+    <div class="sticky-header__interior">
+      <a href="#" class="header__logo">
+        <span class="screen-reader-text">Indiana State University</span>
+        {{ inline_svg('logo') }}
+      </a>
+      <ul class="sticky-header__cta">
+        <li><a href="#" class="button button--blue"><span>Request</span> Info</a></li>
+        <li><a href="#" class="button button--blue">Visit</a></li>
+        <li><a href="#" class="button button--blue">Apply</a></li>
+        <li><button class="sticky-header-search search--open" aria-label="Toggle Search Drawer" aria-expanded="false">
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>

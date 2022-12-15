@@ -1,0 +1,12 @@
+<div class="media {% for mod in mods %}media--{{ mod }} {% endfor %}">
+  {% if video %}
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/oklVBLlQs5k" allowfullscreen></iframe>
+    </div>
+  {% else %}
+    <img src="//placehold.mstoner.com/900x600" alt="placeholder">
+  {% endif %}
+  <div class="media__caption">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae provident vero ullam quaerat officia sapiente eligendi molestiae recusandae deserunt laborum?</p>
+  </div>
+</div>

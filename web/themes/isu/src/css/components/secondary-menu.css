@@ -1,0 +1,26 @@
+.secondary-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  li {
+    width: 100%;
+  }
+  a {
+    display: flex;
+    border: .0625rem solid rgb(var(--light));
+    padding: var(--space-xs);
+    transition: var(--transition);
+
+    &:hover {
+      background-color: rgb(var(--blue-dark));
+      border-color: rgb(var(--blue-dark));
+    }
+  }
+  @media (--md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+      width: calc(33.33333333% - (var(--space-xs)*2/3));
+    }
+  }
+}

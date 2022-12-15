@@ -1,0 +1,17 @@
+{% set page = { title: 'Secondary' } %} {% set alert = true %} {% extends
+'@layouts/base.html' %} {% block body %}
+
+<main id="main-content">
+  {% set vars = {
+    'pageTitle': 'Full Width - Inventory',
+    'image': '../img/Tertiary-Page-Header.jpg',
+    'announcement': 'true'
+  }
+  %}
+  {% include
+  '@components/hero-secondary.html' with vars %}
+
+  {% include '@components/secondary-components.html' %}
+
+</main>
+{% endblock %}

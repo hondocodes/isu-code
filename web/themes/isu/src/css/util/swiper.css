@@ -1,0 +1,66 @@
+.swiper-pagi {
+  font-weight: 700;
+  margin-right: var(--space-m);
+}
+.swiper-initialized {
+  .button-circle {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+.swiper-prev {
+  &::after {
+    font-family: 'Material Symbols Outlined';
+    content: '\f1e6';
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+  }
+}
+.swiper-next {
+  &::after {
+    font-family: 'Material Symbols Outlined';
+    content: '\f1df';
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+  }
+}
+.swiper-button-disabled {
+  opacity: 0.75 !important;
+  background: var(--color-light) !important;
+  cursor: default;
+  &:hover {
+    &::after {
+      transform: none !important;
+    }
+    transform: none !important;
+    cursor: default;
+  }
+
+  .swiper--alt & {
+    background: var(--color-dark) !important;
+    &::after {
+      color: var(--color-light);
+    }
+  }
+}
+.swiper-scrollbar {
+  position: relative;
+  height: 6px;
+  background: rgba(#FFFFFF, 0.06);
+  margin-top: var(--space-xl);
+
+  .swiper--alt & {
+    background: rgba(#201F1F, 0.09);
+  }
+}
+.swiper-scrollbar-drag {
+  position: relative;
+  height: 6px;
+  background: var(--color-yellow);
+
+  .swiper--alt & {
+    background: var(--color-orange);
+  }
+}

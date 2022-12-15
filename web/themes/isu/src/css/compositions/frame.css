@@ -1,0 +1,79 @@
+.frame {
+  --n: 16;
+  --d: 9;
+  aspect-ratio: var(--n) / var(--d);
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-light);
+}
+
+.frame > img,
+.frame > video,
+.frame > iframe {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.image-link {
+  display: block;
+  text-decoration: none;
+  h1,h2,h3,h4 {
+    text-decoration: underline;
+    transition: color var(--transition);
+    text-decoration-thickness: 0.05em;
+    text-underline-offset: 0.1em;
+    color: var(--color-blue);
+
+    .invert & {
+      color: var(--color-light);
+    }
+  }
+  &:hover {
+    h1,h2,h3,h4 {
+      text-decoration: none;
+    }
+    .frame > img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.frame[data-ratio='1:1'] {
+  --n: 1;
+  --d: 1;
+}
+
+.frame[data-ratio='2:3'] {
+  --n: 2;
+  --d: 3;
+}
+
+.frame[data-ratio='3:2'] {
+  --n: 3;
+  --d: 2;
+}
+
+.frame[data-ratio='4:3'] {
+  --n: 4;
+  --d: 3;
+}
+
+.frame[data-ratio='3:4'] {
+  --n: 3;
+  --d: 4;
+}
+
+.frame[data-ratio='5:4'] {
+  --n: 5;
+  --d: 4;
+}
+
+.frame[data-ratio='16:7'] {
+  --n: 16;
+  --d: 7;
+}

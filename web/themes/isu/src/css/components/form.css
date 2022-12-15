@@ -1,0 +1,74 @@
+.form {
+  label {
+    display: block;
+    font-size: var(--size-step-s);
+  }
+  &__group {
+    width: 100%;
+  }
+  &__input {
+    --flow-space: var(--space-3xs);
+    border: none;
+    background-color: rgba(255,255,255,0.2);
+    padding: var(--space-xs);
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="email"] {
+    border: none;
+    background-color: rgba(255,255,255,0.2);
+  }
+  .button {
+    width: 100%;
+  }
+}
+
+.form__select {
+  --flow-space: var(--space-3xs);
+  position: relative;
+}
+
+.form__select select {
+  width: 100%;
+
+  border: none;
+  border-radius: .375rem;
+  background-color: rgba(255,255,255,0.2);
+  padding: var(--space-2xs);
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.form__select::before {
+  font-family: 'Material Symbols Outlined';
+  content: '\e5c5';
+  font-size: 1rem;
+  margin-left: 0.25rem;
+  transition: var(--transition);
+
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  pointer-events: none;
+}
+
+.form__select:hover::before {
+  /* background-color: rgba(255, 255, 255, 0.2); */
+}
+
+.form__select select option {
+  /* padding: 30px; */
+}

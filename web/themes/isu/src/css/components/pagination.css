@@ -1,0 +1,43 @@
+.c-pagination {
+  --space: var(--space-xs);
+  color: rgb(var(--blue));
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.8125rem;
+    width: 2.8125rem;
+    text-decoration: none;
+    padding: var(--space-3xs) var(--space-xs);
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    transition: var(--transition);
+
+    &:hover {
+      background: rgb(var(--blue));
+      color: rgb(var(--light));
+    }
+
+    &.c-pagination--next {
+      border: .0625rem solid rgb(var(--blue));
+      &::after {
+        font-family: 'Material Symbols Outlined';
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        content: '\e5c8';
+        font-size: 1.5rem;
+        transition: 250ms ease;
+        transition: var(--transition);
+      }
+      &:hover {
+        background: rgb(var(--blue));
+        &::after {
+          color: var(--light);
+          font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 72;
+        }
+      }
+    }
+  }
+  .active {
+    border: .0625rem solid rgb(var(--blue));
+  }
+}

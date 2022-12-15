@@ -1,0 +1,27 @@
+{% set page = { title: 'Index' } %}
+{% extends '@layouts/base.html' %}
+
+{% block body %}
+<div class="hero hero--sub invert">
+  <div class="wrapper">
+    <div class="hero__container">
+      {% include '@components/breadcrumbs.html' %}
+      <div><h2 class="hero__headline">ISU Template Suite</h2></div>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="wrapper">
+    <div class="region">
+      <ul class="reset">
+        {% for page in ['home','secondary','secondary-no-announcement','tertiary','tertiary-no-hero','admissions','cost-aid','student-life','program-finder','program','college-landing','faculty-listing','faculty-bio', 'news-post'] %}
+        <li>
+          <a href="{{ page }}.html">{{ page }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,140 @@
+.menu-sidebar {
+  margin-top: var(--space-l);
+  @media(--lg) {
+    margin-top: 0;
+  }
+}
+.menu-sidebar__heading {
+  display: none;
+
+  @media (--lg) {
+    display: block;
+    font-size: var(--size-step-1);
+    color: rgb(var(--blue-dark));
+  }
+}
+.menu-sidebar__toggle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+  padding: 0;
+  font-family: var(--heading);
+  font-size: var(--size-step-1);
+  color: rgb(var(--light));
+  background: rgb(var(--blue-dark));
+  .hamburger {
+    background: rgb(var(--blue));
+  }
+  .hamburger .line {
+    width: 28px;
+    height: 2px;
+    background-color: rgb(var(--white));
+    display: block;
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+  }
+  .icon {
+    background: rgb(var(--blue));
+    font-size: 3rem;
+  }
+  > span {
+    padding: var(--space-s);
+  }
+  &[aria-expanded=true] {
+    .menu-sidebar__menu {
+      display: block;
+    }
+    .hamburger .line {
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+    &::after {
+      transform: rotate(180deg);
+    }
+    + ul {
+      display: block;
+      a {
+        color: rgb(var(--blue-dark));
+      }
+    }
+  }
+  @media (--lg) {
+    display: none;
+  }
+}
+.menu-sidebar__menu {
+  display: none;
+  position: relative;
+  border-left: 2px solid rgb(var(--blue-dark));
+  a,
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(var(--blue));
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    margin: var(--space-s) var(--space-m);
+
+    .invert & {
+      color: rgb(var(--light)) !important;
+    }
+  }
+  .invert & {
+    border-color: rgb(var(--light)) !important;
+  }
+
+  button {
+    &::after {
+      content: '';
+      @mixin inline-svg arrow_drop_down, rgb(root-var(--blue-dark));
+      display: block;
+      width: 0.625rem;
+      height: 0.4375rem;
+      background-size: 1.5rem;
+      margin-top: 0.25rem;
+      margin-left: 0.5rem;
+      position: absolute;
+      right: 0;
+      transition: var(--transition);
+    }
+    &[aria-expanded=true] {
+      color: rgb(var(--blue-dark));
+      font-weight: 900;
+      &::after {
+        transform: rotate(180deg);
+      }
+      + ul {
+        display: block;
+        a {
+          color: rgb(var(--blue-dark));
+        }
+      }
+    }
+  }
+
+  > li > ul {
+    display: none;
+    margin-left: var(--space-s);
+  }
+
+  .active {
+    font-weight: 900;
+    color: rgb(var(--blue-dark));
+  }
+
+  @media (--lg) {
+    display: block;
+  }
+}

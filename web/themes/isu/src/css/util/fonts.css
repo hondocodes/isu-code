@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'LubalinGraph';
+  src: url("../fonts/LubalinGraphStd-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LubalinGraph';
+  src: url("../fonts/LubalinGraphStd-Bold.otf");
+  font-weight: 900;
+  font-style: normal;
+}

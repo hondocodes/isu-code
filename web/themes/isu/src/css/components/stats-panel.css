@@ -1,0 +1,170 @@
+.stats-panel {
+  position: relative;
+  margin-top: 10rem;
+  padding-bottom: var(--space-xl);
+  @media (--lg) {
+    min-height: 500px;
+    padding-bottom: 10rem;
+  }
+}
+.stats-panel__image {
+  position: relative;
+  top: -5rem;
+  background: red;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background: rgb(var(--blue));
+  }
+  img {
+    mix-blend-mode: multiply;
+  }
+}
+.stats-panel__content {
+  margin-top: -40%;
+}
+.stats-panel__item {
+  width: 100%;
+  text-align: center;
+  max-inline-size: 30ch;
+
+  opacity: 0;
+
+  transition: var(--transition);
+
+  &.is-selected {
+    opacity: 1;
+  }
+
+  @media (--lg) {
+    text-align: left;
+    max-inline-size: unset;
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+.stats-panel__container {
+  position: relative;
+  margin: 5rem 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (--xl) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  h2 {
+    color: rgb(var(--blue));
+  }
+}
+
+.stats-panel__carousel {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  & .flickity-viewport {
+    overflow: hidden;
+    width: 100%;
+
+    @media (--lg) {
+      margin: 0;
+    }
+  }
+
+  & .flickity-page-dots {
+    flex-grow: 1;
+    order: 1;
+    height: 4.688rem;
+    background-color: rgb(var(--blue-dark));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (--lg) {
+      justify-content: flex-start;
+      flex-grow: 0;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &::after {
+    content: 'flickity';
+    display: none; /* hide :after */
+
+    @media (--lg) {
+      content: '';
+    }
+  }
+
+  @media (--lg) {
+    flex-wrap: nowrap;
+  }
+}
+
+.stats-panel__nav {
+  order: 1;
+  display: flex;
+
+  @media (--lg) {
+    display: none;
+  }
+}
+
+.stats-panel__nav__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.688rem;
+  width: 4.688rem;
+  border: 0;
+  padding: 0;
+
+  background-color: rgba(var(--blue), .75);
+  transition: var(--transition);
+
+  @media (--lg) {
+    width: 6.375rem;
+  }
+
+  &:hover {
+    background-color: rgb(var(--blue));
+  }
+
+  span {
+    width: 1.25rem;
+    height: 1rem;
+  }
+}
+
+.stats-panel__previous {
+  & span {
+    transform: rotate(180deg);
+  }
+}
+
+
+.stats-panel__arrow {
+  position: absolute;
+  top: 5rem;
+  right: 20%;
+  z-index: 1;
+  width: 10rem;
+  color: rgb(var(--blue));
+  transform: rotate(-90deg);
+
+  @media (--lg) {
+    width: 20rem;
+    top: -10%;
+    right: 20%;
+  }
+}

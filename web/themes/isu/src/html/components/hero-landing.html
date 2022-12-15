@@ -1,0 +1,68 @@
+<div class="hero hero--landing invert">
+  <div class="wrapper">
+    <div class="hero__container">
+      {% include '@components/breadcrumbs.html' %}
+      <h2 class="hero__headline text-center lg:w-75 lg:mx-auto">
+        {{ pageTitle ?? 'Current Page' }}
+      </h2>
+      <hr>
+      <div class="menu-sidebar invert mb-xs lg:hidden">
+        <button class="menu-sidebar__toggle dropdown" aria-expanded="false" data-popup>
+          <span class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+          <span>Menu</span>
+        </button>
+        <ul class="reset menu-sidebar__menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Degrees &amp; Programs</a></li>
+          <li><a href="#">Research</a></li>
+          <li><a href="#">Students</a></li>
+          <li><a href="#">News &amp; Events</a></li>
+          <li><a href="#">Alumni Mentors</a></li>
+          <li><a href="#">Give</a></li>
+        </ul>
+      </div>
+      <ul class="reset cluster justify-center my-l hidden lg:flex">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Degrees &amp; Programs</a></li>
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Students</a></li>
+        <li><a href="#">News &amp; Events</a></li>
+        <li><a href="#">Alumni Mentors</a></li>
+        <li><a href="#">Give</a></li>
+      </ul>
+      <div class="overlay-gradient-blue lg:mb-3xl">
+        <img src="../img/hero-landing.jpg" alt="placeholder">
+      </div>
+      <div class="bordered-flex flex flex-col gap-xl my-xl lg:my-0 lg:mb-3xl lg:flex-row">
+        <div>
+          <div class="flow flow-space-2xs">
+            <h2 class="h3">Contact Us</h2>
+            <h3 class="font-base text-step-1">College of Arts and Sciences</h3>
+            <p class="font-bold">Office of the Dean</p>
+            <p>Stalker Hall 200<br>
+              621 Chestnut Street<br>
+              Terre Haute, IN 47809</p>
+            <p>
+              Phone: 812-237-2015
+            </p>
+            <p>
+              Email: <a href="mailto:ISU-CAS@indstate.edu">ISU-CAS@indstate.edu</a>
+            </p>
+          </div>
+        </div>
+        <div style="flex: 1;">
+          <p class="intro">
+            Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. 
+          </p>
+          <p class="intro">
+            Viverra accumsan. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

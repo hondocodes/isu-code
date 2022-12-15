@@ -1,0 +1,151 @@
+/* custom media queries */
+@custom-media --sm (width >= 32em);
+@custom-media --md (width >= 48em);
+@custom-media --lg (width >= 64em);
+@custom-media --xl (width >= 80em);
+
+/* custom selectors */
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+/* @link https://utopia.fyi/type/calculator?c=320,21,1.2,1140,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+  (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+  (var(--fluid-max-width) - var(--fluid-min-width))
+  );
+
+  /* colors */
+  --black: 0, 0, 0;
+  --white: 255, 255, 255;
+
+  --blue-lightest: 229, 239, 247;
+  --blue-light: 0, 191, 243;
+  --blue: 0, 102, 179;
+  --blue-dark: 22, 50, 92;
+  --blue-robins-egg: 135, 211, 225;
+  --teal: 134, 211, 25;
+  --aqua: 14, 191, 243;
+  --red: 255, 90, 90;
+  --orange: 255, 159, 25;
+  --green: 181, 190, 0;
+  --gray-light: 216, 216, 216;
+  --gray: 110, 99, 89;
+  --pink: 255, 90, 90;
+  --transparent: rgba(0, 0, 0, 0);
+
+  --dark: 0, 0, 0;
+  --light: 255, 255, 255;
+
+  /* layout */
+  --gap: 2rem;
+  --gutter: var(--space-xl);
+
+  --font-light: 300;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-black: 800;
+
+  /* fonts */
+  --heading: 'LubalinGraph', serif;
+  --body: 'trade-gothic-next', sans-serif;
+
+  /* misc */
+  --transition: 250ms ease;
+  --shadow: 0 0 20px 0 rgba(var(--black),0.12);
+  --shadow-light: 0px 3px 15px rgb(0 0 0 / 10%);
+  --shadow-hover: 0 0 1rem 0.5rem rgba(var(--black), 0.25);
+  --transparent: rgba(0, 0, 0, 0);
+
+
+	--header__height: 86px;
+	--js__scroll-gap: 200;
+
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+/* :root {
+  --space-3xs: clamp(0.25rem,0.23rem + 0.12vw,0.3125rem);
+  --space-2xs: clamp(0.5rem,0.45rem + 0.24vw,0.625rem);
+  --space-xs: clamp(0.75rem,0.68rem + 0.37vw,0.9375rem);
+  --space-s: clamp(1rem,0.90rem + 0.49vw,1.25rem);
+  --space-m: clamp(1.5rem,1.35rem + 0.73vw,1.875rem);
+  --space-l: clamp(2rem,1.80rem + 0.98vw,2.5rem);
+  --space-xl: clamp(3rem,2.71rem + 1.46vw,3.75rem);
+  --space-2xl: clamp(4rem,3.61rem + 1.95vw,5rem);
+  --space-3xl: clamp(6rem,5.41rem + 2.93vw,7.5rem);
+  --space-3xs-2xs: clamp(0.25rem,0.10rem + 0.73vw,0.625rem);
+  --space-2xs-xs: clamp(0.5rem,0.33rem + 0.85vw,0.9375rem);
+  --space-xs-s: clamp(0.75rem,0.55rem + 0.98vw,1.25rem);
+  --space-s-m: clamp(1rem,0.66rem + 1.71vw,1.875rem);
+  --space-m-l: clamp(1.5rem,1.11rem + 1.95vw,2.5rem);
+  --space-l-xl: clamp(2rem,1.32rem + 3.41vw,3.75rem);
+  --space-l-2xl: clamp(2rem,0.83rem + 5.85vw,5rem);
+  --space-xl-2xl: clamp(3rem,2.22rem + 3.90vw,5rem);
+  --space-2xl-3xl: clamp(4rem,2.63rem + 6.83vw,7.5rem);
+  --space-zero: clamp(-0.0625rem,-0.09rem + 0.12vw,0rem);
+  --size-step-xs: clamp(0.694375rem,0.69rem + 0.02vw,0.70375rem);
+  --size-step-s: clamp(0.833125rem,0.79rem + 0.20vw,0.9375rem);
+  --size-step-0: clamp(1.124375rem,1.12rem + 0.00vw,1.125rem);
+  --size-step-1: clamp(1.20125rem,1.02rem + 0.91vw,1.66625rem);
+  --size-step-2: clamp(1.44rem,1.14rem + 1.52vw,2.22125rem);
+  --size-step-3: clamp(1.5rem,1.25rem + 2.40vw,1.688rem);
+  --size-step-4: clamp(2.07375rem,1.34rem + 3.65vw,2.938rem);
+  --size-step-5: clamp(2.488125rem,1.41rem + 5.41vw,4.571rem);
+  --size-step-6: clamp(2.98625rem,1.42rem + 7.86vw,9.625rem);
+} */
+
+/* @keyframes fade-in-up {
+  0% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slide-left-fade {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right-fade {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+} */

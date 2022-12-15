@@ -1,0 +1,87 @@
+{% set page = { title: 'Faculty Bio' } %} {% extends '@layouts/base.html' %}
+{% block body %}
+
+<div class="hero hero--sub invert">
+  <div class="wrapper">
+    <div class="hero__container">
+      {% include '@components/breadcrumbs.html' %}
+      <div><h2 class="hero__headline">Faculty</h2></div>
+    </div>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="wrapper">
+    <div class="l-page-sidebar mb-xl lg:my-l">
+      <div>
+        <div class="flow flow-space-l">
+  
+          <div data-animation="fade-in-up" data-animate>
+            {% include '@components/menu-sidebar.html' %}
+          </div>
+  
+        </div>
+      </div>
+      <div>
+        <div class="flow flow-space-2xl">
+
+          <div>
+            <div class="flow flow-space-l">
+              <h2 class="h3">Jillian Bontjes</h2>
+              <div class="flow flow-space-l">
+                <div class="feature feature--xs" data-animation="fade-in-up" data-animate>
+                  <div class="frame" data-ratio="2:3">
+                    <img src="../img/faculty.jpg" alt="placeholder">
+                  </div>
+                  <div class="flow flow-space-2xs">
+                    <h4 class="font-base">Admissions Counselor</h4>
+                    <div>
+                      <p><strong>Office:</strong> Office of Admissions</p>
+                      <p><strong>Phone:</strong> 1 (234)-567-8910</p>
+                      <p><strong>Email:</strong> <a href="mailto:faculty@email.com" class="button-cta">faculty@email.com</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flow flow-space-s">
+              <h2 class="h3">Headline</h2>
+              <p>
+                Paragraph Text (3-5 Sentences)— Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum turpis in augue consectetur, non cursus massa vestibulum. Aenean et augue suscipit, ultrices augue vel, faucibus velit. Fusce pellentesque elit non felis commodo, non tempus urna gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="flow flow-space-s">
+              <h2 class="h3">Split Column</h2>
+              <div class="column-2 flow">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem
+                  ipsum dolor sit amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {% include '@components/accordion.html' %}
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

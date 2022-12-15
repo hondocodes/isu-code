@@ -1,0 +1,53 @@
+<footer class="footer">
+  <div class="content__container footer__grid">
+    <div class="footer__block">
+      <a href="#" class="footer__logo">
+        <span class="screen-reader-text">Indiana State University home page</span>
+        {{ inline_svg('logo') }}
+      </a>
+
+      <p class="footer__location">
+        200 North Seventh Street<br>Terre Haute, Indiana, USA<br>47809-1902
+      </p>
+      <a href="#" class="button button--blue">Contact ISU</a>
+    </div>
+    <div class="footer__block">
+      <ul class="footer__nav">
+        {% for item in ['Directory', 'Parking', 'Campus Map', 'Offices', 'Campus Safety & Reporting', 'Covid-19 Information', 'Employment', 'Be So BOLD'] %}
+        <li>
+          <a href="#">{{ item }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <ul class="footer__social">
+        {% for item in ['youtube', 'instagram', 'facebook','twitter','linkedin'] %}
+        <li>
+          <a href="#" class="footer__social__link footer__social__link--{{ item }}">
+            <span class="screen-reader-text">{{ item }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="footer__block footer__block--btt">
+      {{ inline_svg('Large-Arrow', 'footer__arrow') }}
+      <a href="#main-nav" class="footer__scroll-top">
+        Back to Top
+        <span class="material-symbols-outlined">
+          arrow_drop_up
+        </span>
+      </a>
+    </div>
+    <div class="footer__block footer__block--full">
+       <p class="footer__copy">Copyright © Indiana State University</p>
+       <ul class="footer__links">
+         {% for item in ['Policies', 'Title IX', 'Annual Notice Diveristy', 'Equity and Inclusion'] %}
+         <li>
+           <a href="#">{{ item }}</a>
+         </li>
+         {% endfor %}
+       </ul>
+
+    </div>
+  </div>
+</footer>
