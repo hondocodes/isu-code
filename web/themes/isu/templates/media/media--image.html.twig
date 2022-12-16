@@ -1,10 +1,19 @@
 {% if view_mode == 'url_only_hero' %}
   {% spaceless %}{{ content.field_media_image }}{% endspaceless %}
+{% else if view_mode == 'carousel_slide' %}
+  <a href="{% spaceless %}{{ content.field_media_image }}{% endspaceless %}" class="image-carousel__item" data-minimodal="group" data-minimodal-caption="{{ content.field_media_caption }}">
+    <img src="{% spaceless %}{{ content.field_media_image }}{% endspaceless %}" alt="placeholder">
+    {% if content.field_media_caption_long|render %}
+      <div class="image-carousel__caption">
+        {{ content.field_media_caption_long }}
+      </div>
+    {% endif %}
+  </a>
 {% else %}
   {{ content.field_media_image }}
-  {% if content.field_media_caption_rich|render %}
+  {% if content.field_media_caption_long|render %}
     <div class="media__caption">
-      {{ content.field_media_caption_rich }}
+      {{ content.field_media_caption_long }}
     </div>
   {% endif %}
 {% endif %}

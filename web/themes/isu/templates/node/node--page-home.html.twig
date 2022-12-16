@@ -1,3 +1,4 @@
+{% import "@isu/macros/macros.html.twig" as macros %}
 <div class="hero hero--home hero--center" style="background-image: url('{% spaceless %}{{ content.field_image }}{% endspaceless %}');">
   <h2 class="hero__headline">
     <span>
@@ -35,5 +36,17 @@
 <div class="region overflow-visible bg-light lg:py-xl">
   <div class="wrapper">
     {{ content.field_feature_panel }}
+  </div>
+</div>
+
+<div class="region bg-light">
+  <div class="wrapper">
+    <div class="image-carousel__container flow">
+      {% if content.field_img_carousel_heading|render %}
+        <h2>{{ content.field_img_carousel_heading }}</h2>
+      {% endif %}
+      {{ macros.inline_svg('Large-Arrow', 'image-carousel__arrow') }}
+      {{ content.field_image_carousel }}
+    </div>
   </div>
 </div>
