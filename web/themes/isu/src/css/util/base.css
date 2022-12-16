@@ -49,6 +49,11 @@ ol.reset,
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  & li {
+    &::marker {
+      content: '';
+    }
+  }
 }
 
 .reset,
@@ -186,7 +191,7 @@ a {
   }
 }
 
-*:focus { 
+*:focus {
 	outline: dashed;
   outline-offset: 1px;
   outline-width: 3px;
