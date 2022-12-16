@@ -20,11 +20,7 @@
           {{ content.field_hero_feature_image }}
         </div>
         {% if content.field_hero_feature_video|render %}
-          <a href="{% spaceless %}{{ content.field_hero_feature_video }}{% endspaceless %}" class="feature-panel__video" data-minimodal-title="Placeholder" data-minimodal>
-            <span class="material-symbols-outlined icon-fill">
-              play_arrow
-            </span>
-          </a>
+          {{ content.field_hero_feature_video }}
         {% endif %}
       </div>
       <div class="feature-panel__content">
