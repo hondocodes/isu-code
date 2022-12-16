@@ -1,0 +1,7 @@
+{% if content.field_p_image_position['#items'].getString() == 'right' %}
+  <div class="feature-panel feature-panel--swap">
+{% else %}
+  <div class="feature-panel">
+{% endif %}
+{{ content.field_p_feature }}
+</div>
