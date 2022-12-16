@@ -20,6 +20,7 @@ regions:
   sticky_nav: 'Sticky Navigation'
   breadcrumb: 'Breadcrumb'
   messages: 'Messages'
+  tabs: 'Tabs/System Messages'
   content: 'Content'
   context_before_main: 'Context Before Main'
   context_after_main: 'Context After Main'
