@@ -1,6 +1,6 @@
 {% macro inline_svg(img, cls) %}
   <span class="svg svg--{{ img }} {% if cls %}{{ cls }} {% endif %}">
-    {% set path = '@isu/../dist/img/' ~ img ~ '.svg' %}
+    {% set path = '@isu/../dist/svg/' ~ img ~ '.svg' %}
     {% include (path) %}
   </span>
 {% endmacro %}
