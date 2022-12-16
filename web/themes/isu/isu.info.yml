@@ -1,0 +1,30 @@
+name: Indiana State University
+type: theme
+description: A theme for the Indiana State University site.
+base theme: false
+core_version_requirement: ^8 || ^9
+libraries:
+  - isu/global-css
+  - isu/global-js
+  - isu/behaviors
+
+ckeditor_stylesheets:
+  - dist/css/main.css
+
+regions:
+  alerts: 'Alerts'
+  primary_nav: 'Primary Navigation'
+  topbar_nav: 'Top-Bar Navigation'
+  tactical_nav: 'Tactical Navigation'
+  sub_nav: 'Sub-Navigation'
+  sticky_nav: 'Sticky Navigation'
+  breadcrumb: 'Breadcrumb'
+  messages: 'Messages'
+  content: 'Content'
+  context_before_main: 'Context Before Main'
+  context_after_main: 'Context After Main'
+  context_after_nav: 'Context After Nav'
+  context_before_components: 'Context Before Components'
+  context_after_components: 'Context After Components'
+  context_tactical: 'Context Tactical'
+  footer: 'Footer'

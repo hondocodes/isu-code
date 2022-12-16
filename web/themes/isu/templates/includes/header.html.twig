@@ -1,0 +1,85 @@
+{% import "@isu/macros/macros.html.twig" as macros %}
+<header class="header">
+  <nav class="header__interior" id="main-nav">
+    <div class="header__mobile__nav">
+      <a href="/" class="header__logo header__logo--mobile">
+        <span class="screen-reader-text">Indiana State University</span>
+        {{ macros.inline_svg('logo') }}
+      </a>
+      <button class="header__toggle header__toggle--search search--open" aria-expanded="false">
+        <span class="screen-reader-text">Toggle Search</span>
+      </button>
+      <button class="header__toggle header__toggle--menu menu--open" aria-expanded="false" data-popup>
+        <span class="screen-reader-text">Toggle Navigation</span>
+        <span class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </span>
+      </button>
+    </div>
+    <div class="header__flyout header__flyout--menu">
+      <div class="header__nav__wrapper">
+        <a href="/" class="header__logo header__logo--desktop">
+          <span class="screen-reader-text">Indiana State University</span>
+          {{ macros.inline_svg('logo') }}
+        </a>
+        {{ page.primary_nav }}
+      </div>
+      <div class="header__topbar">
+        {{ page.topbar_nav }}
+        {{ page.tactical_nav }}
+      </div>
+    </div>
+  </nav>
+  <div class="header__flyout header__flyout--search">
+    <div class="header__search">
+      <p class="header__heading">What can we help you find?</p>
+      <form class="header__search__form">
+        <label class="header__search__label">
+          <span class="screen-reader-text">Search</span>
+          <input type="search" id="search-main" class="header__search__input" placeholder="Search">
+        </label>
+        <button class="header__search__submit">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+          <span class="header__search__submit__text">
+            Search
+          </span>
+        </button>
+      </form>
+      <p class="header__search__result">
+        Top Searches
+      </p>
+      <ul class="header__search__list">
+        <li>
+          <a href="#" class="button button-rounded">Academic Calendar</a>
+        </li>
+        <li>
+          <a href="#" class="button button-rounded">Housing</a>
+        </li>
+        <li>
+          <a href="#" class="button button-rounded">Transcripts</a>
+        </li>
+        <li>
+          <a href="#" class="button button-rounded">Library</a>
+        </li>
+        <li>
+          <a href="#" class="button button-rounded">Employment</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<header class="sticky-header">
+  <nav aria-label="Main Navigation">
+    <div class="sticky-header__interior">
+      <a href="#" class="header__logo">
+        <span class="screen-reader-text">Indiana State University</span>
+        {{ macros.inline_svg('logo') }}
+      </a>
+      {{ page.sticky_nav }}
+  </div>
+</nav>
+</header>

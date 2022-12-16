@@ -1,0 +1,13 @@
+<ul class="primary__nav--sub">
+  <li class="header__nav__featured">
+    {{ content.field_p_overview_link }}
+    <span class="material-symbols-outlined">
+      arrow_right
+    </span>
+  </li>
+  {% if content.field_p_subnav_links|render %}
+    <li>
+      {{ content.field_p_subnav_links }}
+    </li>
+  {% endif %}
+</ul>

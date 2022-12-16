@@ -1,0 +1,17 @@
+{% import _self as menus %}
+
+{{ menus.menu_links(items, attributes, 0) }}
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    <ul class="sticky-header__cta">
+      {% for item in items %}
+        {% set link_classes = ['button button--blue'] %}
+        <li>{{ link(item.title, item.url, item.attributes.addClass(link_classes)) }}</li>
+      {% endfor %}
+      <li>
+        <button class="sticky-header-search search--open" aria-label="Toggle Search Drawer" aria-expanded="false" />
+      </li>
+    </ul>
+  {% endif %}
+{% endmacro %}

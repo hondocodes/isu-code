@@ -1,0 +1,21 @@
+global-css:
+  version: 1.1
+  css:
+    theme:
+      dist/css/main.css: {}
+
+global-js:
+  version: 1.1
+  js:
+    dist/js/main.js: {}
+
+behaviors:
+  version: 1.0
+  js:
+    js/isu-behaviors.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

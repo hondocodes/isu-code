@@ -1,0 +1,61 @@
+/* AUTO GRID
+Related Every Layout: https://every-layout.dev/layouts/grid/
+More info on the flexible nature: https://piccalil.li/tutorial/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/
+A flexible layout that will create an auto-fill grid with
+configurable grid item sizes
+
+CUSTOM PROPERTIES AND CONFIGURATION
+--gutter (var(--space-s-m)): This defines the space
+between each item.
+
+--grid-min-item-size (16rem): How large each item should be
+ideally, as a minimum.
+
+--grid-placement (auto-fill): Set either auto-fit or auto-fill
+to change how empty grid tracks are handled */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill),
+    minmax(var(--grid-min-item-size, 16rem), 1fr)
+  );
+  gap: var(--gutter, var(--space-s-l));
+
+  --flow-space: var(--space-s-l);
+}
+
+.grid[data-rows='masonry'] {
+  grid-template-rows: masonry;
+  align-items: start;
+}
+
+.grid[data-layout='1/2'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 50vw, 26rem);
+
+  .l-page-sidebar & {
+    --grid-min-item-size: clamp(16rem, 50vw, 20rem);
+  }
+}
+
+.grid[data-layout='1/3'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: var(--grid-min-item-size-custom, clamp(16rem, 50vw, 20rem));
+
+  &.grid--gallery {
+    --grid-min-item-size: var(--grid-min-item-size-custom, clamp(12rem, 50vw, 12rem));
+  }
+}
+
+.grid[data-layout='1/4'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: var(--grid-min-item-size-custom, clamp(10rem, 50vw, 16rem));
+}
+
+.grid--events {
+  @media only screen and (max-width: 1142px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jc3MvY29tcG9zaXRpb25zL2dyaWQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6ImdyaWQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogQVVUTyBHUklEXG5SZWxhdGVkIEV2ZXJ5IExheW91dDogaHR0cHM6Ly9ldmVyeS1sYXlvdXQuZGV2L2xheW91dHMvZ3JpZC9cbk1vcmUgaW5mbyBvbiB0aGUgZmxleGlibGUgbmF0dXJlOiBodHRwczovL3BpY2NhbGlsLmxpL3R1dG9yaWFsL2NyZWF0ZS1hLXJlc3BvbnNpdmUtZ3JpZC1sYXlvdXQtd2l0aC1uby1tZWRpYS1xdWVyaWVzLXVzaW5nLWNzcy1ncmlkL1xuQSBmbGV4aWJsZSBsYXlvdXQgdGhhdCB3aWxsIGNyZWF0ZSBhbiBhdXRvLWZpbGwgZ3JpZCB3aXRoXG5jb25maWd1cmFibGUgZ3JpZCBpdGVtIHNpemVzXG5cbkNVU1RPTSBQUk9QRVJUSUVTIEFORCBDT05GSUdVUkFUSU9OXG4tLWd1dHRlciAodmFyKC0tc3BhY2Utcy1tKSk6IFRoaXMgZGVmaW5lcyB0aGUgc3BhY2VcbmJldHdlZW4gZWFjaCBpdGVtLlxuXG4tLWdyaWQtbWluLWl0ZW0tc2l6ZSAoMTZyZW0pOiBIb3cgbGFyZ2UgZWFjaCBpdGVtIHNob3VsZCBiZVxuaWRlYWxseSwgYXMgYSBtaW5pbXVtLlxuXG4tLWdyaWQtcGxhY2VtZW50IChhdXRvLWZpbGwpOiBTZXQgZWl0aGVyIGF1dG8tZml0IG9yIGF1dG8tZmlsbFxudG8gY2hhbmdlIGhvdyBlbXB0eSBncmlkIHRyYWNrcyBhcmUgaGFuZGxlZCAqL1xuLmdyaWQge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdChcbiAgICB2YXIoLS1ncmlkLXBsYWNlbWVudCwgYXV0by1maWxsKSxcbiAgICBtaW5tYXgodmFyKC0tZ3JpZC1taW4taXRlbS1zaXplLCAxNnJlbSksIDFmcilcbiAgKTtcbiAgZ2FwOiB2YXIoLS1ndXR0ZXIsIHZhcigtLXNwYWNlLXMtbCkpO1xuXG4gIC0tZmxvdy1zcGFjZTogdmFyKC0tc3BhY2Utcy1sKTtcbn1cblxuLmdyaWRbZGF0YS1yb3dzPSdtYXNvbnJ5J10ge1xuICBncmlkLXRlbXBsYXRlLXJvd3M6IG1hc29ucnk7XG4gIGFsaWduLWl0ZW1zOiBzdGFydDtcbn1cblxuLmdyaWRbZGF0YS1sYXlvdXQ9JzEvMiddIHtcbiAgLS1ncmlkLXBsYWNlbWVudDogYXV0by1maXQ7XG4gIC0tZ3JpZC1taW4taXRlbS1zaXplOiBjbGFtcCgxNnJlbSwgNTB2dywgMjZyZW0pO1xuXG4gIC5sLXBhZ2Utc2lkZWJhciAmIHtcbiAgICAtLWdyaWQtbWluLWl0ZW0tc2l6ZTogY2xhbXAoMTZyZW0sIDUwdncsIDIwcmVtKTtcbiAgfVxufVxuXG4uZ3JpZFtkYXRhLWxheW91dD0nMS8zJ10ge1xuICAtLWdyaWQtcGxhY2VtZW50OiBhdXRvLWZpdDtcbiAgLS1ncmlkLW1pbi1pdGVtLXNpemU6IHZhcigtLWdyaWQtbWluLWl0ZW0tc2l6ZS1jdXN0b20sIGNsYW1wKDE2cmVtLCA1MHZ3LCAyMHJlbSkpO1xuXG4gICYuZ3JpZC0tZ2FsbGVyeSB7XG4gICAgLS1ncmlkLW1pbi1pdGVtLXNpemU6IHZhcigtLWdyaWQtbWluLWl0ZW0tc2l6ZS1jdXN0b20sIGNsYW1wKDEycmVtLCA1MHZ3LCAxMnJlbSkpO1xuICB9XG59XG5cbi5ncmlkW2RhdGEtbGF5b3V0PScxLzQnXSB7XG4gIC0tZ3JpZC1wbGFjZW1lbnQ6IGF1dG8tZml0O1xuICAtLWdyaWQtbWluLWl0ZW0tc2l6ZTogdmFyKC0tZ3JpZC1taW4taXRlbS1zaXplLWN1c3RvbSwgY2xhbXAoMTByZW0sIDUwdncsIDE2cmVtKSk7XG59XG5cbi5ncmlkLS1ldmVudHMge1xuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDExNDJweCkge1xuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMWZyO1xuICB9XG59XG4iXX0= */

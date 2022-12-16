@@ -1,0 +1,9 @@
+<ul class="primary__nav--sub-columns">
+  {% for item in items %}
+    {% if item['content']['#title'] %}
+      <li class="primary__nav__item--sub">
+        <a href="{{ item['content']['#url'] }}" class="primary__nav__link--sub">{{ item['content']['#title'] }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

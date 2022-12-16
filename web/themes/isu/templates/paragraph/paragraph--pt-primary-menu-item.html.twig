@@ -1,0 +1,10 @@
+{% if content.field_p_link_url|render %}
+  <li class="primary__nav__item">
+    <a href="{{ content.field_p_link_url }}" class="header__nav__link">{{ content.field_p_link_title }}</a>
+  </li>
+{% else %}
+  <li class="primary__nav__item">
+    <button class="header__nav__toggle header__nav__toggle--menu" aria-expanded="false" data-popup>{{ content.field_p_link_title }}</button>
+    {{ content.field_p_mega_menu }}
+  </li>
+{% endif %}
