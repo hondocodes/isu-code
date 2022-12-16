@@ -1,6 +1,6 @@
 {% import "@isu/macros/macros.html.twig" as macros %}
 <main id="main-content">
-  <div class="hero hero--home hero--center" style="background-image: url('{% spacesless %}{{ drupal_field('field_image', 'node', (node.id ? node.id : node)) }}{% endspaceless %}');">
+  <div class="hero hero--home hero--center" style="background-image: url('{% spaceless %}{{ drupal_field('field_image', 'node', (node.id ? node.id : node)) }}{% endspaceless %}');">
     <h2 class="hero__headline">
       <span>
         <span data-animation="slide-in" data-animate>{{ drupal_field('field_hero_h2_larger_text', 'node', (node.id ? node.id : node)) }}</span>
@@ -15,7 +15,7 @@
       {{ macros.inline_svg('Large-Arrow','hero__arrow') }}
     </a>
   </div>
-
+  {{ content }}
   <!-- <div class="region bg-blue invert" id="main-content">
     <div class="wrapper">
       {% include '@components/feature-panel.html' with {video: true, whiteBtn: true, imgWide: true, item: 'Committed to Helping You Succeed', image: '../img/home1.jpg'} %}
@@ -75,10 +75,10 @@
 
           <div class="image-carousel__nav">
             <button class="image-carousel__nav__btn image-carousel__previous" aria-label="Previous Slide">
-              {{ inline_svg('icon-arrow') }}
+              {{ macros.inline_svg('icon-arrow') }}
             </button>
             <button class="image-carousel__nav__btn image-carousel__next" aria-label="Next Slide">
-              {{ inline_svg('icon-arrow') }}
+              {{ macros.inline_svg('icon-arrow') }}
             </button>
           </div>
         </div>
