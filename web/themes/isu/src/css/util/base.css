@@ -49,9 +49,9 @@ ol.reset,
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
-  & li {
+  li {
     &::marker {
-      content: '';
+      display: none;
     }
   }
 }
