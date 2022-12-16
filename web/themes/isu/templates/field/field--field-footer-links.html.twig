@@ -1,7 +1,7 @@
 <ul class="footer__nav">
   {% for item in items %}
     {% if item['content']['#title'] %}
-      <li class="primary__nav__item--sub">
+      <li>
         <a href="{{ item['content']['#url'] }}">{{ item['content']['#title'] }}</a>
       </li>
     {% endif %}
