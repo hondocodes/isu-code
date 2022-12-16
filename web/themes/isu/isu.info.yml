@@ -18,7 +18,6 @@ regions:
   tactical_nav: 'Tactical Navigation'
   sub_nav: 'Sub-Navigation'
   sticky_nav: 'Sticky Navigation'
-  footer_nav: 'Footer Navigation'
   breadcrumb: 'Breadcrumb'
   messages: 'Messages'
   tabs: 'Tabs/System Messages'
