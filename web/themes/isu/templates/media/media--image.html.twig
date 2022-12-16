@@ -1,0 +1,10 @@
+{% if view_mode == 'url_only_hero' %}
+  {% spaceless %}{{ content.field_media_image }}{% endspaceless %}
+{% else %}
+  {{ content.field_media_image }}
+  {% if content.field_media_caption_rich|render %}
+    <div class="media__caption">
+      {{ content.field_media_caption_rich }}
+    </div>
+  {% endif %}
+{% endif %}
