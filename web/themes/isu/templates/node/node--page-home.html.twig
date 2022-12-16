@@ -50,3 +50,28 @@
     </div>
   </div>
 </div>
+
+<div class="content__half-white py-xl mb-2xl">
+  <div class="routing-panel__container">
+    {% if content.field_ybh_heading|render %}
+      {% if content.field_heading_tag['#items'].getString() == 'H2' %}
+        <h2 class="routing-panel__heading">{{ content.field_ybh_heading }}</h2>
+      {% elseif content.field_heading_tag['#items'].getString() == 'H3' %}
+        <h3 class="routing-panel__heading">{{ content.field_ybh_heading }}</h3>
+      {% elseif content.field_heading_tag['#items'].getString() == 'H4' %}
+        <h4 class="routing-panel__heading">{{ content.field_ybh_heading }}</h4>
+      {% elseif content.field_heading_tag['#items'].getString() == 'H5' %}
+        <h5 class="routing-panel__heading">{{ content.field_ybh_heading }}</h5>
+      {% elseif content.field_heading_tag['#items'].getString() == 'H6' %}
+        <h6 class="routing-panel__heading">{{ content.field_ybh_heading }}</h6>
+      {% else %}
+        <p class="routing-panel__heading">{{ content.field_ybh_heading }}</p>
+      {% endif %}
+    {% endif %}
+    {% if content.field_ybh_cards|render %}
+      <ul class="routing-panel">
+        {% content.field_ybh_cards %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
