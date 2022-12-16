@@ -1,0 +1,16 @@
+{% if view_mode == 'feature_panel' %}
+  <a href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" class="feature-panel__video" data-minimodal-title="Placeholder" data-minimodal>
+    <span class="material-symbols-outlined icon-fill">
+      play_arrow
+    </span>
+  </a>
+{% else %}
+  <div class="media">
+    <div class="video">
+      {{ content.field_media_oembed_video_1 }}
+    </div>
+    {% if content.field_media_caption|render %}
+      <div class="media__caption"><p>{{ content.field_media_caption }}</p></div>
+    {% endif %}
+  </div>
+{% endif %}
