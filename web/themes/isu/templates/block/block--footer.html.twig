@@ -1,0 +1,66 @@
+{% import "@isu/macros/macros.html.twig" as macros %}
+<footer class="footer">
+  <div class="content__container footer__grid">
+    <div class="footer__block">
+      <a href="#" class="footer__logo">
+        <span class="screen-reader-text">Indiana State University home page</span>
+        {{ macros.inline_svg('logo') }}
+      </a>
+
+      {% if content.field_address|render %}
+        <p class="footer__location">
+          {{ content.field_address }}
+        </p>
+      {% endif %}
+      {% if content.field_cta_button|render %}
+        {{ content.field_cta_button }}
+      {% endif %}
+    </div>
+    <div class="footer__block">
+      <ul class="footer__nav">
+      </ul>
+      <ul class="footer__social">
+        <li>
+          <a href="{% spaceless %}{{ content.field_youtube_link }}{% endspaceless %}" class="footer__social__link footer__social__link--youtube">
+            <span class="screen-reader-text">Youtube</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% spaceless %}{{ content.field_instagram_link }}{% endspaceless %}" class="footer__social__link footer__social__link--instagram">
+            <span class="screen-reader-text">Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% spaceless %}{{ content.field_facebook_link }}{% endspaceless %}" class="footer__social__link footer__social__link--facebook">
+            <span class="screen-reader-text">Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% spaceless %}{{ content.field_twitter_link }}{% endspaceless %}" class="footer__social__link footer__social__link--twitter">
+            <span class="screen-reader-text">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% spaceless %}{{ content.field_linkedin_link }}{% endspaceless %}" class="footer__social__link footer__social__link--linkedin">
+            <span class="screen-reader-text">LinkedIn</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__block footer__block--btt">
+      {{ macros.inline_svg('Large-Arrow', 'footer__arrow') }}
+      <a href="#main-nav" class="footer__scroll-top">
+        Back to Top
+        <span class="material-symbols-outlined">
+          arrow_drop_up
+        </span>
+      </a>
+    </div>
+    <div class="footer__block footer__block--full">
+       <p class="footer__copy">Copyright © Indiana State University</p>
+       <ul class="footer__links">
+         {{ content.field_bottom_links }}
+       </ul>
+    </div>
+  </div>
+</footer>

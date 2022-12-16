@@ -29,8 +29,16 @@ function isu_theme_suggestions_page_alter(array &$suggestions, array $variables)
  */
 function isu_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   if(isset($variables['elements']['content']['field_items'])) {
-    if($variables['elements']['content']['field_pn_items']['#bundle'] == 'primary_nav') {
+    if($variables['elements']['content']['field_items']['#bundle'] == 'primary_nav') {
       $suggestions[] = 'block__primary_nav';
     }
   }
+
+  if(isset($variables['elements']['content']['field_bottom_links'])) {
+    if($variables['elements']['content']['field_bottom_links']['#bundle'] == 'footer') {
+      $suggestions[] = 'block__footer';
+    }
+  }
+
+
 }

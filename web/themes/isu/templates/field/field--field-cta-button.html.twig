@@ -1,0 +1,7 @@
+{% for item in items %}
+  {% if item['content']['#title'] %}
+    <a href="{{ item['content']['#url'] }}" class="button button--blue">
+      {{ item['content']['#title'] }}
+    </a>
+  {% endif %}
+{% endfor %}
