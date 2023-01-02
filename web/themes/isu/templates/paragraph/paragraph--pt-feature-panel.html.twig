@@ -1,7 +1,19 @@
-{% if content.field_p_image_position['#items'].getString() == 'right' %}
-  <div class="feature-panel feature-panel--swap">
+{% if view_mode == 'home' %}
+  {% if content.field_p_image_position['#items'].getString() == 'right' %}
+    <div class="feature-panel feature-panel--swap">
+  {% else %}
+    <div class="feature-panel">
+  {% endif %}
+    {{ content.field_p_feature }}
+  </div>
 {% else %}
-  <div class="feature-panel">
+  <div>
+    {% if content.field_p_image_position['#items'].getString() == 'right' %}
+      <div class="feature-panel feature-panel--swap">
+    {% else %}
+      <div class="feature-panel">
+    {% endif %}
+      {{ content.field_p_feature }}
+    </div>
+  </div>
 {% endif %}
-  {{ content.field_p_feature }}
-</div>

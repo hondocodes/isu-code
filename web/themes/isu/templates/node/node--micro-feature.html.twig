@@ -1,15 +1,31 @@
-<div class="feature-panel__img feature-panel__img--pull">
-  <div class="frame relative" data-ratio="3:2">
-    {{ content.field_image }}
+{% if view_mode == 'home' %}
+  <div class="feature-panel__img feature-panel__img--pull">
+    <div class="frame relative" data-ratio="3:2">
+      {{ content.field_image }}
+    </div>
+    {% if content.field_modal_content|render %}
+      {{ content.field_modal_content }}
+    {% endif %}
   </div>
-  {% if content.field_modal_content|render %}
-    {{ content.field_modal_content }}
-  {% endif %}
-</div>
-<div class="feature-panel__content">
-  <h2 class="feature-panel__heading">{{ label }}</h2>
-  {{ content.field_content }}
-  {% if content.field_feature_cta|render %}
-    {{ content.field_feature_cta }}
-  {% endif %}
-</div>
+  <div class="feature-panel__content">
+    <h2 class="feature-panel__heading">{{ label }}</h2>
+    {{ content.field_content }}
+    {% if content.field_feature_cta|render %}
+      {{ drupal_field('field_feature_cta', 'paragraph', paragraph.id.value, 'home') }}
+    {% endif %}
+  </div>
+{% else %}
+  <div class="feature-panel__img overlay-gradient-white ">
+    {{ content.field_image }}
+    {% if content.field_modal_content|render %}
+      {{ content.field_modal_content }}
+    {% endif %}
+  </div>
+  <div class="feature-panel__content">
+    <h2 class="feature-panel__heading">{{ label }}</h2>
+    {{ content.field_content }}
+    {% if content.field_feature_cta|render %}
+      {{ drupal_field('field_feature_cta', 'paragraph', paragraph.id.value, 'default') }}
+    {% endif %}
+  </div>
+{% endif %}

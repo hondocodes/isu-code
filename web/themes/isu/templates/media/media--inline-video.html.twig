@@ -4,13 +4,15 @@
       play_arrow
     </span>
   </a>
+{% elseif view_mode == 'home' %}
+  <a href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" class="feature-panel__video" data-minimodal-title="Placeholder" data-minimodal>
+    <span class="material-symbols-outlined icon-fill">
+      play_arrow
+    </span>
+  </a>
 {% else %}
-  <div class="media">
-    <div class="video">
-      {{ content.field_media_oembed_video_1 }}
-    </div>
-    {% if content.field_media_caption|render %}
-      <div class="media__caption"><p>{{ content.field_media_caption }}</p></div>
-    {% endif %}
-  </div>
+  <a class="button-arrow button-arrow--blue-dark button-arrow--play absolute z-10 bottom-xs left-xs" href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal="" data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
+    <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
+    Watch Video
+  </a>
 {% endif %}
