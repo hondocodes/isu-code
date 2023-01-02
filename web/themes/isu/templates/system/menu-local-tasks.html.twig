@@ -1,0 +1,10 @@
+<div class="container">
+  {% if primary %}
+    <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+    <ul class="tasks__nav tasks__nav--primary">{{ primary }}</ul>
+  {% endif %}
+  {% if secondary %}
+    <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+    <ul class="tasks__nav tasks__nav--secondary">{{ secondary }}</ul>
+  {% endif %}
+</div>
