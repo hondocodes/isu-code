@@ -1,7 +1,9 @@
 <main id="main-content">
   <div class="wrapper">
     <div class="l-page-sidebar mb-xl lg:my-l">
-      <div></div>
+      <div>
+        {{ drupal_field('field_sidebar_modules', 'node', (node.id ? node.id : node)) }}
+      </div>
       <div>
         <div class="flow relative">
           <div class="flow flow-space-2xl">
