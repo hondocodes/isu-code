@@ -10,6 +10,19 @@
       play_arrow
     </span>
   </a>
+{% elseif view_mode == 'full_width' %}
+  <div class="frame border-radius relative overlay-gradient-white" data-ratio="3:2">
+    {{ content.field_media_placeholder }}
+    <a class="button-arrow button-arrow--play button-arrow--blue-dark absolute z-10 bottom-xs left-xs" href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal="" data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
+      <span class="material-symbols-outlined" aria-hidden="true">
+        play_arrow
+      </span>
+      Watch Video
+    </a>
+  </div>
+  {% if content.field_media_caption|render %}
+    <p class="text-step-s font-bold">{{ content.field_media_caption }}</p>
+  {% endif %}
 {% else %}
   <a class="button-arrow button-arrow--blue-dark button-arrow--play absolute z-10 bottom-xs left-xs" href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal="" data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
     <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
