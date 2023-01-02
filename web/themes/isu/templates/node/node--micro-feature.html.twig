@@ -11,7 +11,7 @@
     <h2 class="feature-panel__heading">{{ label }}</h2>
     {{ content.field_content }}
     {% if content.field_feature_cta|render %}
-      {{ drupal_field('field_feature_cta', 'paragraph', paragraph.id.value, 'home') }}
+      {{ drupal_field('field_feature_cta', 'node', (node.id ? node.id : node)), 'home') }}
     {% endif %}
   </div>
 {% else %}
@@ -25,7 +25,7 @@
     <h2 class="feature-panel__heading">{{ label }}</h2>
     {{ content.field_content }}
     {% if content.field_feature_cta|render %}
-      {{ drupal_field('field_feature_cta', 'paragraph', paragraph.id.value, 'default') }}
+      {{ drupal_field('field_feature_cta', 'node', (node.id ? node.id : node)), 'default') }}
     {% endif %}
   </div>
 {% endif %}
