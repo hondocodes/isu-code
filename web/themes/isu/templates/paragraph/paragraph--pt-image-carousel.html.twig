@@ -1,12 +1,28 @@
 {% import "@isu/macros/macros.html.twig" as macros %}
-<div class="image-carousel">
-  {{ content.field_p_images }}
-  <div class="image-carousel__nav">
-    <button class="image-carousel__nav__btn image-carousel__previous" aria-label="Previous Slide">
-      {{ macros.inline_svg('icon-arrow') }}
-    </button>
-    <button class="image-carousel__nav__btn image-carousel__next" aria-label="Next Slide">
-      {{ macros.inline_svg('icon-arrow') }}
-    </button>
+{% if view_mode == 'home' %}
+  <div class="image-carousel">
+    {{ content.field_p_images }}
+    <div class="image-carousel__nav">
+      <button class="image-carousel__nav__btn image-carousel__previous" aria-label="Previous Slide">
+        {{ macros.inline_svg('icon-arrow') }}
+      </button>
+      <button class="image-carousel__nav__btn image-carousel__next" aria-label="Next Slide">
+        {{ macros.inline_svg('icon-arrow') }}
+      </button>
+    </div>
   </div>
-</div>
+{% else %}
+  <div>
+    <div class="image-carousel">
+      {{ content.field_p_images }}
+      <div class="image-carousel__nav">
+        <button class="image-carousel__nav__btn image-carousel__previous" aria-label="Previous Slide">
+          {{ macros.inline_svg('icon-arrow') }}
+        </button>
+        <button class="image-carousel__nav__btn image-carousel__next" aria-label="Next Slide">
+          {{ macros.inline_svg('icon-arrow') }}
+        </button>
+      </div>
+    </div>
+  </div>
+{% endif %}
