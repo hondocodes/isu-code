@@ -9,6 +9,15 @@
       </div>
     {% endif %}
   </a>
+{% elseif view_mode == 'full_width' %}
+  <div class="frame border-radius" data-ratio="3:2">
+    {{ content.field_media_image }}
+  </div>
+  {% if content.field_media_caption_long|render %}
+    <p class="text-step-s font-bold">
+      {{ content.field_media_caption_long }}
+    </p>
+  {% endif %}
 {% else %}
   {{ content.field_media_image }}
 {% endif %}
