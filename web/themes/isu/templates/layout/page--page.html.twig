@@ -2,7 +2,16 @@
   <div class="wrapper">
     <div class="l-page-sidebar mb-xl lg:my-l">
       <div>
-        {{ drupal_field('field_sidebar_modules', 'node', (node.id ? node.id : node)) }}
+        <div class="flow flow-space-l">
+          <div data-animation="fade-in-up" data-animate>
+            {{ page.sub_nav }}
+          </div>
+        </div>
+        {% if not node.field_sidebar_modules.isempty %}
+          <div class="hidden flow flow-space-l lg:block">
+            {{ drupal_field('field_sidebar_modules', 'node', (node.id ? node.id : node)) }}
+          </div>
+        {% endif %}
       </div>
       <div>
         <div class="flow relative">
