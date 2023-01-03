@@ -1,0 +1,40 @@
+<div class="box bg-blue-robins-egg text-blue-dark border-radius shadow-md p-l" data-animation="fade-in-up" data-animate>
+  <div class="flow">
+    {% if content.field_heading|render %}
+      {% if content.field_heading_tag['#items'].getString() == 'H2' %}
+        <h2 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h2>
+      {% elseif content.field_heading_tag['#items'].getString() == 'H3' %}
+        <h3 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h3>
+      {% elseif content.field_heading_tag['#items'].getString() == 'H4' %}
+        <h4 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h4>
+      {% elseif content.field_heading_tag['#items'].getString() == 'H5' %}
+        <h5 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h5>
+      {% elseif content.field_heading_tag['#items'].getString() == 'H6' %}
+        <h6 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h6>
+      {% else %}
+        <p class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</p>
+      {% endif %}
+    {% endif %}
+
+    <div class="bordered">
+      <div class="flow flow-space-m">
+        {% if content.field_pt_sub_heading|render %}
+          <div><strong>{{ content.field_pt_sub_heading }}</strong></div>
+        {% endif %}
+        {{ content.field_content }}
+        {% if content.field_email|render %}
+          {{ content.field_email }}
+        {% endif %}
+        <div>
+          {% if content.field_phone|render %}
+            <div><strong>Phone:</strong> {{ content.field_phone }}</div>
+          {% endif %}
+          {% if content.field_phone|render %}
+            <div><strong>Fax:</strong> {{ content.field_fax }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
