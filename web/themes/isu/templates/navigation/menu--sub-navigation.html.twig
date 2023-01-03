@@ -1,0 +1,43 @@
+{% import _self as menus %}
+
+<div class="menu-sidebar">
+  <h2 class="menu-sidebar__heading">
+    <span>Menu</span>
+  </h2>
+  <button class="menu-sidebar__toggle dropdown" aria-expanded="false" data-popup>
+    <span class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+    <span>Menu</span>
+  </button>
+  {{ menus.menu_links(items, attributes, 0) }}
+  {% macro menu_links(items, attributes, menu_level) %}
+    {% import _self as menus %}
+    {% if items %}
+      {% if menu_level == 0 %}
+        <ul class="reset menu-sidebar__menu">
+      {% else %}
+        <ul class="reset">
+      {% endif %}
+      {% for item in items %}
+        {% if item.in_active_trail %}
+          <li class="active">
+        {% else %}
+          <li>
+        {% endif %}
+        {% if item.below %}
+          <button aria-expanded="false" data-popup>
+            {{ item.title }}
+          </button>
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% else %}
+          {{ link(item.title, item.url) }}
+        {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endmacro %}
+</div>
