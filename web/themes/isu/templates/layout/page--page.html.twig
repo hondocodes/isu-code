@@ -21,6 +21,13 @@
           </div>
         </div>
       </div>
+      {% if not node.field_sidebar_modules.isempty %}
+        <div class="mt-l lg:hidden">
+          <div class="flow flow-space-l">
+            {{ drupal_field('field_sidebar_modules', 'node', (node.id ? node.id : node)) }}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </div>
 </main>
