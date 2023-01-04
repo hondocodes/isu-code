@@ -20,4 +20,7 @@
   {% endif %}
 {% else %}
   {{ content.field_media_image }}
+  <div class="media__caption">
+    <p>{{ content.field_media_caption_long }}</p>
+  </div>
 {% endif %}
