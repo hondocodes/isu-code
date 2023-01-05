@@ -18,6 +18,8 @@
       {{ content.field_media_caption_long }}
     </p>
   {% endif %}
+{% elseif view_mode == 'no_caption' %}
+  {{ content.field_media_image }}
 {% else %}
   {{ content.field_media_image }}
   <div class="media__caption">

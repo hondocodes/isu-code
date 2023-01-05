@@ -1,0 +1,26 @@
+{% if content.field_p_image %}
+  <div class="overlay-gradient-blue lg:mb-3xl">
+    {{ content.field_p_image }}
+  </div>
+  <div class="flow lg:mt-[-25rem] lg:z-10 lg:flex lg:items-center lg:gap-xl">
+    <div>
+      <h2 class="hero__headline">
+        {{ content.field_p_h1 }}
+      </h2>
+      {% if content.field_p_intro_text|render %}
+        <div class="intro lg:w-75">
+          {{ content.field_p_intro_text }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% else %}
+  <div>
+    <h2 class="hero__headline">{{ content.field_p_h1 }}</h2>
+    {% if content.field_p_intro_text|render %}
+      <div class="intro">
+        {{ content.field_p_intro_text }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
