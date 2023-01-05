@@ -1,0 +1,25 @@
+{% if breadcrumb %}
+  <div class="breadcrumbs invert">
+    <div class="py-s">
+      <ul class="reset cluster">
+        {% for item in breadcrumb %}
+          {% if loop.first %}
+            <li class="breadcrumbs__home">
+              <a href="/" aria-label="Home page"></a>
+            </li>
+          {% elseif item.url %}
+            <li>
+              <a href="{{ item.url }}">
+                {{ item.text }}
+              </a>
+            </li>
+          {% else %}
+            <li>
+              {{ item.text }}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}
