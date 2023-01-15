@@ -14,6 +14,20 @@
       {{ drupal_field('field_feature_cta', 'node', (node.id ? node.id : node), 'home') }}
     {% endif %}
   </div>
+{% elseif view_mode == 'full_width' %}
+  <div class="feature-panel__img feature-panel__img--pull overlay-gradient-blue-dark">
+     {{ content.field_image }}
+     {% if content.field_modal_content|render %}
+       {{ drupal_field('field_modal_content', 'node', (node.id) ? node.id: node), 'full_width_feature' }}
+     {% endif %}
+  </div>
+  <div class="feature-panel__content">
+    <h2 class="feature-panel__heading">label</h2>
+      {{ content.field_content }}
+      {% if content.field_feature_cta|render %}
+        {{ drupal_field('field_feature_cta', 'node', (node.id ? node.id : node), 'full_width_feature') }}
+      {% endif %}
+  </div>
 {% else %}
   <div class="feature-panel__img overlay-gradient-white ">
     {{ content.field_image }}

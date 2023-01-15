@@ -23,6 +23,13 @@
   {% if content.field_media_caption|render %}
     <p class="text-step-s font-bold">{{ content.field_media_caption }}</p>
   {% endif %}
+{% elseif view_mode == 'full_width_feature' %}
+  <a class="button-arrow button-arrow--white button-arrow--play absolute z-10 bottom-xs left-xs" href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
+   <span class="material-symbols-outlined icon-fill" aria-hidden="true">
+     play_arrow
+   </span>
+   Watch Video
+  </a>
 {% else %}
   <a class="button-arrow button-arrow--blue-dark button-arrow--play absolute z-10 bottom-xs left-xs" href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal="" data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
     <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
