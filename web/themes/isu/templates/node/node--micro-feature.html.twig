@@ -18,7 +18,7 @@
   <div class="feature-panel__img feature-panel__img--pull overlay-gradient-blue-dark">
      {{ content.field_image }}
      {% if content.field_modal_content|render %}
-       {{ drupal_field('field_modal_content', 'node', (node.id) ? node.id: node), 'full_width_feature' }}
+       {{ drupal_field('field_modal_content', 'node', (node.id ? node.id: node), 'full_width_feature') }}
      {% endif %}
   </div>
   <div class="feature-panel__content">
