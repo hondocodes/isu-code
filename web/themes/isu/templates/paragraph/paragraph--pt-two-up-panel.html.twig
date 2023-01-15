@@ -1,0 +1,49 @@
+<div class="region content__top-blue">
+  <div class="routing-panel__container">
+    {% if content.field_p_heading|render %}
+      {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
+        <h2 class="routing-panel__heading text-blue-dark">{{ content.field_p_heading }}</h2>
+      {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
+        <h3 class="routing-panel__heading text-blue-dark">{{ content.field_p_heading }}</h3>
+      {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
+        <h4 class="routing-panel__heading text-blue-dark">{{ content.field_p_heading }}</h4>
+      {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
+        <h5 class="routing-panel__heading text-blue-dark">{{ content.field_p_heading }}</h5>
+      {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
+        <h6 class="routing-panel__heading text-blue-dark">{{ content.field_p_heading }}</h6>
+      {% else %}
+        <p class="routing-panel__heading text-blue-dark">{{ content.field_p_heading }}</p>
+      {% endif %}
+    {% endif %}
+    <ul class="routing-panel invert">
+      <li class="routing-panel__block flow flow flow-space-m">
+        {% if content.field_p_panel_1_image|render %}
+          <div class="routing-panel__frame overlay-gradient-blue">
+            {{ content.field_p_panel_1_image }}
+          </div>
+        {% endif %}
+        {% if content.field_p_panel_1_title|render %}
+          <h3>{{ content.field_p_panel_1_title }}</h3>
+        {% endif %}
+        <div class="routing-panel__content flow flow flow-space-2xs">
+          {{ content.field_p_panel_1_content }}
+          {{ content.field_p_panel_1_link }}
+        </div>
+      </li>
+      <li class="routing-panel__block flow flow flow-space-m">
+        {% if content.field_p_panel_2_image|render %}
+          <div class="routing-panel__frame overlay-gradient-blue">
+            {{ content.field_p_panel_2_image }}
+          </div>
+        {% endif %}
+        {% if content.field_p_panel_2_title|render %}
+          <h3>{{ content.field_p_panel_2_title }}</h3>
+        {% endif %}
+        <div class="routing-panel__content flow flow flow-space-2xs">
+          {{ content.field_p_panel_2_content }}
+          {{ content.field_p_panel_2_link }}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
