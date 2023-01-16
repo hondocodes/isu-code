@@ -13,4 +13,19 @@
       </div>
     {% endif %}
   </li>
+{% else %}
+  <li class="routing-panel__block flow">
+    <a href="{% spaceless %}{{ content.field_p_card_link }}{% endspaceless %}" class="routing-panel__link flow flow-space-m">
+      <div class="routing-panel__frame">
+        {{ content.field_p_image }}
+        <div class="routing-panel__box"></div>
+      </div>
+      <h3>{{ content.field_p_heading }}</h3>
+    </a>
+    {% if content.field_p_content|render %}
+      <div class="routing-panel__content flow-space-3xs">
+        {{ content.field_p_content }}
+      </div>
+    {% endif %}
+  </li>
 {% endif %}
