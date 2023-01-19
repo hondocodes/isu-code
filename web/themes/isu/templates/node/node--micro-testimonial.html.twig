@@ -12,16 +12,35 @@
             </p>
           {% endif %}
           {% if content.field_modal_video|render %}
-            <a href="https://www.youtube.com/watch?v=oklVBLlQs5k" class="button-arrow button-arrow--play button-arrow--white" data-minimodal-title="Placeholder" data-minimodal>
-              <span class="material-symbols-outlined">
-                play_arrow
-              </span>
-              Watch Video
-            </a>
+            {{ content.field_modal_video }}
           {% elseif content.field_testimonial_cta|render %}
             {{ content.field_testimonial_cta }}
           {% endif %}
         </blockquote>
+      </div>
+    </div>
+  </div>
+{% elseif view_mode == 'slide' %}
+  <div class="testimonial-carousel__item">
+    <div class="pullquote__container">
+      <div class="content__half-blue">
+        <div class="content__img content__img-alt">
+          {{ content.field_image }}
+          <div class="blue-gradient"></div>
+          <div class="pullquote pullquote--white">
+            <blockquote>
+              {{ content.field_quote }}
+              {% if content.field_attribution|render %}
+                <p class="pullquote__author">
+                   {{ content.field_attribution }}
+                </p>
+              {% endif %}
+              {% if content.field_testimonial_cta|render %}
+                {{ drupal_field('field_testimonial_cta', 'node', (node.id ? node.id : node), 'testimonial_slide') }}
+              {% endif %}
+            </blockquote>
+          </div>
+        </div>
       </div>
     </div>
   </div>
