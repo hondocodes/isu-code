@@ -2,7 +2,7 @@
 <div class="testimonial-carousel__container">
   <div class="testimonial-carousel">
     {{ content.field_p_testimonials }}
-    {% if content.field_p_testimonials|length > 1 %}
+    {% if testimonial_count > 1 %}
       <div class="testimonial-carousel__nav">
         <button class="testimonial-carousel__nav__btn testimonial-carousel__previous" aria-label="Previous Slide">
           {{ macros.inline_svg('icon-arrow') }}
