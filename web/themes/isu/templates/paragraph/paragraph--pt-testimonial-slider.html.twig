@@ -1,16 +1,18 @@
 {% import "@isu/macros/macros.html.twig" as macros %}
 <div class="testimonial-carousel__container">
-  <div class="testimonial-carousel">
+  {% if testimonial_count > 1%}
+    <div class="testimonial-carousel">
+  {% else %}
+    <div class="testimonial-carousel testimonial-carousel--hide-pager">
+  {% endif %}
     {{ content.field_p_testimonials }}
-    {% if testimonial_count > 1 %}
-      <div class="testimonial-carousel__nav">
-        <button class="testimonial-carousel__nav__btn testimonial-carousel__previous" aria-label="Previous Slide">
-          {{ macros.inline_svg('icon-arrow') }}
-        </button>
-        <button class="testimonial-carousel__nav__btn testimonial-carousel__next" aria-label="Next Slide">
-          {{ macros.inline_svg('icon-arrow') }}
-        </button>
-      </div>
-    {% endif %}
+    <div class="testimonial-carousel__nav">
+      <button class="testimonial-carousel__nav__btn testimonial-carousel__previous" aria-label="Previous Slide">
+        {{ macros.inline_svg('icon-arrow') }}
+      </button>
+      <button class="testimonial-carousel__nav__btn testimonial-carousel__next" aria-label="Next Slide">
+        {{ macros.inline_svg('icon-arrow') }}
+      </button>
+    </div>
   </div>
 </div>

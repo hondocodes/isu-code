@@ -46,6 +46,15 @@
   }
 }
 
+.testimonial-carousel--hide-pager {
+  & .flickity-page-dots {
+    display: none;
+  }
+  & .testimonial-carousel__nav {
+    display: none;
+  }
+}
+
 .testimonial-carousel__nav {
   order: 1;
   display: flex;
