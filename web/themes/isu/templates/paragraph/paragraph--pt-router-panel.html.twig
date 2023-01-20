@@ -1,0 +1,37 @@
+{% import "@isu/macros/macros.html.twig" as macros %}
+{% if content.field_router_panel['#items'].getString() == 'light-blue' %}
+  <div class="content__blue bg-blue-light py-[75px] lg:py-[200px]">
+{% else %}
+  <div class="content__blue bg-blue-dark invert py-[75px] lg:py-[200px]">
+{% endif %}
+  <div class="wrapper">
+    <div class="feature-panel">
+      <div class="feature-panel__img">
+        <div class="frame relative" data-ratio="1:1">
+          {{ content.field_p_image }}
+        </div>
+        <div class="image__arrow" data-animation="slide-left-fade" data-animate>
+          {{ macros.inline_svg('Large-Arrow') }}
+        </div>
+      </div>
+      <div class="feature-panel__content">
+        {% if content.field_p_heading|render %}
+          {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
+            <h2 class="h2 feature-panel__heading">{{ content.field_p_heading }}</h2>
+          {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
+            <h3 class="h2 feature-panel__heading">{{ content.field_p_heading }}</h3>
+          {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
+            <h4 class="h2 feature-panel__heading">{{ content.field_p_heading }}</h4>
+          {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
+            <h5 class="h2 feature-panel__heading">{{ content.field_p_heading }}</h5>
+          {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
+            <h6 class="h2 feature-panel__heading">{{ content.field_p_heading }}</h6>
+          {% else %}
+            <p class="h2 feature-panel__heading">{{ content.field_p_heading }}</p>
+          {% endif %}
+        {% endif %}
+        {{ content.field_p_router_links }}
+      </div>
+    </div>
+  </div>
+</div>
