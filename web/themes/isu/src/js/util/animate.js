@@ -5,7 +5,7 @@ const watch = () => {
   [...targets].forEach((target) => {
     if (!done) {
       const pos = target.getBoundingClientRect();
-      if (pos.top < (window.innerHeight - 100) && pos.bottom > 100) {
+      if (pos.top < (window.innerHeight - 300) && pos.bottom > 300) {
         target.setAttribute('data-animate', 'true');
         done = true;
       }
