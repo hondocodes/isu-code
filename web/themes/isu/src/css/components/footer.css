@@ -76,12 +76,10 @@
   @media (--lg) {
     column-count: 2;
     column-gap: 0;
-    padding: 0 3rem;
     margin: 0;
   }
 
   @media (--xl) {
-    padding: 0 5rem;
     column-gap: 4rem;
   }
 
@@ -103,11 +101,7 @@
   list-style: none;
   margin: 0 0 1rem 0;
   @media (--lg) {
-    margin: 2rem 0 0 3rem;
-  }
-
-  @media (--xl) {
-    margin: 2rem 0 0 5rem;
+    margin: 2rem 0 0 0;
   }
 
   li {
@@ -189,6 +183,25 @@
   font-weight: bold;
   margin-top: 2rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transform: translateY(-2rem);
+  transition: transform var(--transition);
+
+  &:hover,
+  &:focus {
+    transform: translateY(-4rem);
+
+    .footer__scroll-text {
+      text-decoration: underline;
+    }
+  }
+}
+.footer__scroll-text {
+  display: flex;
+  align-items: center;
 }
 .footer__copy {
   margin-bottom: 0;
