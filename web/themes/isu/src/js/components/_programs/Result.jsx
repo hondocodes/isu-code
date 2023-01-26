@@ -36,7 +36,7 @@ export default function Result(props) {
       <div className="results__buttons cluster">
         {activeFilters.map(({ type, value, remove }) => (
           <button
-            className="button button-rounded button-icon button-icon--close"
+            className={`button button-rounded button-icon button-icon--close button--${value.replace(/\s+/g, '-').toLowerCase()}`}
             aria-label={`Remove ${value} Filter`}
             onClick={remove}
           >
