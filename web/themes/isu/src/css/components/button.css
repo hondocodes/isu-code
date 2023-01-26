@@ -3,8 +3,7 @@
   line-height: 1.2;
   font-family: var(--body);
   font-weight: normal;
-  border: none;
-  min-width: 13.4375rem;
+  border: 2px rgb(var(--blue-dark)) solid;
   display: inline-block;
   padding: 1rem 3rem;
   background: rgb(var(--blue-dark));
@@ -12,10 +11,13 @@
   text-align: center;
   text-decoration: none;
   transition: all var(--transition);
-
+  
   &:hover {
     color: rgb(var(--blue-dark));
     background: rgb(var(--white));
+  }
+  @media (--lg) {
+    min-width: 13.4375rem;
   }
 }
 
@@ -24,10 +26,11 @@
 }
 
 .button-arrow {
-  @mixin text-sm;
+  font-size: 1.25rem;
   font-weight: bold;
   color: rgb(var(--blue));
   text-decoration: none;
+  margin: 0;
   display: inline-flex;
   align-items: center;
 
@@ -107,9 +110,9 @@
 }
 
 .button-rounded {
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 21.5px;
+  border-radius: 5rem;
   padding: 0.5rem 1rem 0.75rem;
 }
 
@@ -121,6 +124,7 @@
   &::after {
     line-height: 1;
     margin-left: 0.5rem;
+    margin-top: 0.4rem;
   }
 }
 .button-icon--down {
