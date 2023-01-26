@@ -8,8 +8,11 @@
   @media (--lg) {
     /* padding: 4rem 0; */
     align-items: center;
-    gap: 8rem;
+    gap: var(--space-3xl);
     flex-direction: row;
+    .l-page-sidebar & {
+      gap: var(--space-l);
+    }
   }
   .content__blue &,
   .invert & {
