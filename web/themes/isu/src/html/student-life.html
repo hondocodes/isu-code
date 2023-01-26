@@ -4,31 +4,14 @@
 {% block body %}
 
 <main id="main-content">
-  <div class="hero hero--sub invert">
-    <div class="wrapper">
-      <div class="hero__container">
-        {% include '@components/breadcrumbs.html' %}
-        <div class="overlay-gradient-blue lg:mb-3xl">
-          <img src="../img/cost-hero.jpg" alt="placeholder">
-        </div>
-        <div class="lg:mt-[-25rem] lg:z-10 lg:flex lg:items-center lg:gap-xl">
-          <div class="flow flow-space-2xl">
-            <div class="flow lg:flex lg:items-center">
-              <h2 class="hero__headline">
-                Student Life
-              </h2>
-            </div>
-            <div>
-              <div class="flow flow-space-m">
-                <p class="intro lg:w-75">Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan.</p>
-                {% include '@components/secondary-menu.html' %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% set vars = {
+    'pageTitle': 'Student Life',
+    'image': '../img/cost-hero.jpg',
+    'announcement': 'true'
+  }
+  %}
+  {% include
+  '@components/hero-secondary.html' with vars %}
 
   <div class="content__blue invert py-[75px] lg:mt-2xl">
     <div class="wrapper">
