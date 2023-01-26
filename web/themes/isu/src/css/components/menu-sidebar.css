@@ -75,7 +75,7 @@
   position: relative;
   border-left: 2px solid rgb(var(--blue-dark));
   a,
-  button {
+  div.active {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,6 +87,11 @@
     background-color: transparent;
     margin: var(--space-s) var(--space-m);
 
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
     .invert & {
       color: rgb(var(--light)) !important;
     }
@@ -95,21 +100,8 @@
     border-color: rgb(var(--light)) !important;
   }
 
-  button {
-    &::after {
-      content: '';
-      @mixin inline-svg arrow_drop_down, rgb(root-var(--blue-dark));
-      display: block;
-      width: 0.625rem;
-      height: 0.4375rem;
-      background-size: 1.5rem;
-      margin-top: 0.25rem;
-      margin-left: 0.5rem;
-      position: absolute;
-      right: 0;
-      transition: var(--transition);
-    }
-    &[aria-expanded=true] {
+  div {
+    &.active {
       color: rgb(var(--blue-dark));
       font-weight: 900;
       &::after {
@@ -121,11 +113,13 @@
           color: rgb(var(--blue-dark));
         }
       }
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
   > li > ul {
-    display: none;
     margin-left: var(--space-s);
   }
 
