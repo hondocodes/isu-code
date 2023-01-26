@@ -88,10 +88,13 @@
   > :first-child {
     flex-basis: 0;
     flex-grow: 999;
-    min-inline-size: 33%;
+    min-inline-size: 35%;
 
     @media (--lg) {
       min-inline-size: 30%;
+      .l-page-sidebar & {
+        min-inline-size: 34%;
+      }
     }
   }
 }
