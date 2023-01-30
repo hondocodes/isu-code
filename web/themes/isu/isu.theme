@@ -71,7 +71,7 @@ function _isu_testimonial_slider($paragraph) {
     }
   }
 
-  return $testimonials;
+  return $testimonials_array;
 }
 
 function _isu_theme_node($nid, $view_mode = 'default') {
