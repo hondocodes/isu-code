@@ -52,5 +52,33 @@ function isu_preprocess_paragraph(&$variables) {
       $i++;
     }
     $variables['testimonial_count'] = $i;
+    $variables['testimonials'] = _isu_testimonial_slider($paragraph);
   }
+}
+
+function _isu_testimonial_slider($paragraph) {
+  $variation = $paragraph->get('field_p_tslider_variation');
+  $testimonials = array();
+  if($variation->getValue()) == 1) {
+    $testimonials = $paragraph->get('field_p_testimonials');
+    foreach($testimonials->referencedEntities() as $t) {
+      $testimonials[] = _isu_theme_node($t->id(), 'testimonial_slide');
+    }
+  } else {
+    $testimonials = $paragraph->get('field_p_testimonials');
+    foreach($testimonials->referencedEntities() as $t) {
+      $testimonials[] = _isu_theme_node($t->id(), 'testimonial_slide_no_bg');
+    }
+  }
+
+  return $testimonials;
+}
+
+function _isu_theme_node($nid, $view_mode = 'default') {
+  $entity_type = 'node';
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
+  $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
+  $node = $storage->load($nid);
+  $build = $view_builder->view($node, $view_mode);
+  return render($build);
 }
