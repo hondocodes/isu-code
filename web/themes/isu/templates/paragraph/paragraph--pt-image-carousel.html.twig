@@ -14,7 +14,7 @@
 {% elseif view_mode == 'full_width' %}
   <div class="region bg-white">
     <div class="wrapper">
-      <div>
+      <div class="image-carousel__container">
         <div class="image-carousel">
           {{ content.field_p_images }}
           <div class="image-carousel__nav">
@@ -30,7 +30,7 @@
     </div>
   </div>
 {% else %}
-  <div>
+  <div class="image-carousel__container">
     <div class="image-carousel">
       {{ content.field_p_images }}
       <div class="image-carousel__nav">
