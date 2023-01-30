@@ -59,7 +59,7 @@ function isu_preprocess_paragraph(&$variables) {
 function _isu_testimonial_slider($paragraph) {
   $variation = $paragraph->get('field_p_tslider_variation');
   $testimonials = array();
-  if($variation->getValue() == 1) {
+  if($variation->getString() == 1) {
     $testimonials = $paragraph->get('field_p_testimonials');
     foreach($testimonials->referencedEntities() as $t) {
       $testimonials[] = _isu_theme_node($t->id(), 'testimonial_slide');
