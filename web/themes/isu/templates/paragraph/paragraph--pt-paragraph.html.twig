@@ -1,5 +1,15 @@
-<div>
-  <div class="flow flow-space-s">
-    {{ content.field_p_content }}
+{% if view_mode == 'full_width' %}
+  <div class="region bg-white">
+    <div class="wrapper">
+      <div class="flow">
+        {{ content.field_p_content }}
+      </div>
+    </div>
   </div>
-</div>
+{% else %}
+  <div>
+    <div class="flow flow-space-s">
+      {{ content.field_p_content }}
+    </div>
+  </div>
+{% endif %}
