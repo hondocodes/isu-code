@@ -62,12 +62,12 @@ function _isu_testimonial_slider($paragraph) {
   if($variation->getString() == 1) {
     $testimonials = $paragraph->get('field_p_testimonials');
     foreach($testimonials->referencedEntities() as $t) {
-      $testimonials[] = _isu_theme_node($t->id(), 'testimonial_slide');
+      $testimonials[] = array(); //_isu_theme_node($t->id(), 'testimonial_slide');
     }
   } else {
     $testimonials = $paragraph->get('field_p_testimonials');
     foreach($testimonials->referencedEntities() as $t) {
-      $testimonials[] = _isu_theme_node($t->id(), 'testimonial_slide_no_bg');
+      $testimonials[] = array(); //_isu_theme_node($t->id(), 'testimonial_slide_no_bg');
     }
   }
 
