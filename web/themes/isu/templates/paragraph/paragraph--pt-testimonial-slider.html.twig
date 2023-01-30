@@ -5,7 +5,9 @@
   {% else %}
     <div class="testimonial-carousel testimonial-carousel--hide-pager">
   {% endif %}
-    {{ content.field_p_testimonials }}
+    {% for testimoninal in testimonials %}
+      {{ testimonial }}
+    {% endfor %}
     <div class="testimonial-carousel__nav">
       <button class="testimonial-carousel__nav__btn testimonial-carousel__previous" aria-label="Previous Slide">
         {{ macros.inline_svg('icon-arrow') }}
