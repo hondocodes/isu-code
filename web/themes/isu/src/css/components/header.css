@@ -668,6 +668,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  gap: 1rem;
   width: 100%;
 
   @media (--xl) {
@@ -675,7 +676,7 @@
   }
 
   & li {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     width: calc(33% - 1rem);
 
     flex-grow: 1;

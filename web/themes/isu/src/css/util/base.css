@@ -192,9 +192,9 @@ a {
 }
 
 *:focus {
-	outline: dashed;
-  outline-offset: 1px;
-  outline-width: 3px;
+	/* outline: dashed; */
+  outline-offset: 3px;
+  /* outline-width: 3px; */
 }
 /* Remove outline for non-keyboard :focus */
 *:focus:not(.focus-visible) {
@@ -205,12 +205,12 @@ a {
   scroll-margin-top: 2ex;
 }
 
-main:focus {
+/* main:focus {
   outline: none;
-}
+} */
 
 /* Base selection styles that invert whatever colours are rendered */
-::selection {
+/* ::selection {
   background: var(--color-dark);
   color: var(--color-light);
-}
+} */

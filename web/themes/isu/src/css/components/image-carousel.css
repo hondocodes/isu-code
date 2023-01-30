@@ -94,11 +94,11 @@
 
   display: flex;
   width: 100%;
-  transition: width 500ms ease;
+  /* transition: width 500ms ease; */
   img {
     object-fit: cover;
     width: 100%;
-    transform: scale(1.4);
+    /* transform: scale(1.4); */
   }
 
   @media (--xl) {
@@ -109,14 +109,20 @@
 .image-carousel__item.is-selected {
   z-index: 1;
   @media (--xl) {
-    width: 56.25rem;
+    /* width: 56.25rem; */
     .l-page-sidebar & {
       width: 100%;
     }
   }
   img {
-    transform: scale(1);
+    /* transform: scale(1); */
     min-height: 60vh;
+    transition: transform 500ms ease;
+  }
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
   }
 }
 

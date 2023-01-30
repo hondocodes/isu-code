@@ -1,53 +1,58 @@
-<div class="hero hero--sub invert">
+<div class="hero hero--sub invert" style="background-image: url('{{ image ?? 'img/hero-secondary.jpg' }}');">
+  <div class="px-s xl:px-l">
+    {% include '@components/breadcrumbs.html' %}
+  </div>
   <div class="wrapper">
     <div class="hero__container">
-      {% include '@components/breadcrumbs.html' %}
-      <div class="overlay-gradient-blue lg:mb-3xl">
-        <img src="../img/hero-landing.jpg" alt="placeholder">
-      </div>
-      <div class="flow lg:mt-[-25rem] lg:z-10 lg:flex lg:items-center lg:gap-xl">
-        <div>
-          <h2 class="hero__headline">
-            {{ pageTitle ?? 'Current Page' }}
-          </h2>
-          <p class="intro lg:w-75">Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan.</p>
+      <div class="lg:z-10 lg:flex lg:items-center lg:gap-xl">
+        <div class="flow flow-space-2xl">
+          <div class="flow lg:flex">
+            <div class="flex flex-col justify-end">
+              <h1 class="hero__headline" style="flex: 0;">
+                {{ pageTitle ?? 'Current Page' }}
+              </h1>
+              <p class="intro lg:w-75">
+                Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan.
+              </p>
+            </div>
+            {% if form %}
+            <div class="p-xl mb-xl bg-blue-dark invert lg:mb-0 lg:min-w-[474px] lg:-top-[50%]">
+              <form class="form flow flow-space-xs">
+                <h2 class="h4 text-step-1">Learn more about Biology: Microbiology PhD.</h2>
+                <div class="form__group flow">
+                  <label for="first-name-input" class="screen-reader-text">First Name*</label>
+                  <input id="first-name-input" type="text" class="form__input" placeholder="Name*">
+                </div>
+                <div class="form__group flow">
+                  <label for="last-name-input" class="screen-reader-text">Last Name*</label>
+                  <input id="last-name-input" type="text" class="form__input" placeholder="Last Name*">
+                </div>
+                <div class="form__group flow">
+                  <label for="email-input" class="screen-reader-text">Email Name*</label>
+                  <input id="email-input" type="email" class="form__input" placeholder="Email*">
+                </div>
+                <button class="button button--blue">Request Information</button>
+                <div class="form__group flow">
+                  <label>
+                  <input type="checkbox">
+                  <span>
+                    * I consent to receive communications from Indiana State University, including information, news and offers in accordance with the School's Privacy Policy.
+                  </span>
+                </label>
+                </div>
+                <div>
+                  <a href="#">Start Your Application</a>
+                </div>
+              </form>
+            </div>
+          {% endif %}
+          {% if annoucement %}
+            <div class="p-xl bg-blue-dark invert lg:-mr-xl lg:min-w-[474px] lg:-top-[50%]">
+              ANNOUNCEMENT HERE
+            </div>
+          {% endif %}
+          </div>
         </div>
-        {% if form %}
-          <div class="p-xl bg-blue-dark invert lg:-mr-xl lg:min-w-[474px] lg:-top-[50%]">
-            <form class="form flow flow-space-xs">
-              <h2 class="h4 text-step-1">Learn more about Biology: Microbiology PhD.</h2>
-              <div class="form__group flow">
-                <label for="first-name-input" class="screen-reader-text">First Name*</label>
-                <input id="first-name-input" type="text" class="form__input" placeholder="Name*">
-              </div>
-              <div class="form__group flow">
-                <label for="last-name-input" class="screen-reader-text">Last Name*</label>
-                <input id="last-name-input" type="text" class="form__input" placeholder="Last Name*">
-              </div>
-              <div class="form__group flow">
-                <label for="email-input" class="screen-reader-text">Email Name*</label>
-                <input id="email-input" type="email" class="form__input" placeholder="Email*">
-              </div>
-              <button class="button button--blue">Request Information</button>
-              <div class="form__group flow">
-                <label>
-                <input type="checkbox">
-                <span>
-                  * I consent to receive communications from Indiana State University, including information, news and offers in accordance with the School's Privacy Policy.
-                </span>
-              </label>
-              </div>
-              <div>
-                <a href="#">Start Your Application</a>
-              </div>
-            </form>
-          </div>
-        {% endif %}
-        {% if annoucement %}
-          <div class="p-xl bg-blue-dark invert lg:-mr-xl lg:min-w-[474px] lg:-top-[50%]">
-            ANNOUNCEMENT HERE
-          </div>
-        {% endif %}
       </div>
     </div>
   </div>

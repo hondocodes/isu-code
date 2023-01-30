@@ -101,6 +101,7 @@
 
 .accordion__content {
   overflow:hidden;
+  visibility: hidden;
   transition:height .3s ease-out;
   height:0;
 
@@ -121,6 +122,7 @@
   }
 
   &.active {
+    visibility: visible;
       padding-bottom: 2.5rem;
 
       @media (--md) {

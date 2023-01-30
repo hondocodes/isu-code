@@ -1,0 +1,13 @@
+.video__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(18, 51, 93, 0.75);
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}

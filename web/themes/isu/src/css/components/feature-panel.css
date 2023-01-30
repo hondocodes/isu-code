@@ -121,6 +121,6 @@
   }
 }
 
-/* .feature-panel__heading {
-  font-size: 2.938rem;
-} */
+.feature-panel__heading {
+  font-size: var(--size-step-2);
+}
