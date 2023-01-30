@@ -58,14 +58,14 @@ function isu_preprocess_paragraph(&$variables) {
 
 function _isu_testimonial_slider($paragraph) {
   $variation = $paragraph->get('field_p_tslider_variation');
+  $testimonials = $paragraph->get('field_p_testimonials');
+
   $testimonial_array = array();
   if($variation->getString() == 1) {
-    $testimonials = $paragraph->get('field_p_testimonials');
     foreach($testimonials->referencedEntities() as $t) {
       $testimonial_array[] = _isu_theme_node($t->id(), 'testimonial_slide');
     }
   } else {
-    $testimonials = $paragraph->get('field_p_testimonials');
     foreach($testimonials->referencedEntities() as $t) {
       $testimonial_array[] = _isu_theme_node($t->id(), 'testimonial_slide_no_bg');
     }
