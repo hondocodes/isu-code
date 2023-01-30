@@ -28,10 +28,10 @@ export default function Program(props) {
   return (
     <li className={programCollege.replace(/\s+/g, '-').toLowerCase()}>
       <a
-        className="button-program flex gap-2xs justify-end lg:items-center lg:py-xs lg:px-m"
+        className="button-program flex gap-zero justify-end lg:items-center lg:py-xs lg:px-m"
         href={props.programs.url}
       >
-        <div className="frame border-radius" data-ratio="3:2">
+        <div className="button-program__image">
           <img src={props.programs.image} alt="placeholder" />
           <div className="button-program__box" />
         </div>

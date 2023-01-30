@@ -40,6 +40,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    gap: var(--space-xs);
 
     @media (--lg) {
       flex-direction: row;
@@ -52,7 +53,7 @@
       align-items: flex-start;
 
       @media(--lg) {
-        min-height: 130px;
+        min-height: 150px;
       }
     }
   }
@@ -148,7 +149,7 @@
     margin-bottom: none;
 
     .program__content {
-      padding: 0 var(--space-s) var(--space-s);
+      padding: var(--space-s);
     }
   }
 }

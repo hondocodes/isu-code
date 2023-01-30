@@ -68,8 +68,10 @@
   <div class="wrapper">
     <div class="feature-panel feature-panel--swap">
       <div class="feature-panel__img">
-        <div class="frame relative" data-ratio="3:2">
-          <img src="../img/router-panel1.jpg" alt="placeholder">
+        <div>
+          <div class="frame relative" data-ratio="3:2">
+            <img src="../img/router-panel1.jpg" alt="placeholder">
+          </div>
         </div>
         <div class="image__arrow" data-animation="slide-left-fade" data-animate>
           {{ inline_svg('Large-Arrow') }}
@@ -120,8 +122,10 @@
   <div class="wrapper">
     <div class="feature-panel">
       <div class="feature-panel__img">
-        <div class="frame relative" data-ratio="3:2">
-          <img src="../img/router-panel2.jpg" alt="placeholder">
+        <div>
+          <div class="frame relative" data-ratio="3:2">
+            <img src="../img/router-panel2.jpg" alt="placeholder">
+          </div>
         </div>
         <div class="image__arrow" data-animation="slide-left-fade" data-animate>
           {{ inline_svg('Large-Arrow') }}
@@ -569,20 +573,18 @@
         Headline (Events) Variation 2
       </h2>
       <div class="grid gap-m" data-layout="1/2">
-        <div class="event event--alt invert">
+        <a href="#" class="event event--alt invert">
           <div class="event__date">
             May
             <span>10</span>
           </div>
           <div class="event__details">
             <h3 class="event__title font-base text-step-0">
-              <a href="#"
-                >Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit</a
-              >
+              Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit
             </h3>
           </div>
-        </div>
-        <div class="event event--alt invert">
+        </a>
+        <a href="#"  class="event event--alt invert">
           <div class="event__date event__date--range">
             Jul 19
             <span>&mdash;</span>
@@ -590,38 +592,32 @@
           </div>
           <div class="event__details">
             <h3 class="event__title font-base text-step-0">
-              <a href="#"
-                >Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit</a
-              >
+              Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit
             </h3>
           </div>
-        </div>
-        <div class="event event--alt invert">
+        </a>
+        <a href="#"  class="event event--alt invert">
           <div class="event__date">
             Sep
             <span>24</span>
           </div>
           <div class="event__details">
             <h3 class="event__title font-base text-step-0">
-              <a href="#"
-                >Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit</a
-              >
+              Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit
             </h3>
           </div>
-        </div>
-        <div class="event event--alt invert">
+        </a>
+        <a href="#"  class="event event--alt invert">
           <div class="event__date">
             Dec
             <span>13</span>
           </div>
           <div class="event__details">
             <h3 class="event__title font-base text-step-0">
-              <a href="#"
-                >Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit</a
-              >
+              Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit
             </h3>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -668,7 +664,7 @@
 <div class="region bg-blue-dark invert">
   <div class="wrapper">
     <h2>Accordion</h2>
-    {% include '@components/accordion.html' %}
+    {% include '@components/accordion.html' with {dark: true} %}
   </div>
 </div>
 

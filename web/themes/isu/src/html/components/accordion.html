@@ -1,30 +1,63 @@
-<div class="accordion bg-blue-dark invert">
-    {% for i in range(0, 4) %}
+{% if dark %}
+    <div class="accordion bg-blue-dark invert">
+        {% for i in range(0, 4) %}
 
-    <h4 class="accordion__heading">
+        <h3 class="accordion__heading">
+        
+            <button class="accordion__toggle" aria-expanded="false">
+                Accordion
+            </button>
+        
+        </h3>
     
-        <button class="accordion__toggle" aria-expanded="false">
-            Accordion
-        </button>
-    
-    </h4>
-  
-    <div class="accordion__content flow">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Officiis quam nisi vitae amet voluptate sapiente similique
-            quos necessitatibus eum magni delectus non autem repellendus
-            voluptates cumque adipisci, tempore ipsam eos quaerat ea?
-            Ducimus quasi saepe quis eligendi nesciunt suscipit, unde
-            minus, quod excepturi hic, voluptate ipsum dignissimos
-            eveniet.
-        </p>
-        <a href="#" class="button-arrow button-arrow--white">
-            <span class="material-symbols-outlined span-headline">
-                arrow_forward
-            </span>
-            Optional Link
-        </a>
+        <div class="accordion__content flow">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis quam nisi vitae amet voluptate sapiente similique
+                quos necessitatibus eum magni delectus non autem repellendus
+                voluptates cumque adipisci, tempore ipsam eos quaerat ea?
+                Ducimus quasi saepe quis eligendi nesciunt suscipit, unde
+                minus, quod excepturi hic, voluptate ipsum dignissimos
+                eveniet.
+            </p>
+            <a href="#" class="button-arrow button-arrow--white">
+                <span class="material-symbols-outlined span-headline">
+                    arrow_forward
+                </span>
+                Optional Link
+            </a>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+{% else %}
+    <div class="accordion">
+        {% for i in range(0, 4) %}
+
+        <h3 class="accordion__heading">
+        
+            <button class="accordion__toggle" aria-expanded="false">
+                Accordion
+            </button>
+        
+        </h3>
+    
+        <div class="accordion__content flow">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis quam nisi vitae amet voluptate sapiente similique
+                quos necessitatibus eum magni delectus non autem repellendus
+                voluptates cumque adipisci, tempore ipsam eos quaerat ea?
+                Ducimus quasi saepe quis eligendi nesciunt suscipit, unde
+                minus, quod excepturi hic, voluptate ipsum dignissimos
+                eveniet.
+            </p>
+            <a href="#" class="button-arrow">
+                <span class="material-symbols-outlined span-headline">
+                    arrow_forward
+                </span>
+                Optional Link
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endif %}

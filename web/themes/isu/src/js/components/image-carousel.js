@@ -9,7 +9,6 @@ carousels.forEach((carousel) => {
     cellSelector: '.image-carousel__item',
     cellAlign: 0.001,
     draggable: false,
-
     prevNextButtons: false,
     resize: true,
   });

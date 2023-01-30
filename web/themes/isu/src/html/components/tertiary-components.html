@@ -118,6 +118,17 @@
             </div>
 
             <div>
+              <div class="pullquote__container">
+                <div class="content__img content__img-alt">
+                  <img src="//placehold.mstoner.com/1440x16:9" alt="">
+                  <div class="blue-gradient"></div>
+                  {# {% include '@components/pullquote.html' with {blue: true, whiteBtn: true} %} #}
+                  {% include '@components/pullquote.html' with {white: true, link: true} %}
+                </div>
+              </div>
+            </div>
+
+            <div>
               <div class="feature-panel feature-panel--swap">
                 <div class="feature-panel__img overlay-gradient-white ">
                       <img src="//placehold.mstoner.com/612x478" alt="placeholder">
@@ -229,14 +240,16 @@
           <div data-animation="fade-in-up" data-animate>
             <div class="flow flow-space-s">
               <h2 class="h3">Video Embed</h2>
-              <div class="frame border-radius relative overlay-gradient-white" data-ratio="3:2">
+              <div class="frame border-radius relative" data-ratio="3:2">
                 <img src="../img/feature1.jpg" alt="placeholder">
-                <a class="button-arrow button-arrow--play button-arrow--blue-dark absolute z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
-                  <span class="material-symbols-outlined" aria-hidden="true">
-                    play_arrow
-                  </span>
-                  Watch Video
-                </a>
+                <div class="video__caption">
+                  <a class="button-arrow button-arrow--play button-arrow--white" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                      play_arrow
+                    </span>
+                    Watch Video
+                  </a>
+                </div>
               </div>
               <p class="text-step-s font-bold">Nunc lacinia egestas luctus. Phasellus placerat convallis sapien ac tristique. </p>
             </div>
@@ -247,8 +260,13 @@
           </div>
 
           <div>
-            <h2 class="h3">Accordion</h2>
+            <h2 class="h3">Accordion (Light)</h2>
             {% include '@components/accordion.html' %}
+          </div>
+
+          <div>
+            <h2 class="h3">Accordion (Dark)</h2>
+            {% include '@components/accordion.html' with {dark: true} %}
           </div>
 
           <div>
@@ -354,8 +372,6 @@
                 </div>
               </div>
               <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
-                <div>
-                </div>
                 <div class="flow flow-space-s">
                   <p class="font-bold">Friday, May 22, 2020</p>
                   <h4><a href="#" class="font-base text-blue">Subheading (8-10 Words) — Lorem Ipsum dolor Sit Amet Odio Lucilius Eam</a></h4>

@@ -3,14 +3,16 @@
 }
 
 .invert {
-  /* ↓ Dark becomes light, and light becomes dark */
-  --outline-color: rgb(var(--light));
-  color: rgb(var(--light));
-  /* background-color: var(--color-blue); */
-
-  h1, h2, h3, h4, h5, h6,
-  a h1, a h2, a h3, a h4, a h5, a h6 {
+  > * {
+    /* ↓ Dark becomes light, and light becomes dark */
+    --outline-color: rgb(var(--light));
     color: rgb(var(--light));
+    /* background-color: var(--color-blue); */
+
+    h1, h2, h3, h4, h5, h6,
+    a h1, a h2, a h3, a h4, a h5, a h6 {
+      color: rgb(var(--light));
+    }
   }
 }
 
