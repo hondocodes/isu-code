@@ -1,11 +1,15 @@
 {% import "@isu/macros/macros.html.twig" as macros %}
-{% if content.field_router_panel['#items'].getString() == 'light-blue' %}
+{% if content.field_p_background_color['#items'].getString() == 'light-blue' %}
   <div class="content__blue bg-blue-light py-[75px] lg:py-[200px]">
 {% else %}
   <div class="content__blue bg-blue-dark invert py-[75px] lg:py-[200px]">
 {% endif %}
   <div class="wrapper">
-    <div class="feature-panel">
+    {% if content.field_p_image_position['#items'].getString() == 'right' %}
+      <div class="feature-panel feature-panel--swap">
+    {% else %}
+      <div class="feature-panel">
+    {% endif %}
       <div class="feature-panel__img">
         <div class="frame relative" data-ratio="1:1">
           {{ content.field_p_image }}
