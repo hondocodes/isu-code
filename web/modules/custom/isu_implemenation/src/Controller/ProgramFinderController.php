@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\isu_implementation\Controller;
+namespace Drupal\isu_implemenation\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\HttpFoundation\Response;
@@ -73,7 +73,7 @@ class ProgramFinderController extends ControllerBase {
         }
       }
       $program->location = $location;
-      
+
       $programs_array[] = $program;
     }
 
