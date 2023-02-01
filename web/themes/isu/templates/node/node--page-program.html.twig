@@ -15,16 +15,4 @@
   </li>
 {% else %}
   {{ content.field_standard_modules }}
-  {% if content.field_related_programs|render %}
-    <div class="region bg-blue invert">
-      <div class="routing-panel__container">
-        {% if content.field_heading|render %}
-          <h2 class="routing-panel__heading">{{ content.field_heading }}</h2>
-        {% endif %}
-        <ul class="routing-panel grid" data-layout="1/3">
-          {{ content.field_related_programs }}
-        </ul>
-      </div>
-    </div>
-  {% endif %}
 {% endif %}
