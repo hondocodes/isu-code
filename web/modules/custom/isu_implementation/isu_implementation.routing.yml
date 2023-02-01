@@ -1,0 +1,7 @@
+isu_implementation.json:
+    path: '/program-finder-json'
+    defaults:
+      _controller: '\Drupal\isu_implementation\Controller\ProgramFinderController::getJson'
+      _title: 'Get List'
+    requirements:
+      _permission: 'access content'
