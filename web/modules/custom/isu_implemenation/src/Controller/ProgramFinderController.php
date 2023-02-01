@@ -74,6 +74,17 @@ class ProgramFinderController extends ControllerBase {
       }
       $program->location = $location;
 
+      if(isset($node->get('field_image')->entity)) {
+        $imageUrl = $node->get('field_image')->entity->get('field_media_image')->entity->uri;
+        if (!empty($imageUrl)) {
+          $style = \Drupal::entityTypeManager()->getStorage('image_style')->load('card');
+          $url = $style->buildUrl($node->get('field_image')->entity->get('field_media_image')->entity->getFileUri());
+          $program->image = $url;
+        }
+      } else {
+        $program->image = '';
+      }
+
       $programs_array[] = $program;
     }
 
