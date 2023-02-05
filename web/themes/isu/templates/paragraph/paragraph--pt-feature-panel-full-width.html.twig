@@ -1,11 +1,11 @@
 {% if content.field_p_background_color['#items'].getString() == 'light-blue' %}
-  {% if content.field_p_remove_top_margin['#items'].getString() == 'On' %}
+  {% if field_p_remove_top_margin.value %}
     <div class="content__blue invert py-[75px]">
   {% else %}
     <div class="content__blue invert py-[75px] lg:mt-2xl">
   {% endif %}
 {% else %}
-  {% if content.field_p_remove_top_margin['#items'].getString() == 'On' %}
+  {% if field_p_remove_top_margin.value %}
     <div class="content__blue-dark bg-blue-dark invert py-[75px]">
   {% else %}
     <div class="content__blue-dark bg-blue-dark invert py-[75px] lg:mt-2xl">
