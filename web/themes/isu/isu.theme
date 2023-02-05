@@ -53,6 +53,8 @@ function isu_preprocess_paragraph(&$variables) {
     }
     $variables['testimonial_count'] = $i;
     $variables['testimonials'] = _isu_testimonial_slider($paragraph);
+  } elseif($paragraph->bundle() == 'pt_feature_panel_full_width') {
+    $variables['remove_top_margin'] = $paragraph->get('field_p_remove_top_margin')->getString();
   }
 }
 
