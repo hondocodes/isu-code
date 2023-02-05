@@ -1,7 +1,15 @@
 {% if content.field_p_background_color['#items'].getString() == 'light-blue' %}
-  <div class="content__blue invert py-[75px] lg:mt-2xl">
+  {% if content.field_p_remove_top_margin['#items'].getString() == 'On' %}
+    <div class="content__blue invert py-[75px]">
+  {% else %}
+    <div class="content__blue invert py-[75px] lg:mt-2xl">
+  {% endif %}
 {% else %}
-  <div class="content__blue-dark bg-blue-dark invert py-[75px] lg:mt-2xl">
+  {% if content.field_p_remove_top_margin['#items'].getString() == 'On' %}
+    <div class="content__blue-dark bg-blue-dark invert py-[75px]">
+  {% else %}
+    <div class="content__blue-dark bg-blue-dark invert py-[75px] lg:mt-2xl">
+  {% endif %}
 {% endif %}
   <div class="wrapper">
     {% if content.field_p_image_position['#items'].getString() == 'right' %}
