@@ -64,6 +64,20 @@ if (finderPage) {
         }
       };
 
+      if (window.innerWidth < 1280) { finderPage.removeAttribute('data-grid'); } else { finderPage.setAttribute('data-grid', ''); }
+
+      if (window.attachEvent) {
+        window.attachEvent('onresize', () => {
+          if (window.innerWidth < 1280) { finderPage.removeAttribute('data-grid'); } else { finderPage.setAttribute('data-grid', ''); }
+        });
+      } else if (window.addEventListener) {
+        window.addEventListener('resize', () => {
+          if (window.innerWidth < 1280) { finderPage.removeAttribute('data-grid'); } else { finderPage.setAttribute('data-grid', ''); }
+        }, true);
+      } else {
+        // The browser does not support Javascript event binding
+      }
+
       const filteredPrograms = programs.filter((program) => {
         let include = true;
 
