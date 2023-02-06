@@ -117,10 +117,8 @@ if (finderPage) {
                   </div>
                 </div>
                 <div>
-                  <h2 className="hero__headline">
-                    Academic Program Finder
-                  </h2>
-                  <p className="intro lg:w-75">Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan in nisl nisi. </p>
+                  <h1 className="hero__headline js-program-finder-title" />
+                  <p className="intro lg:w-75 js-program-finder-intro" />
                   <div className="w-full mt-xl">
                     <Filters
                       programs={programs}
@@ -211,5 +209,10 @@ if (finderPage) {
     const App = <OnlineProgramsFinder programs={programs} />;
 
     render(App, finderPage);
+
+    const finderTitle = finderPage.dataset.programFinderTitle;
+    const finderIntro = finderPage.dataset.programFinderIntro;
+    document.querySelector('.js-program-finder-title').innerHTML = finderTitle;
+    document.querySelector('.js-program-finder-intro').innerHTML = finderIntro;
   })();
 }
