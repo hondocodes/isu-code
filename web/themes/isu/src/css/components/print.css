@@ -1,5 +1,5 @@
 @media print {
-  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, a, .button, button {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, a, .button, button, div {
     color: #000000 !important;
     background: transparent !important;
   }
@@ -10,11 +10,55 @@
   }
 
   img {
-    max-width: 500px;
+    display: none;
   }
 
   .menu-sidebar {
     display: none;
+  }
+
+  .stats-panel__content {
+    margin: 0 !important;
+    color: #000000 !important;
+  }
+
+  .stats-panel__carousel,
+  .image-carousel {
+    &::after {
+      content: '' !important;
+    }
+  }
+
+  .stats-panel__item,
+  .image-carousel__item {
+    opacity: 1 !important;
+  }
+  .stat-panel__image {
+    display: none;
+  }
+
+  .invert {
+    > * {
+      /* ↓ Dark becomes light, and light becomes dark */
+      --outline-color: rgb(var(--dark));
+      color: rgb(var(--dark));
+      /* background-color: var(--color-blue); */
+  
+      h1, h2, h3, h4, h5, h6,
+      a h1, a h2, a h3, a h4, a h5, a h6 {
+        color: rgb(var(--dark));
+      }
+    }
+  }
+
+  .image-carousel__item {
+    img {
+      display: none !important;
+    }
+  }
+
+  .flickity-page-dots {
+    display: none !important;
   }
 
 }
