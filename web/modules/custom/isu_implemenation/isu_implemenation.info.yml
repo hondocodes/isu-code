@@ -1,0 +1,8 @@
+name: ISU Implementation
+type: module
+description: Implementation module for ISU.
+version: 1.0
+core_version_requirement: ^8 || ^9
+package: ISU
+dependencies:
+  - block

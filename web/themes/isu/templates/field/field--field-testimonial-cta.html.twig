@@ -1,10 +1,24 @@
-{% for item in items %}
-  {% if item['content']['#title'] %}
-    <a href="{{ item['content']['#url'] }}" class="button-arrow button-arrow--white">
-      <span class="material-symbols-outlined">
-        arrow_forward
-      </span>
-      {{ item['content']['#title'] }}
-    </a>
-  {% endif %}
-{% endfor %}
+{% set view_mode = element['#view_mode'] %}
+{% if view_mode == 'testimonial_slide' %}
+  {% for item in items %}
+    {% if item['content']['#title'] %}
+      <a href="{{ item['content']['#url'] }}" class="button-arrow">
+        <span class="material-symbols-outlined">
+          arrow_forward
+        </span>
+        {{ item['content']['#title'] }}
+      </a>
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% for item in items %}
+    {% if item['content']['#title'] %}
+      <a href="{{ item['content']['#url'] }}" class="button-arrow button-arrow--white">
+        <span class="material-symbols-outlined">
+          arrow_forward
+        </span>
+        {{ item['content']['#title'] }}
+      </a>
+    {% endif %}
+  {% endfor %}
+{% endif %}

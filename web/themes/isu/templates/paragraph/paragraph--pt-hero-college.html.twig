@@ -1,0 +1,39 @@
+<div class="menu-sidebar invert mb-xs lg:hidden">
+  <button class="menu-sidebar__toggle dropdown" aria-expanded="false" data-popup>
+    <span class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </span>
+    <span>Menu</span>
+  </button>
+  {% if content.field_p_col_sub_nav_links|render %}
+    <ul class="reset menu-sidebar__menu">
+      {{ content.field_p_col_sub_nav_links }}
+    </ul>
+  {% endif %}
+</div>
+{% if content.field_p_col_sub_nav_links|render %}
+  <ul class="reset cluster justify-center my-l hidden lg:flex">
+    {{ content.field_p_col_sub_nav_links }}
+  </ul>
+{% endif %}
+{% if content.field_p_image|render %}
+  <div class="overlay-gradient-blue lg:mb-3xl">
+    {{ content.field_p_image }}
+  </div>
+{% endif %}
+<div class="bordered-flex flex flex-col gap-xl my-xl lg:my-0 lg:mb-3xl lg:flex-row">
+  {% if content.field_p_contact|render %}
+    <div>
+      <div class="flow flow-space-2xs">
+        {{ content.field_p_contact }}
+      </div>
+    </div>
+  {% endif %}
+  {% if content.field_p_intro_text|render %}
+    <div style="flex: 1;">
+      {{ content.field_p_intro_text }}
+    </div>
+  {% endif %}
+</div>

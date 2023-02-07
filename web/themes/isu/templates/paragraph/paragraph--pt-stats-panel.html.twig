@@ -1,0 +1,36 @@
+{% import "@isu/macros/macros.html.twig" as macros %}
+<div class="stats-panel bg-blue invert">
+  <div class="wrapper">
+    <div class="stats-panel__image overlay-gradient-blue bg-dark">
+      {{ content.field_p_image }}
+    </div>
+    <div class="stats-panel__content relative z-10 flow lg:px-xl">
+      {% if content.field_p_heading|render %}
+        {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
+          <h2 class="h2 text-center">{{ content.field_p_heading }}</h2>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
+          <h3 class="h2 text-center">{{ content.field_p_heading }}</h3>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
+          <h4 class="h2 text-center">{{ content.field_p_heading }}</h4>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
+          <h5 class="h2 text-center">{{ content.field_p_heading }}</h5>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
+          <h6 class="h2 text-center">{{ content.field_p_heading }}</h6>
+        {% else %}
+          <p class="h2 text-center">{{ content.field_p_heading }}</p>
+        {% endif %}
+      {% endif %}
+      <div class="stats-panel__carousel gap-xl flow-space-2xl lg:flex">
+        {{ content.field_p_stats }}
+        <div class="stats-panel__nav">
+          <button class="stats-panel__nav__btn stats-panel__previous" aria-label="Previous Slide">
+            {{ macros.inline_svg('icon-arrow') }}
+          </button>
+          <button class="stats-panel__nav__btn stats-panel__next" aria-label="Next Slide">
+            {{ macros.inline_svg('icon-arrow') }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

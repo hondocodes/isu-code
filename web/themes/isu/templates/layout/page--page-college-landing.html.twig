@@ -1,0 +1,17 @@
+<div class="hero hero--landing invert">
+  <div class="wrapper">
+    <div class="hero__container">
+      {{ page.breadcrumb }}
+      <h2 class="hero__headline text-center lg:w-75 lg:mx-auto">
+        {{ node.label }}
+      </h2>
+      <hr>
+      {{ drupal_field('field_college_hero', 'node', (node.id ? node.id : node)) }}
+    </div>
+  </div>
+</div>
+<main id="main-content">
+  {{ page.tabs }}
+  {{ page.content }}
+</main>
+{{ page.footer }}
