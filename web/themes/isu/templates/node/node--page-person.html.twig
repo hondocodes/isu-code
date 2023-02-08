@@ -1,0 +1,29 @@
+<div>
+  <div class="flow flow-space-l">
+    <h2 class="h3">{{ label }}</h2>
+    <div class="flow flow-space-l">
+      <div class="feature feature--xs" data-animation="fade-in-up" data-animate>
+        <div class="frame" data-ratio="2:3">
+          {{ content.field_image }}
+        </div>
+        <div class="flow flow-space-2xs">
+          {% if content.field_person_title|render %}
+            <h4 class="font-base">{{ content.field_person_title }}</h4>
+          {% endif %}
+          <div>
+            {% if content.field_person_office|render  %}
+              <p><strong>Office:</strong> {{ content.field_person_office }}</p>
+            {% endif %}
+            {% if content.field_person_phone %}
+              <p><strong>Phone:</strong> {{ content.field_person_phone }}</p>
+            {% endif %}
+            {% if content.field_person_email|render %}
+              <p><strong>Email:</strong> <a href="{% spaceless %}{{ content.field_person_email }}{% endspaceless %}" class="button-cta">{{ content.field_person_email }}</a></p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ content.field_standard_modules }}
