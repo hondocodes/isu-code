@@ -1,5 +1,4 @@
 {% import _self as menus %}
-
 <div class="menu-sidebar">
   <h2 class="menu-sidebar__heading">
     <span>Menu</span>
@@ -28,9 +27,9 @@
           <li>
         {% endif %}
         {% if item.below %}
-          <button aria-expanded="false" data-popup>
+          <div class="active">
             {{ item.title }}
-          </button>
+          </div>
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% else %}
           {{ link(item.title, item.url) }}
