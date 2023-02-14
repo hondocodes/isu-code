@@ -13,6 +13,11 @@
 }
 
 
+.fc-button-group>.fc-button{
+  background-color:rgb(var(--blue));
+  border-color:rgb(var(--blue));
+}
+
 .event__singular{
   padding: 5rem 0;
 }
