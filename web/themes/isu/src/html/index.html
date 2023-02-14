@@ -4,11 +4,21 @@
 {% block body %}
 <h1 class="screen-reader-text">Indiana State University</h1>
 
+<div class="px-s xl:px-l">
+  {% include '@components/breadcrumbs.html' %}
+</div>
 <div class="hero hero--sub invert">
   <div class="wrapper">
     <div class="hero__container">
-      {% include '@components/breadcrumbs.html' %}
-      <div><h2 class="hero__headline">ISU Template Suite</h2></div>
+      <div class="lg:z-10 lg:flex lg:items-center lg:gap-xl">
+        <div class="flow flow-space-2xl">
+          <div class="flow lg:flex">
+            <h1 class="hero__headline">
+              ISU Template Suite
+            </h1>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

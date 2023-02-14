@@ -1,10 +1,12 @@
 {% set page = { title: 'Faculty Listing' } %} {% extends '@layouts/base.html' %}
 {% block body %}
 
+<div class="px-s xl:px-l">
+  {% include '@components/breadcrumbs.html' %}
+</div>
 <div class="hero hero--sub invert">
   <div class="wrapper">
     <div class="hero__container">
-      {% include '@components/breadcrumbs.html' %}
       <div><h1 class="hero__headline">Listing</h2></div>
     </div>
   </div>
