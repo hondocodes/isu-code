@@ -23,13 +23,13 @@
       {% for item in items %}
         {% if item.in_active_trail %}
           <li>
-            <div class="active">
-              {{ item.title }}
-            </div>
         {% else %}
           <li>
         {% endif %}
         {% if item.below %}
+          <div class="active">
+            {{ item.title }}
+          </div>
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% else %}
           {{ link(item.title, item.url) }}
