@@ -32,7 +32,13 @@
           </div>
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% else %}
-          {{ link(item.title, item.url) }}
+          {% if item.in_active_trail %}
+            <div class="active">
+              {{ item.title }}
+            </div>
+          {% else %}
+            {{ link(item.title, item.url) }}
+          {% endif %}
         {% endif %}
         </li>
       {% endfor %}
