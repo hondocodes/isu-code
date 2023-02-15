@@ -24,7 +24,7 @@ function isu_theme_suggestions_page_alter(array &$suggestions, array $variables)
 
   if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term')) {
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
-    $suggestions[] = 'page__taxonomy__' . $term->getVocabularyId();
+    $suggestions[] = 'page__taxonomy__' . $term->bundle();
   }
 }
 
