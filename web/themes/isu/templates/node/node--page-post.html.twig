@@ -1,2 +1,19 @@
+<div>
+  <div class="flow flow-space-xs">
+    <ul class="reset cluster">
+      <li><a href="#">Category</a></li>
+    </ul>
+    <h2 class="h3">{{ label }}</h2>
+    <hr>
+    <ul class="reset cluster">
+      {% if content.field_publish_date|render %}
+        <li>{{ content.field_publish_date }}</li>|
+      {% endif %}
+      {% if content.field_author|render %}
+        <li>{{ content.field_author }}</li>
+      {% endif %}
+    </ul>
+  </div>
+</div>
 {{ body }}
 {{ content.field_standard_modules }}
