@@ -1,19 +1,52 @@
-<div>
-  <div class="flow flow-space-xs">
-    <ul class="reset cluster">
-      <li><a href="#">Category</a></li>
-    </ul>
-    <h2 class="h3">{{ label }}</h2>
-    <hr>
-    <ul class="reset cluster">
-      {% if content.field_publish_date|render %}
-        <li>{{ content.field_publish_date }}</li>|
+{% if view_mode == 'related' %}
+  <li class="routing-panel__block flow">
+    <a href="{{ url }}" class="routing-panel__link flow flow-space-2xs">
+      <div class="routing-panel__frame overlay-gradient-blue">
+        {{ content.field_image }}
+        <div class="routing-panel__box"></div>
+      </div>
+      <p>{{ content.field_categories }}</p>
+      <h3>{{ label }}</h3>
+    </a>
+    <div class="routing-panel__content flow-space-3xs">
+      <p>
+        {{ content.field_publish_date }}&nbsp;|&nbsp;{{ content.field_author }}
+      </p>
+    </div>
+  </li>
+{% elseif view_mode == 'listing' %}
+  <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
+    {% if content.field_image|render %}
+      <div class="frame" data-ratio="3:2">
+        {{ content.field_image }}
+      </div>
+    {% endif %}
+    <div class="flow flow-space-s">
+      <p class="font-bold">{{ content.field_publish_date }}</p>
+      <h4><a href="{{ url }}" class="font-base text-blue">{{ label }}</a></h4>
+      {% if summary %}
+        <p>{{ summary }}</p>
       {% endif %}
-      {% if content.field_author|render %}
-        <li>{{ content.field_author }}</li>
-      {% endif %}
-    </ul>
+    </div>
   </div>
-</div>
-{{ content.body }}
-{{ content.field_standard_modules }}
+{% else %}
+  <div>
+    <div class="flow flow-space-xs">
+      <ul class="reset cluster">
+        <li><a href="#">Category</a></li>
+      </ul>
+      <h2 class="h3">{{ label }}</h2>
+      <hr>
+      <ul class="reset cluster">
+        {% if content.field_publish_date|render %}
+          <li>{{ content.field_publish_date }}</li>|
+        {% endif %}
+        {% if content.field_author|render %}
+          <li>{{ content.field_author }}</li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+  {{ content.body }}
+  {{ content.field_standard_modules }}
+{% endif %}

@@ -1,5 +1,9 @@
 <?php
 
+function isu_preprocess_node(&$variables) {
+  $variables['summary'] = ['#markup' => $variables['node']->body->summary];
+}
+
 /**
 * Implements hook_theme_suggestions_HOOK_alter().
 */
