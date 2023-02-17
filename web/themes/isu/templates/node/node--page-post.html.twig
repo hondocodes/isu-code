@@ -34,7 +34,7 @@
     <div class="flow flow-space-xs">
       {% if categories|length > 0 %}
         <ul class="reset cluster">
-          <li>{{ categories }}</li>
+          <li>{{ categories|raw }}</li>
         </ul>
       {% endif %}
       <h2 class="h3">{{ label }}</h2>
