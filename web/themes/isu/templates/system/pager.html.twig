@@ -1,0 +1,49 @@
+{% import "@isu/macros/macros.html.twig" as macros %}
+
+{% if items %}
+  <nav class="pager" role="navigation" aria-labelledby="{{ heading_id }}">
+    <h4 id="{{ heading_id }}" class="visually-hidden">{{ 'Pagination'|t }}</h4>
+    <ul class="reset c-pagination cluster mt-m-l">
+      {# Print previous item if we are not on the first page. #}
+      {% if items.previous %}
+        <li>
+          <a href="{{ items.previous.href }}" class="c-pagination--prev" title="{{ 'Go to previous page'|t }}" rel="prev"{{ items.previous.attributes|without('href', 'title', 'rel') }}>
+            <span class="screen-reader-text">Previous page of results</span>
+          </a>
+        </li>
+      {% endif %}
+      {# Add an ellipsis if there are further previous pages. #}
+      {% if ellipses.previous %}
+        <li class="pagination__summary" role="presentation"><a role="button">&hellip;</a></li>
+      {% endif %}
+      {# Now generate the actual pager piece. #}
+      {% for key, item in items.pages %}
+        <li>
+          {% if current == key %}
+            {% set title = 'Current page'|t %}
+          {% else %}
+            {% set title = 'Go to page @key'|t({'@key': key}) %}
+          {% endif %}
+          <a href="{{ item.href }}" class="{{ current == key ? ' active' : '' }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }}>
+            <span class="visually-hidden">
+              {{ current == key ? 'Current page'|t : 'Page'|t }}
+            </span>
+            {{- key -}}
+          </a>
+        </li>
+      {% endfor %}
+      {# Add an ellipsis if there are further next pages. #}
+      {% if ellipses.next %}
+        <li class="pagination__summary" role="presentation"><a role="button">&hellip;</a></li>
+      {% endif %}
+      {# Print next item if we are not on the last page. #}
+      {% if items.next %}
+        <li >
+          <a href="{{ items.next.href }}" class="c-pagination--next" title="{{ 'Go to next page'|t }}" rel="next"{{ items.next.attributes|without('href', 'title', 'rel') }}>
+            <span class="screen-reader-text">Next page of results</span>
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
