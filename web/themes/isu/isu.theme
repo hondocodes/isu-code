@@ -1,7 +1,15 @@
 <?php
 
 function isu_preprocess_node(&$variables) {
-  $variables['summary'] = ['#markup' => $variables['node']->body->summary];
+  $node = $variables['node'];
+
+  $revision = \Drupal::routeMatch()->getRawParameter('node_revision');
+
+  if($revision) {
+    $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($revision);
+  }
+
+  $variables['summary'] = ['#markup' => $node->body->summary];
 
   if($node->getType() == 'page_post') {
     $categories = array();
