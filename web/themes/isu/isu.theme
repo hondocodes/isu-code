@@ -2,6 +2,16 @@
 
 function isu_preprocess_node(&$variables) {
   $variables['summary'] = ['#markup' => $variables['node']->body->summary];
+
+  if($node->getType() == 'page_post') {
+    $categories = array();
+    for($i = 0; $i < count($node->get('field_categories')); $i++) {
+      if (!empty($node->get('field_categories')[$i]->entity)){
+        $categories[] = '<a href="/taxonomy/term/'.$node->get('field_categories')[$i]->entity->id().'">'.$node->get('field_categories')[$i]->entity->get('name')->value.'</a>';
+      }
+    }
+    $variables['categories'] = implode(',', $categories);
+  }
 }
 
 /**

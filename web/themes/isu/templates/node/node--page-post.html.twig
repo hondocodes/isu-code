@@ -32,9 +32,11 @@
 {% else %}
   <div>
     <div class="flow flow-space-xs">
-      <ul class="reset cluster">
-        <li>{{ content.field_categories }}</li>
-      </ul>
+      {% if categories|length > 0 %}
+        <ul class="reset cluster">
+          <li>{{ categories }}</li>
+        </ul>
+      {% endif %}
       <h2 class="h3">{{ label }}</h2>
       <hr>
       <ul class="reset cluster">
