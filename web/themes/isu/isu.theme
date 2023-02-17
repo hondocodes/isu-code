@@ -9,17 +9,23 @@ function isu_preprocess_node(&$variables) {
     $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($revision);
   }
 
-  $variables['summary'] = ['#markup' => $node->body->summary];
+  if($node) {
 
-  if($node->getType() == 'page_post') {
-    $categories = array();
-    for($i = 0; $i < count($node->get('field_categories')); $i++) {
-      if (!empty($node->get('field_categories')[$i]->entity)){
-        $categories[] = '<a href="/taxonomy/term/'.$node->get('field_categories')[$i]->entity->id().'">'.$node->get('field_categories')[$i]->entity->get('name')->value.'</a>';
-      }
+    if(isset($node->body->summary)) {
+      $variables['summary'] = ['#markup' => $node->body->summary];  
     }
-    $variables['categories'] = implode(',', $categories);
+
+    if($node->getType() == 'page_post') {
+      $categories = array();
+      for($i = 0; $i < count($node->get('field_categories')); $i++) {
+        if (!empty($node->get('field_categories')[$i]->entity)){
+          $categories[] = '<a href="/taxonomy/term/'.$node->get('field_categories')[$i]->entity->id().'">'.$node->get('field_categories')[$i]->entity->get('name')->value.'</a>';
+        }
+      }
+      $variables['categories'] = implode(',', $categories);
+    }
   }
+
 }
 
 /**
