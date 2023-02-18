@@ -1,12 +1,5 @@
 <main id="main-content">
-  <div class="hero hero--sub invert">
-    <div class="wrapper">
-      <div class="hero__container">
-        {{ page.breadcrumb }}
-        {{ drupal_field('field_hero', 'node', (node.id ? node.id : node)) }}
-      </div>
-    </div>
-  </div>
+  {{ drupal_field('field_hero', 'node', (node.id ? node.id : node)) }}
   {{ page.tabs }}
   {{ page.content }}
 </main>
