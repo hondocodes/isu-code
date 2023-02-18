@@ -1,34 +1,44 @@
 {% import "@isu/macros/macros.html.twig" as macros %}
-<div class="overlay-gradient-blue lg:mb-3xl">
-  {{ content.field_p_image }}
-</div>
-<div class="lg:mt-[-25rem] lg:z-10 lg:flex lg:items-center lg:gap-xl">
-  <div class="flow flow-space-2xl">
-    <div class="flow lg:flex lg:items-center">
-      <h2 class="hero__headline">
-        {{ content.field_p_h1 }}
-      </h2>
-      {% if content.field_p_announcement_title|render %}
-        <div class="announcement">
-          <div class="announcement__details">
-            {% if content.field_p_announcement_url|render %}
-              <a href="{% spaceless %}{{ content.field_p_announcement_url }}{% endspaceless %}">
-                {{ content.field_p_announcement_title}}
-              </a>
+<div class="hero hero--sub invert" style="background-image: url('{% spaceless %}{{ content.field_p_image }}{% endspaceless %}');">
+  <div class="px-s xl:px-l">
+    {{ drupal_breadcrumb() }}
+  </div>
+  <div class="wrapper">
+    <div class="hero__container">
+      <div class="lg:z-10 lg:flex lg:items-center lg:gap-xl">
+        <div class="flow flow-space-2xl">
+          <div class="flow lg:flex">
+            <h1 class="hero__headline">
+              {{ content.field_p_h1 }}
+            </h1>
+            {% if content.field_p_announcement_title|render %}
+              <div class="announcement">
+                <div class="announcement__details">
+                  {% if content.field_p_announcement_url|render %}
+                    <a href="{% spaceless %}{{ content.field_p_announcement_url }}{% endspaceless %}">
+                      {{ content.field_p_announcement_title}}
+                    </a>
+                  {% endif %}
+                </div>
+                <div class="announcement__date">
+                  {{ content.field_p_announcement_month }}
+                  <span>
+                    {{ content.field_p_announcement_day }}
+                  </span>
+                </div>
+                <div class="announcement__arrow" data-animation="slide-left-fade" data-animate>
+                  {{ macros.inline_svg('Large-Arrow') }}
+                </div>
+              </div>
             {% endif %}
           </div>
-          <div class="announcement__date">
-            {{ content.field_p_announcement_month }}
-            <span>
-              {{ content.field_p_announcement_day }}
-            </span>
-          </div>
-          <div class="announcement__arrow" data-animation="slide-left-fade" data-animate>
-            {{ macros.inline_svg('Large-Arrow') }}
-          </div>
         </div>
-      {% endif %}
+      </div>
     </div>
+  </div>
+</div>
+<div class="bg-blue invert pb-xl">
+  <div class="wrapper">
     <div>
       <div class="flow flow-space-m">
         {% if content.field_p_intro_text|render %}
