@@ -107,10 +107,8 @@ if (finderPage) {
                 <div className="breadcrumbs invert">
                   <div className="py-s">
                     <ul className="reset cluster">
-                      <li>
-                        <a href="#" aria-label="Home page">
-                          Home
-                        </a>
+                      <li className="breadcrumbs__home">
+                        <a href="#" aria-label="Home page" />
                       </li>
                       <li>
                         Program Finder
