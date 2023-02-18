@@ -11,9 +11,17 @@
     </span>
   </a>
 {% elseif view_mode == 'full_width' %}
-  <div class="frame border-radius relative overlay-gradient-white" data-ratio="3:2">
+  <div class="frame border-radius relative" data-ratio="3:2">
     {{ content.field_media_placeholder_image }}
     <a class="button-arrow button-arrow--play button-arrow--blue-dark absolute z-10 bottom-xs left-xs" href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal="" data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
+      <span class="material-symbols-outlined" aria-hidden="true">
+        play_arrow
+      </span>
+      Watch Video
+    </a>
+  </div>
+  <div class="video__caption">
+    <a class="button-arrow button-arrow--play button-arrow--white" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
       <span class="material-symbols-outlined" aria-hidden="true">
         play_arrow
       </span>
