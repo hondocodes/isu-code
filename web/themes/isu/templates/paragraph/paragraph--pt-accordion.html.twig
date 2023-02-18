@@ -1,33 +1,31 @@
 {% if view_mode == 'full_width' %}
-  <div>
-    {% if content.field_p_heading|render %}
-      {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
-        <h2 class="h3">{{ content.field_p_heading }}</h2>
-      {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
-        <h3 class="h3">{{ content.field_p_heading }}</h3>
-      {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
-        <h4 class="h3">{{ content.field_p_heading }}</h4>
-      {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
-        <h5 class="h3">{{ content.field_p_heading }}</h5>
-      {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
-        <h6 class="h3">{{ content.field_p_heading }}</h6>
-      {% else %}
-        <p class="h3">{{ content.field_p_heading }}</p>
-      {% endif %}
-    {% endif %}
-    {% if content.field_p_background_color['#items'].getString() == 'dark-blue' %}
-      <div class="region bg-blue-dark invert">
-        <div class="wrapper">
-          <div class="accordion bg-blue-dark invert">
-    {% else %}
-      <div class="region invert">
-        <div class="wrapper">
-          <div class="accordion">
-    {% endif %}
-        {% if content.field_p_items|render %}
-          {{ content.field_p_items }}
+  {% if content.field_p_background_color['#items'].getString() == 'dark-blue' %}
+    <div class="region bg-blue-dark invert">
+      <div class="wrapper">
+        <div class="accordion bg-blue-dark invert">
+  {% else %}
+    <div class="region invert">
+      <div class="wrapper">
+        <div class="accordion">
+  {% endif %}
+      {% if content.field_p_heading|render %}
+        {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
+          <h2 class="h3">{{ content.field_p_heading }}</h2>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
+          <h3 class="h3">{{ content.field_p_heading }}</h3>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
+          <h4 class="h3">{{ content.field_p_heading }}</h4>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
+          <h5 class="h3">{{ content.field_p_heading }}</h5>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
+          <h6 class="h3">{{ content.field_p_heading }}</h6>
+        {% else %}
+          <p class="h3">{{ content.field_p_heading }}</p>
         {% endif %}
-      </div>
+      {% endif %}
+      {% if content.field_p_items|render %}
+        {{ content.field_p_items }}
+      {% endif %}
     </div>
   </div>
 </div>
