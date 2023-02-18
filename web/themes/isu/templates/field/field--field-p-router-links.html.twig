@@ -1,8 +1,13 @@
-<ul class="reset flow flow-space-xs invert">
+<ul class="reset router-list">
   {% for item in items %}
     {% if item['content']['#title'] %}
-      <li data-animation="fade-in-up" data-animate>
-        <a class="button-router" href="{{ item['content']['#url'] }}">{{ item['content']['#title'] }}</a>
+      <li>
+        <a href="{{ item['content']['#url'] }}" class="button-arrow button-arrow--white">
+          <span class="material-symbols-outlined" aria-hidden="true">
+            arrow_forward
+          </span>
+          {{ item['content']['#title'] }}
+        </a>
       </li>
     {% endif %}
   {% endfor %}
