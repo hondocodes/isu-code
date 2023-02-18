@@ -23,7 +23,12 @@
         {% endif %}
         {{ content.field_content }}
         {% if content.field_email|render %}
-          {{ content.field_email }}
+          <a href="mailto:{% spaceless %}{{ content.field_email }}{% endspaceless %}" class="button-arrow button-arrow--blue-dark">
+            <span class="material-symbols-outlined" aria-hidden="true">
+              arrow_forward
+            </span>
+            Send Email
+          </a>
         {% endif %}
         <div>
           {% if content.field_phone|render %}
