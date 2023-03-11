@@ -12,7 +12,7 @@ function isu_preprocess_node(&$variables) {
   if($node) {
 
     if(isset($node->body->summary)) {
-      $variables['summary'] = ['#markup' => $node->body->summary];  
+      $variables['summary'] = ['#markup' => $node->body->summary];
     }
 
     if($node->getType() == 'page_post') {
@@ -83,7 +83,26 @@ function isu_preprocess_paragraph(&$variables) {
     $variables['testimonials'] = _isu_testimonial_slider($paragraph);
   } elseif($paragraph->bundle() == 'pt_feature_panel_full_width') {
     $variables['remove_top_margin'] = $paragraph->get('field_p_remove_top_margin')->getString();
+  } elseif($paragraph->bundle() == 'pt_event_headlines_curated') {
+    $variables['events'] = _isu_event_headlines_curated($paragraph);
   }
+}
+
+function _isu_event_headlines_curated($paragraph){
+  $variation = $paragraph->get('field_p_event_style');
+  $events = $paragraph->get('field_p_events');
+
+  $events_array = array();
+  if($variation->getString() == '1') {
+    foreach($events->referencedEntities() as $e) {
+      $events_array[] = _isu_theme_node($e->id(), 'headline');
+    }
+  } else {
+    foreach($events->referencedEntities() as $e) {
+      $events_array[] = _isu_theme_node($e->id(), 'announcement');
+    }
+  }
+  return $events_array;
 }
 
 function _isu_testimonial_slider($paragraph) {
