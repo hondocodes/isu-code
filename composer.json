@@ -45,7 +45,8 @@
         "drupal/smart_date": "^3.6",
         "drupal/devel": "^5.1",
         "drupal/viewsreference": "^1.8",
-        "drupal/pathauto": "^1.11"
+        "drupal/pathauto": "^1.11",
+        "drupal/feeds": "^3.0@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
