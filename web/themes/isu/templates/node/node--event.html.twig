@@ -46,7 +46,11 @@
   </a>
 {% elseif view_mode == 'announcement' %}
   <a href="{{ url }}" class="event event--alt invert">
+    {% if end_month %}
+    <div class="event__date event__date--range">
+    {% else %}
     <div class="event__date">
+    {% endif %}
       {% if not end_month %}
         {{ start_month }} <span>{{ start_day }}</span>
       {% else %}

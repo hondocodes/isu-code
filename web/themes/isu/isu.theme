@@ -37,8 +37,10 @@ function isu_preprocess_node(&$variables) {
       $variables['start_day'] = $start_date->format('j');
 
       if($end_date) {
-        $variables['end_month'] = $end_date->format('M');
-        $variables['end_day'] = $end_date->format('j');
+        if($start_date->format('j') != $end_date->format('j')) {
+          $variables['end_month'] = $end_date->format('M');
+          $variables['end_day'] = $end_date->format('j');
+        }
       }
     }
   }
