@@ -1,0 +1,38 @@
+<div class="region bg-white">
+  <div class="wrapper">
+    <div class="flow flow-space-l">
+      <div class="flex flex-col gap-s lg:flex-row lg:justify-between lg:items-center" data-animation="fade-in-up" data-animate>
+        {% if content.field_p_heading|render %}
+          {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
+            <h2>{{ content.field_p_heading }}</h2>
+          {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
+            <h3 class="h2">{{ content.field_p_heading }}</h3>
+          {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
+            <h4 class="h2">{{ content.field_p_heading }}</h4>
+          {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
+            <h5 class="h2">{{ content.field_p_heading }}</h5>
+          {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
+            <h6 class="h2">{{ content.field_p_heading }}</h6>
+          {% else %}
+            <p class="h2">{{ content.field_p_heading }}</p>
+          {% endif %}
+        {% endif %}
+        {% if content.field_p_event_button|render %}
+          <div class="lg:text-right">
+            {{ content.field_p_event_button }}
+          </div>
+        {% endif %}
+      </div>
+      {% if content.field_p_event_style['#items'].getString() == '2' %}
+        <div class="grid gap-m" data-layout="1/2">
+      {% else %}
+        <div class="grid grid--events gap-m" data-layout="1/3">
+      {% endif %}
+        {% for event in events %}
+          {{ event }}
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -106,6 +106,8 @@ function isu_preprocess_paragraph(&$variables) {
     $variables['remove_top_margin'] = $paragraph->get('field_p_remove_top_margin')->getString();
   } elseif($paragraph->bundle() == 'pt_event_headlines_curated') {
     $variables['events'] = _isu_event_headlines_curated($paragraph);
+  } elseif($paragraph->bundle() == 'pt_event_headlines_by_category') {
+    $variables['events'] = _isu_event_headlines_by_category($paragraph);
   }
 }
 
@@ -127,6 +129,70 @@ function _isu_event_headlines_curated($paragraph){
   } else {
     foreach($events->referencedEntities() as $e) {
       $events_array[] = _isu_theme_node($e->id(), 'announcement');
+    }
+  }
+  return $events_array;
+}
+
+function _isu_event_headlines_by_category($paragraph){
+  $variation = $paragraph->get('field_p_event_style');
+  $categories = $paragraph->get('field_p_categories');
+
+  $category_tids = array();
+  foreach($categories->referencedEntities() as $cat) {
+    $category_tids[] = $cat->id();
+  }
+
+  $events = array();
+  if(count($category_tids) > 0 || count($types_tids) > 0) {
+    $sql = "SELECT n.nid FROM {node} n
+    INNER JOIN {node_field_data} d
+    ON n.nid = d.nid";
+
+    if(count($category_tids) > 0 ) {
+      $sql .= " INNER JOIN {node__field_categories} c
+          ON n.nid = c.entity_id";
+    }
+
+    $sql .= " WHERE n.type = 'event'
+    AND d.status = 1";
+
+    if(count($category_tids) > 0 ) {
+      $sql .= " AND c.field_categories_target_id IN (:tids[])";
+    }
+
+    $sql .= " ORDER BY d.title ASC";
+
+    $database = \Drupal::database();
+    if(count($category_tids) > 0) {
+      $result = $database->query($sql, [
+        ':tids[]' => $category_tids
+      ]);
+    } else {
+      $result = $database->query($sql);
+    }
+
+    if($result) {
+      while ($row = $result->fetchAssoc()) {
+        $events[] = $row['nid'];
+      }
+    }
+  }
+
+  $events_array = array();
+  if($variation->getString() == '1') {
+    $i = 1;
+    foreach($events as $e) {
+      if($i%2 == 0) {
+        $events_array[] = _isu_theme_node($e, 'headline_alt');
+      } else {
+        $events_array[] = _isu_theme_node($e, 'headline');
+      }
+      $i++;
+    }
+  } else {
+    foreach($events->referencedEntities() as $e) {
+      $events_array[] = _isu_theme_node($e, 'announcement');
     }
   }
   return $events_array;
