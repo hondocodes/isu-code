@@ -9,7 +9,30 @@
         <span class="material-symbols-outlined" aria-hidden="true">
           schedule
         </span>
-        {{ content.field_event_date }}
+        {{ event_time}}
+      </div>
+      {% if content.field_contact_venue|render %}
+        <div class="flex items-center gap-xs">
+          <span class="material-symbols-outlined" aria-hidden="true">
+            location_on
+          </span>
+          {{ content.field_contact_venue }}
+        </div>
+      {% endif %}
+    </div>
+  </a>
+{% elseif view_mode == 'headline_alt' %}
+  <a href="{{ url }}" class="event flow bg-blue-light py-l px-m">
+    <div class="event__date h3">{{ content.field_event_date }}</div>
+    <h3 class="event__title font-base text-step-0">
+      {{ label }}
+    </h3>
+    <div class="event__details">
+      <div class="event flex items-center gap-xs">
+        <span class="material-symbols-outlined" aria-hidden="true">
+          schedule
+        </span>
+        {{ event_time }}
       </div>
       {% if content.field_contact_venue|render %}
         <div class="flex items-center gap-xs">
