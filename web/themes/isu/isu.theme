@@ -26,9 +26,17 @@ function isu_preprocess_node(&$variables) {
     } elseif($node->getType() == 'event') {
       // $variables['event_time'] = $node->get('field_event_date')->date->format('g:ia');
       $startTs = $node->get('field_event_date')->getValue()[0]['value'];
+      $endTs = $node->get('field_event_date')->getValue()[0]['value1'];
       $start_date = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($startTs);
+      $end_date = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($endTs);
+
 
       $variables['start_date'] = $start_date->format('F j');
+
+      $variables['start_month'] = $start_date->format('M');
+      $variables['start_day'] = $start_date->format('j');
+      $variables['end_month'] = $end_date->format('M');
+      $variables['end_day'] = $end_date->format('j');
 
     }
   }
