@@ -144,13 +144,13 @@ function _isu_event_headlines_by_category($paragraph){
   }
 
   $events = array();
-  if(count($category_tids) > 0 || count($types_tids) > 0) {
+  if(count($category_tids) > 0) {
     $sql = "SELECT n.nid FROM {node} n
     INNER JOIN {node_field_data} d
     ON n.nid = d.nid";
 
     if(count($category_tids) > 0 ) {
-      $sql .= " INNER JOIN {node__field_categories} c
+      $sql .= " INNER JOIN {node__field_event_tags} c
           ON n.nid = c.entity_id";
     }
 
@@ -158,7 +158,7 @@ function _isu_event_headlines_by_category($paragraph){
     AND d.status = 1";
 
     if(count($category_tids) > 0 ) {
-      $sql .= " AND c.field_categories_target_id IN (:tids[])";
+      $sql .= " AND c.field_event_tags_target_id IN (:tids[])";
     }
 
     $sql .= " ORDER BY d.title ASC";
