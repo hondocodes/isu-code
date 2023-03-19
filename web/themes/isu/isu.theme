@@ -26,10 +26,10 @@ function isu_preprocess_node(&$variables) {
     } elseif($node->getType() == 'event') {
       $date = $node->get('field_event_date')->getValue();
 
+      $startTs = $node->get('field_event_date')->getValue()[0]['value'];
+      $start_date = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($startTs);
+
       if(count($date) > 1) {
-        $startTs = $node->get('field_event_date')->getValue()[0]['value'];
-        $start_date = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($startTs);
-      } else {
         $endTs = $node->get('field_event_date')->getValue()[1]['value'];
         $end_date = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($endTs);
       }
