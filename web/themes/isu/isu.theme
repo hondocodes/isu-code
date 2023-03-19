@@ -191,7 +191,7 @@ function _isu_event_headlines_by_category($paragraph){
       $i++;
     }
   } else {
-    foreach($events->referencedEntities() as $e) {
+    foreach($events as $e) {
       $events_array[] = _isu_theme_node($e, 'announcement');
     }
   }
