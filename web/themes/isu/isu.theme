@@ -25,7 +25,7 @@ function isu_preprocess_node(&$variables) {
       $variables['categories'] = implode(',', $categories);
     } elseif($node->getType() == 'event') {
       // $variables['event_time'] = $node->get('field_event_date')->date->format('g:ia');
-      kint($node->get('field_event_date'));
+      kint($node->get('field_event_date')->getValue());
     }
   }
 
