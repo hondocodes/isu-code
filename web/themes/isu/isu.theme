@@ -24,6 +24,7 @@ function isu_preprocess_node(&$variables) {
       }
       $variables['categories'] = implode(',', $categories);
     } elseif($node->getType() == 'event') {
+      kint($node->get('field_event_date')->getValue());
       $startTs = $node->get('field_event_date')->getValue()[0]['value'];
       $start_date = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($startTs);
 
