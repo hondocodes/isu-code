@@ -26,7 +26,7 @@ function isu_preprocess_node(&$variables) {
     } elseif($node->getType() == 'event') {
       // $variables['event_time'] = $node->get('field_event_date')->date->format('g:ia');
       $timestamp = $node->get('field_event_date')->getValue()[0]['value'];
-      $date = new DrupalDateTime::createFromTimestamp($timestamp);
+      $date = DrupalDateTime::createFromTimestamp($timestamp);
       kint($date);
 
     }
