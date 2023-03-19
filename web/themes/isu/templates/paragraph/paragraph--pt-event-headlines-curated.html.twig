@@ -23,8 +23,9 @@
           </div>
         {% endif %}
       </div>
-      {% if content.field_p_event_style['#items'].getString() == '1' %}
-        <div class="grid grid--events gap-m" data-layout="1/3">
+{{      content.field_p_event_style['#items'].getString()
+}}      {% if content.field_p_event_style['#items'].getString() == '2' %}
+        <div class="grid gap-m" data-layout="1/2">
       {% else %}
         <div class="grid gap-zero" data-layout="1/3">
       {% endif %}
