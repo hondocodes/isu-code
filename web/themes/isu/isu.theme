@@ -34,11 +34,13 @@ function isu_preprocess_node(&$variables) {
         $end_date = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp($endTs);
       }
 
-      $variables['start_date'] = $start_date->format('F j');
+      $variables['start_date'] = $start_date->format('M j');
       $variables['start_month'] = $start_date->format('M');
       $variables['start_day'] = $start_date->format('j');
 
+
       if(count($date) > 1) {
+        $variables['end_date'] = $end_date->format('M j')
         if($start_date->format('j') != $end_date->format('j')) {
           $variables['end_month'] = $end_date->format('M');
           $variables['end_day'] = $end_date->format('j');
