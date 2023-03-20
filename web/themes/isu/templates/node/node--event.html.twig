@@ -11,12 +11,14 @@
       {{ label }}
     </h3>
     <div class="event__details">
-      <div class="event flex items-center gap-xs">
-        <span class="material-symbols-outlined" aria-hidden="true">
-          schedule
-        </span>
-        {{ content.field_event_date }}
-      </div>
+      {% if not end_date %}
+        <div class="event flex items-center gap-xs">
+          <span class="material-symbols-outlined" aria-hidden="true">
+            schedule
+          </span>
+          {{ content.field_event_date }}
+        </div>
+      {% endif %}
       {% if content.field_contact_venue|render %}
         <div class="flex items-center gap-xs">
           <span class="material-symbols-outlined" aria-hidden="true">
