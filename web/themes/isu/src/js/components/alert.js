@@ -15,26 +15,26 @@ const closes = document.querySelectorAll('[data-alert-close]');
 
 closes.forEach((close) => {
   close.addEventListener('click', () => {
-    // if (sessionStorage) {
-    //   if (!sessionStorage.getItem('closed')) {
-    // alert.style.display = 'none';
+    if (sessionStorage) {
+      if (!sessionStorage.getItem('closed')) {
+    alert.style.display = 'none';
     close.parentNode.remove();
-    // sessionStorage.setItem('closed', 'true');
-    //   }
-    // }
+    sessionStorage.setItem('closed', 'true');
+      }
+    }
   });
 });
 
-// const load = function load() {
-//   if (sessionStorage) {
-//     if (sessionStorage.getItem('closed')) {
-//       if (alert) {
-//         alert.style.display = 'none';
-//       }
-//     } else if (alert) {
-//       alert.style.display = 'flex';
-//     }
-//   }
-// };
+const load = function load() {
+  if (sessionStorage) {
+    if (sessionStorage.getItem('closed')) {
+      if (alert) {
+        alert.style.display = 'none';
+      }
+    } else if (alert) {
+      alert.style.display = 'flex';
+    }
+  }
+};
 
-// window.addEventListener('load', load);
+window.addEventListener('load', load);
