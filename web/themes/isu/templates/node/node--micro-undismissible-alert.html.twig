@@ -1,0 +1,24 @@
+<div class="alert alert--urgent flow">
+  <div class="alert__main">
+    <div class="flex items-center">
+      <span class="material-symbols-outlined text-step-2 icon" aria-hidden="true">
+        info
+      </span>
+      <strong>{{ label }}</strong>
+    </div>
+  </div>
+  <button class="alert__button icon-button" aria-expanded="true" data-alert-toggle>
+    <span class="screen-reader-text">Toggle</span>
+    <span class="material-symbols-outlined icon" aria-hidden="true">
+      play_arrow
+    </span>
+  </button>
+  <div class="alert__expand mt-xs">
+    {{ content.field_content }}
+    {% if content.field_alert_cta|render %}
+      <div class="alert__side">
+        {{ content.field_alert_cta }}
+      </div>
+    {% endif %}
+  </div>
+</div>
