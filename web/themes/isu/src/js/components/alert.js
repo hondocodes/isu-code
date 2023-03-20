@@ -17,9 +17,9 @@ closes.forEach((close) => {
   close.addEventListener('click', () => {
     if (sessionStorage) {
       if (!sessionStorage.getItem('closed')) {
-    alert.style.display = 'none';
-    close.parentNode.remove();
-    sessionStorage.setItem('closed', 'true');
+        alert.style.display = 'none';
+        close.parentNode.remove();
+        sessionStorage.setItem('closed', 'true');
       }
     }
   });
