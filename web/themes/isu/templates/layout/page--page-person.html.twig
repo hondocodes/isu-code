@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="hero__container">
       {{ page.breadcrumb }}
-      <div><h2 class="hero__headline">Faculty</h2></div>
+      <div><h2 class="hero__headline">{{ drupal_field('field_h1', 'node', (node.id ? node.id : node)) }}</h2></div>
     </div>
   </div>
 </div>
