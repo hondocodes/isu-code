@@ -18,14 +18,14 @@
                   </div>
                 {% endif %}
               </div>
+              {% if content.field_p_form_embed|render %}
+                <div class="p-xl mb-xl bg-blue-dark invert lg:mb-0 lg:min-w-[474px] lg:-top-[50%]">
+                  {{ content.field_p_form_embed }}
+                </div>
+              {% endif %}
             </div>
           </div>
         </div>
-        {% if content.field_p_form_embed|render %}
-          <div class="p-xl mb-xl bg-blue-dark invert lg:mb-0 lg:min-w-[474px] lg:-top-[50%]">
-            {{ content.field_p_form_embed }}
-          </div>
-        {% endif %}
       </div>
     </div>
   </div>
