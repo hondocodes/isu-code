@@ -12,7 +12,7 @@
   text-align: center;
   text-decoration: none;
   transition: all var(--transition);
-  
+
   &:hover {
     color: rgb(var(--blue-dark));
     background: rgb(var(--white));
@@ -48,6 +48,24 @@
     & .material-symbols-outlined {
       color: rgb(var(--white));
       background-color: rgb(var(--blue));
+    }
+  }
+
+  .invert & {
+    color: rgb(var(--white));
+
+    & .material-symbols-outlined {
+      border-color: rgb(var(--white));
+    }
+
+    &:hover {
+      & .material-symbols-outlined {
+        background-color: rgb(var(--white));
+        color: rgb(var(--blue));
+        .bg-blue-dk & {
+          color: rgb(var(--blue-dark));
+        }
+      }
     }
   }
 }
@@ -92,7 +110,7 @@
   }
 
   &.button-arrow--play {
-    
+
     & .material-symbols-outlined {
       background-color: rgb(var(--blue-dark));
       color: rgb(var(--light));
@@ -309,7 +327,7 @@
       }
     }
   }
-  
+
 
   .button-router {
     @mixin h4;
@@ -340,14 +358,14 @@
       } */
 
         @mixin inline-svg Small-Arrow, rgb(root-var(--white));
-  
+
         content: '';
         width: 2.5625rem;
         height: 2.125rem;
         margin-top: 0.1875rem;
         float: right;
         transition: transform var(--transition);
-    
+
     }
 
     &:hover {
