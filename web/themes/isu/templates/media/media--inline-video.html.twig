@@ -39,6 +39,13 @@
     </span>
     Watch Video
   </a>
+{% elseif view_mode == 'testimonial_home_2' %}
+  <a href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" class="button-arrow button-arrow--play button-arrow--white" data-minimodal-title="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}" data-minimodal>
+    <span class="material-symbols-outlined">
+      play_arrow
+    </span>
+    Watch Video
+  </a>
 {% else %}
   <a class="button-arrow button-arrow--blue-dark button-arrow--play absolute z-10 bottom-xs left-xs" href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal="" data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
     <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
