@@ -59,7 +59,7 @@
             {% if content.field_modal_video|render %}
               {{ content.field_modal_video }}
             {% elseif content.field_testimonial_cta|render %}
-              {{ drupal_field('field_testimonial_cta', 'node', node.id.value, 'button_white' }}
+              {{ drupal_field('field_testimonial_cta', 'node', node.id.value, 'button_white') }}
             {% endif %}
           </blockquote>
         </div>
