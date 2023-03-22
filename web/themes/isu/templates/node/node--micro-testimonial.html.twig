@@ -20,6 +20,52 @@
       </div>
     </div>
   </div>
+{% elseif view_mode == 'home_testimonial_1' %}
+  <div class="pullquote__container">
+    <div class="content__img content__img-alt">
+      {{ content.field_image }}
+      <div class="blue-gradient"></div>
+      <div class="pullquote pullquote--blue">
+        <blockquote>
+          {{ content.field_quote }}
+          {% if content.field_attribution|render %}
+            <p class="pullquote__author">
+               {{ content.field_attribution }}
+            </p>
+          {% endif %}
+          {% if content.field_modal_video|render %}
+            {{ content.field_modal_video }}
+          {% elseif content.field_testimonial_cta|render %}
+            {{ content.field_testimonial_cta }}
+          {% endif %}
+        </blockquote>
+      </div>
+    </div>
+  </div>
+{% elseif view_mode == 'home_testimonial_2' %}
+  <div class="pullquote__container">
+    <div class="content__half-blue">
+      <div class="content__img content__img-alt">
+        {{ content.field_image }}
+        <div class="blue-gradient"></div>
+        <div class="pullquote">
+          <blockquote>
+            {{ content.field_quote }}
+            {% if content.field_attribution|render %}
+              <p class="pullquote__author">
+                 {{ content.field_attribution }}
+              </p>
+            {% endif %}
+            {% if content.field_modal_video|render %}
+              {{ content.field_modal_video }}
+            {% elseif content.field_testimonial_cta|render %}
+              {{ content.field_testimonial_cta }}
+            {% endif %}
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
 {% elseif view_mode == 'home_footer_testimonial' %}
   <div class="content__half-blue">
     <div class="content__container">
