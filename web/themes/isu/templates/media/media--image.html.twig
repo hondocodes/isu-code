@@ -1,4 +1,4 @@
-{% if view_mode == 'url_only_hero' %}
+{% if view_mode == 'url_only_hero' or view_mode == 'url_only' %}
   {% spaceless %}{{ content.field_media_image }}{% endspaceless %}
 {% elseif view_mode == 'carousel_slide' %}
   <a href="{% spaceless %}{{ content.field_media_image }}{% endspaceless %}" class="image-carousel__item" data-minimodal="group" data-minimodal-caption="{{ content.field_media_caption_long }}">
