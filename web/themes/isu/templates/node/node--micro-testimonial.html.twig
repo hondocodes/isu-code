@@ -20,6 +20,29 @@
       </div>
     </div>
   </div>
+{% elseif view_mode == 'home_footer_testimonial' %}
+  <div class="content__half-blue">
+    <div class="content__container">
+      <div class="content__img" style="background-image: url('{% spaceless %}{{ content.field_image }}{% endspaceless %}');">
+        <div class="blue-blur"></div>
+        <div class="pullquote">
+          <blockquote>
+            {{ content.field_quote }}
+            {% if content.field_attribution|render %}
+              <p class="pullquote__author">
+                 {{ content.field_attribution }}
+              </p>
+            {% endif %}
+            {% if content.field_modal_video|render %}
+              {{ content.field_modal_video }}
+            {% elseif content.field_testimonial_cta|render %}
+              {{ content.field_testimonial_cta }}
+            {% endif %}
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
 {% elseif view_mode == 'testimonial_slide' %}
   <div class="testimonial-carousel__item">
     <div class="pullquote__container">
