@@ -1,5 +1,5 @@
 {% if view_mode == 'full_width' %}
-  {% if content.field_p_background_color['#items'].getString() == 'dark-blue' %}
+  {% if content.field_p_accordion_bg_color['#items'].getString() == 'dark-blue' %}
     <div class="region bg-blue-dark invert">
       <div class="wrapper">
   {% else %}
@@ -21,7 +21,7 @@
         <p class="h3">{{ content.field_p_heading }}</p>
       {% endif %}
     {% endif %}
-    {% if content.field_p_background_color['#items'].getString() == 'dark-blue' %}
+    {% if content.field_p_accordion_bg_color['#items'].getString() == 'dark-blue' %}
     <div class="accordion bg-blue-dark invert">
     {% else %}
     <div class="accordion">
@@ -49,7 +49,7 @@
         <p class="h3">{{ content.field_p_heading }}</p>
       {% endif %}
     {% endif %}
-    {% if content.field_p_background_color['#items'].getString() == 'dark-blue' %}
+    {% if content.field_p_accordion_bg_color['#items'].getString() == 'dark-blue' %}
     <div class="accordion bg-blue-dark invert">
     {% else %}
     <div class="accordion">
