@@ -10,6 +10,17 @@
       </a>
     {% endif %}
   {% endfor %}
+{% elseif view_mode == 'button_white' %}
+  {% for item in items %}
+    {% if item['content']['#title'] %}
+      <a href="{{ item['content']['#url'] }}" class="button-arrow button-arrow--white">
+        <span class="material-symbols-outlined">
+          arrow_forward
+        </span>
+        {{ item['content']['#title'] }}
+      </a>
+    {% endif %}
+  {% endfor %}
 {% else %}
   {% for item in items %}
     {% if item['content']['#title'] %}
