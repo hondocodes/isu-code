@@ -82,57 +82,33 @@
     </div>
   </a>
 {% else %}
-<div class="wrapper">
+  <div class="wrapper">
+    <div class="flow relative">
+      <div class="flow flow-space-l">
+        <div class="flow flow-space-l bordered">
+          <div class="feature feature--xs event__singular" data-direction="rtl" data-animation="fade-in-up" data-animate="true">
+            {% if content.field_event_image|render %}
+              <div class="frame" data-ratio="3:2">
+                {{ content.field_event_image }}
+              </div>
+            {% endif %}
+            <div class="flow flow-space-s">
+              <div id="event_tag__container">
+                <h4>Description</h4>
+                {{ content.field_event_description }}
+                <span class="event__tags">Primary Topic:  {{ content.field_event_primary_topic }} Tags:  {{ content.field_event_tags }}</span>
+              </div>
 
-<div class="flow relative">
-
-
-<div class="flow flow-space-l">
-
-<div class="flow flow-space-l bordered">
-
-
-
-<div class="feature feature--xs event__singular" data-direction="rtl" data-animation="fade-in-up" data-animate="true"><div class="frame" data-ratio="3:2">
-
-
-{{content.field_event_image}}
-
-</div>
-
-
-
-<div class="flow flow-space-s">
-<div id="event_tag__container">
-<h4>Description</h4>
-{{content.field_event_description}}
-<span class="event__tags">Primary Topic:  {{content.field_event_primary_topic}} Tags:  {{content.field_event_tags}}</span>
-</div>
-
-<p><span class="event__info">Date(s):  </span>{{content.field_event_date}}</p>
-<p><span class="event__info">Venue:  </span>{{content.field_event_venue}}</p>
-<h4>Contact Info</h4>
-<p><span class="event__info">Name:  </span>{{content.field_event_contact_name}}</p>
-<p><span class="event__info">Email:  </span>{{content.field_event_contact_email}}</p>
-<p><span class="event__info">Phone:  </span>{{content.field_event_contact_phone}}</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
+              <p><span class="event__info">Date(s):  </span>{{content.field_event_date}}</p>
+              <p><span class="event__info">Venue:  </span>{{content.field_event_venue}}</p>
+              <h4>Contact Info</h4>
+              <p><span class="event__info">Name:  </span>{{content.field_event_contact_name}}</p>
+              <p><span class="event__info">Email:  </span>{{content.field_event_contact_email}}</p>
+              <p><span class="event__info">Phone:  </span>{{content.field_event_contact_phone}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endif %}
