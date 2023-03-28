@@ -99,12 +99,20 @@
                 <span class="event__tags">Primary Topic:  {{ content.field_event_primary_topic }} Tags:  {{ content.field_event_tags }}</span>
               </div>
 
-              <p><span class="event__info">Date(s):  </span>{{content.field_event_date}}</p>
-              <p><span class="event__info">Venue:  </span>{{content.field_event_venue}}</p>
+              <p><span class="event__info">Date(s):  </span>{{ content.field_event_date }}</p>
+              {% if content.field_event_venue|render %}
+                <p><span class="event__info">Venue:  </span>{{ content.field_event_venue }}</p>
+              {% endif %}
               <h4>Contact Info</h4>
-              <p><span class="event__info">Name:  </span>{{content.field_event_contact_name}}</p>
-              <p><span class="event__info">Email:  </span>{{content.field_event_contact_email}}</p>
-              <p><span class="event__info">Phone:  </span>{{content.field_event_contact_phone}}</p>
+              {% if content.field_event_contact_name|render %}
+                <p><span class="event__info">Name:  </span>{{ content.field_event_contact_name }}</p>
+              {% endif %}
+              {% if content.field_event_contact_email|render %}
+                <p><span class="event__info">Email:  </span>{{ content.field_event_contact_email }}</p>
+              {% endif %}
+              {% if content.field_event_contact_phone|render %}
+                <p><span class="event__info">Phone:  </span>{{ content.field_event_contact_phone }}</p>
+              {% endif %}
             </div>
           </div>
         </div>
