@@ -110,7 +110,7 @@ if (finderPage) {
                       <li className="breadcrumbs__home">
                         <a href="#" aria-label="Home page" />
                       </li>
-                      <li>
+                      <li className="js-program-finder-title">
                         Program Finder
                       </li>
                     </ul>

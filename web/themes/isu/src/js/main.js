@@ -4,7 +4,7 @@ import 'focus-visible';
 // utilities
 import './util/focus-within';
 import './util/minimodal';
-import './util/popup';
+import './util/expand';
 import './util/select';
 import './util/toggle';
 import './util/animate';
