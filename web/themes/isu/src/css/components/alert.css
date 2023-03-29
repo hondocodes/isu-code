@@ -125,6 +125,7 @@
 
 .alert__expand {
   display: none;
+  flex: 1;
 
   @media (--lg) {
     --flow-space: 0;
