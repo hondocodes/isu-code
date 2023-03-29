@@ -4,6 +4,10 @@
   left: 0;
   width: 100%;
   z-index: 20;
+
+  &.header--no-hero {
+    background-color: rgb(var(--blue));
+  }
 }
 
 .header__interior {
@@ -215,6 +219,10 @@
   flex-wrap: wrap;
   padding: 0 1rem 15rem;
   background-color: rgb(var(--blue-dark));
+
+  .header--no-hero & {
+    border-bottom: 1px solid rgb(var(--blue-dark));
+  }
 
   @media (--xl) {
     padding: 1rem;

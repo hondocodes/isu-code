@@ -1,11 +1,34 @@
-{% set page = { title: 'Faculty Listing' } %} {% extends '@layouts/base.html' %}
+{% set page = { title: 'Faculty Listing' } %}
+{% set noHero = 'true' %}
+{% extends '@layouts/base.html' %}
 {% block body %}
 
-<div class="hero hero--sub invert">
-  <div class="wrapper">
-    <div class="hero__container">
-      {% include '@components/breadcrumbs.html' %}
-      <div><h1 class="hero__headline">Listing</h2></div>
+<div class="px-s xl:px-l">
+  <div class="breadcrumbs">
+    <div class="py-s">
+      <ul class="reset cluster">
+        <li class="breadcrumbs__home">
+          <a href="#" aria-label="Home page"></a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          {{ pageTitle ?? 'Current Page' }}
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -27,14 +50,14 @@
 
           <div>
             <div class="flow flow-space-l">
-              <h2>Faculty Listing</h2>
+              <h1 class="h2">Faculty Listing</h1>
               <div class="flow flow-space-l">
                 <div class="feature feature--xs bg-blue-lightest p-l" data-direction='rtl' data-animation="fade-in-up" data-animate>
                   <div class="frame" data-ratio="2:3">
                     <img src="../img/faculty.jpg" alt="placeholder">
                   </div>
                   <div class="flow flow-space-2xs">
-                    <h3 class="h4"><a href="#" class="font-base text-blue">Jillian Bontjes</a></h3>
+                    <h2 class="h4"><a href="#" class="font-base text-blue">Jillian Bontjes</a></h2>
                     <div>
                       <p><strong>Admissions Counselor</strong></p>
                       <p><strong>Office:</strong> Office of Admissions</p>

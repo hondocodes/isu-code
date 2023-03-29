@@ -20,8 +20,12 @@
       bottom: 0; */
       text-decoration: none;
       content: "/";
-      color: rgb(var(--blue-light));
+      color: rgb(var(--blue));
       padding-left: 0.5rem;
+
+      .invert & {
+        color: rgb(var(--blue-light));
+      }
     }
     &:first-of-type {
       &::after {
@@ -36,7 +40,10 @@
 
     a {
       &:hover {
-        color: rgb(var(--light));
+
+        .invert & {
+          color: rgb(var(--light));
+        }
 
         .hero & {
           text-decoration: none;

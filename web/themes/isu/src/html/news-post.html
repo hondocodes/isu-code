@@ -1,12 +1,35 @@
-{% set page = { title: 'News Post' } %} {% extends '@layouts/base.html' %}
+{% set page = { title: 'News Post' } %}
+{% set noHero = 'true' %}
+{% extends '@layouts/base.html' %}
 {% block body %}
 <h1 class="screen-reader-text">Indiana State University</h1>
 
-<div class="hero hero--sub invert">
-  <div class="wrapper">
-    <div class="hero__container">
-      {% include '@components/breadcrumbs.html' %}
-      <div><h2 class="hero__headline">News</h2></div>
+<div class="px-s xl:px-l">
+  <div class="breadcrumbs">
+    <div class="py-s">
+      <ul class="reset cluster">
+        <li class="breadcrumbs__home">
+          <a href="#" aria-label="Home page"></a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          {{ pageTitle ?? 'Current Page' }}
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -31,7 +54,7 @@
               <ul class="reset cluster">
                 <li><a href="#">Category</a></li>
               </ul>
-              <h2 class="h3">News Post Title</h2>
+              <h1 class="h3">News Post Title</h1>
               <hr>
               <ul class="reset cluster">
                 <li>Date</li>|
@@ -43,11 +66,7 @@
           <p class="intro">
             Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan.
           </p>
-
-          <p>
-            Paragraph Text (3-5 Sentences)— Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum turpis in augue consectetur, non cursus massa vestibulum. Aenean et augue suscipit, ultrices augue vel, faucibus velit. Fusce pellentesque elit non felis commodo, non tempus urna gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-
+          
           <div data-animation="fade-in-up" data-animate>
             <div class="flow flow-space-s">
               <div class="frame border-radius" data-ratio="3:2">
@@ -56,6 +75,10 @@
               <p class="text-step-s font-bold">Nunc lacinia egestas luctus. Phasellus placerat convallis sapien ac tristique. </p>
             </div>
           </div>
+
+          <p>
+            Paragraph Text (3-5 Sentences)— Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum turpis in augue consectetur, non cursus massa vestibulum. Aenean et augue suscipit, ultrices augue vel, faucibus velit. Fusce pellentesque elit non felis commodo, non tempus urna gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
 
           <div data-animation="fade-in-up" data-animate>
             <div class="flow flow-space-s">

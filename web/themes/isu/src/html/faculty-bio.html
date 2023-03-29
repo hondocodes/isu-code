@@ -1,11 +1,34 @@
-{% set page = { title: 'Faculty Bio' } %} {% extends '@layouts/base.html' %}
+{% set page = { title: 'Faculty Bio' } %}
+{% set noHero = 'true' %}
+{% extends '@layouts/base.html' %}
 {% block body %}
 
-<div class="hero hero--sub invert">
-  <div class="wrapper">
-    <div class="hero__container">
-      {% include '@components/breadcrumbs.html' %}
-      <div><h2 class="hero__headline">Faculty</h2></div>
+<div class="px-s xl:px-l">
+  <div class="breadcrumbs">
+    <div class="py-s">
+      <ul class="reset cluster">
+        <li class="breadcrumbs__home">
+          <a href="#" aria-label="Home page"></a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Parent Page
+          </a>
+        </li>
+        <li>
+          {{ pageTitle ?? 'Current Page' }}
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -27,14 +50,14 @@
 
           <div>
             <div class="flow flow-space-l">
-              <h2 class="h3">Jillian Bontjes</h2>
+              <h1 class="h3">Jillian Bontjes</h1>
               <div class="flow flow-space-l">
                 <div class="feature feature--xs" data-animation="fade-in-up" data-animate>
                   <div class="frame" data-ratio="2:3">
                     <img src="../img/faculty.jpg" alt="placeholder">
                   </div>
                   <div class="flow flow-space-2xs">
-                    <h4 class="font-base">Admissions Counselor</h4>
+                    <h2 class="font-base">Admissions Counselor</h2>
                     <div>
                       <p><strong>Office:</strong> Office of Admissions</p>
                       <p><strong>Phone:</strong> 1 (234)-567-8910</p>

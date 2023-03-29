@@ -21,7 +21,7 @@
     {% include '@components/alert.html' %}
   {% endif %}
 
-  {% include '@components/header.html' %}
+  {% include '@components/header.html' with { noHero } %}
   {% block body %}{% endblock %}
   {% include '@components/footer.html' %}
 </body>
