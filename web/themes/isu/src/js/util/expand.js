@@ -1,5 +1,15 @@
 import focusLock from 'dom-focus-lock';
 
+
+
+
+var checkReadyState = setInterval(() => {
+
+
+if (document.readyState === "complete") {
+
+clearInterval(checkReadyState);
+
 const targets = document.querySelectorAll('[data-expand]');
 
 targets.forEach((target) => {
@@ -72,3 +82,5 @@ targets.forEach((target) => {
     });
   }
 });
+
+}}, 100);
