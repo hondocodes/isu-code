@@ -83,4 +83,4 @@ targets.forEach((target) => {
   }
 });
 
-}}, 50);
+}}, 5);
