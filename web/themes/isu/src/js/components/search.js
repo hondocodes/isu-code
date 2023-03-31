@@ -1,3 +1,10 @@
+
+var checkReadyState = setInterval(() => {
+
+
+if (document.readyState === "complete") {
+
+clearInterval(checkReadyState);
 const toggles = document.querySelectorAll('.search--open');
 const body = document.querySelector('body');
 
@@ -57,3 +64,5 @@ const toggleSearch = () => {
 toggles.forEach((toggle) => {
   toggle.addEventListener('click', toggleSearch);
 });
+
+}}, 5);
