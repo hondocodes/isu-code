@@ -22,6 +22,9 @@
     gap: var(--gap);
   }
 }
+.column-split {
+  --gutter: var(--space-s);
+}
 
 summary {
   display: flex;
