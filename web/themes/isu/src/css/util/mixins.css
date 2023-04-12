@@ -101,6 +101,14 @@
   }
 }
 
+@define-mixin intro-s {
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.6;
+  text-transform: none;
+}
+
 @define-mixin underline {
   line-height: 220%;
   box-shadow: 0 0.2em rgb(var(--red));

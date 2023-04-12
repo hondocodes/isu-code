@@ -177,6 +177,10 @@ h6, .h6 {
   @mixin intro;
 }
 
+.intro-s {
+  @mixin intro-s;
+}
+
 a {
   text-underline-offset: 0.2em;
   color: currentColor;
