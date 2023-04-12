@@ -55,6 +55,14 @@
 .hero__container {
   position: relative;
   /* @mixin container; */
+
+  .programs-finder & {
+    padding-top: 2rem;
+
+    @media (--lg) {
+      padding-top: 14rem;
+    }
+  }
 }
 
 .hero__headline {
