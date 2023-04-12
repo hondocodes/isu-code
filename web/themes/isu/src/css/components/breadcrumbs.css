@@ -64,6 +64,7 @@
 }
 
 .breadcrumbs__home {
+  display: flex;
   a {
     text-decoration: none;
     &::after {

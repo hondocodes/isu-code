@@ -104,18 +104,6 @@ if (finderPage) {
           <div className="hero hero--sub overflow-visible invert">
             <div className="wrapper">
               <div className="hero__container">
-                <div className="breadcrumbs invert">
-                  <div className="py-s">
-                    <ul className="reset cluster">
-                      <li className="breadcrumbs__home">
-                        <a href="#" aria-label="Home page" />
-                      </li>
-                      <li className="js-program-finder-title">
-                        Program Finder
-                      </li>
-                    </ul>
-                  </div>
-                </div>
                 <div>
                   <h1 className="hero__headline js-program-finder-title" />
                   <p className="intro lg:w-75 js-program-finder-intro" />
