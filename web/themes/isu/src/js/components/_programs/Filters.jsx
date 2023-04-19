@@ -199,7 +199,7 @@ export default function Filters(props) {
 
       <div className="flex flex-col gap-m pb-l lg:flex-row lg:items-center">
         <Filter
-          title="Degree Level"
+          title="Program Type"
           target="degree"
           {...props}
         />

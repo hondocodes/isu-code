@@ -15,7 +15,12 @@
     </div>
   </li>
 {% elseif view_mode == 'listing' %}
-  <div class="feature feature--xs" data-direction="rtl" data-animation="fade-in-up" data-animate>
+  <div
+    class="feature feature--xs"
+    data-direction="rtl"
+    data-animation="fade-in-up"
+    data-animate
+  >
     {% if content.field_image|render %}
       <div class="frame" data-ratio="3:2">
         {{ content.field_image }}
