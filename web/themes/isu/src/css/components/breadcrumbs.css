@@ -48,6 +48,11 @@
     }
 
     a {
+
+      .normal-crumbs & {
+        color: rgb(var(--blue)) !important;
+      }
+
       &:hover {
 
         .invert & {
@@ -55,7 +60,7 @@
         }
 
         .normal-crumbs & {
-          color: rgb(var(--blue));
+          color: rgb(var(--blue)) !important;
         }
 
         .hero & {
