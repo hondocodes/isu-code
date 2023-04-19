@@ -12,6 +12,11 @@
   .invert & {
     color: rgb(var(--light));
   }
+
+  .normal-crumbs & {
+    color: rgb(var(--blue)) !important;
+  }
+
   li {
     position: relative;
     /* margin-right: 0.5rem; */
@@ -25,6 +30,10 @@
 
       .invert & {
         color: rgb(var(--blue-light));
+      }
+
+      .normal-crumbs & {
+        color: rgb(var(--blue)) !important;
       }
     }
     &:first-of-type {
@@ -45,9 +54,15 @@
           color: rgb(var(--light));
         }
 
+        .normal-crumbs & {
+          color: rgb(var(--blue));
+        }
+
         .hero & {
           text-decoration: none;
         }
+
+
       }
     }
   }
