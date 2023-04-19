@@ -14,7 +14,7 @@
   <div class="frame border-radius relative" data-ratio="3:2">
     {{ content.field_media_placeholder_image }}
     <div class="video__caption">
-      <a class="button-arrow button-arrow--play button-arrow--white" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
+      <a class="button-arrow button-arrow--play button-arrow--white" href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal="" data-minimodal-caption="{% spaceless %}{{ content.field_media_caption }}{% endspaceless %}">
         <span class="material-symbols-outlined" aria-hidden="true">
           play_arrow
         </span>
