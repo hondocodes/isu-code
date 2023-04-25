@@ -73,6 +73,8 @@ function isu_theme_suggestions_page_alter(array &$suggestions, array $variables)
     $term = \Drupal\taxonomy\Entity\Term::load($tid);
     $suggestions[] = 'page__taxonomy__' . $term->bundle();
   }
+
+  print_r($suggestions);
 }
 
 /**
