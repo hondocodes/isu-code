@@ -1,0 +1,27 @@
+{% include '@isu/includes/header-no-hero.html.twig' %}
+<h1 class="screen-reader-text">Faculty Listing</h1>
+<div class="px-s xl:px-l normal-crumbs">
+  {{ page.breadcrumb }}
+</div>
+<main id="main-content">
+  <div class="wrapper">
+    <div class="l-page-sidebar mb-xl lg:my-l">
+      <div>
+        <div class="flow flow-space-l">
+          <div data-animation="fade-in-up" data-animate>
+            {{ page.sub_nav }}
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flow relative">
+          <div class="flow flow-space-2xl">
+            {{ page.tabs }}
+            {{ page.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{{ page.footer }}
