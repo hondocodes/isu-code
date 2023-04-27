@@ -133,6 +133,7 @@ function _isu_events_three_up_curated($paragraph){
 
   $events_array = array();
 
+  $i = 0;
   foreach($events->referencedEntities() as $e) {
     if($i%2 == 0) {
       $events_array[] = _isu_theme_node($e->id(), 'headline_alt');
