@@ -177,6 +177,7 @@
     visibility: visible;
     overflow: visible;
     transition: none;
+    background: var(--color-dark);
   }
 }
 
