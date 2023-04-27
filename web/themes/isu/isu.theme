@@ -129,7 +129,7 @@ function _isu_events_two_up_curated($paragraph){
 }
 
 function _isu_events_three_up_curated($paragraph){
-  $events = $paragraph->get('field_p_events');
+  $events = $paragraph->get('field_p_events_three_up');
 
   $events_array = array();
 
