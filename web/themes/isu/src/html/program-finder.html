@@ -1,4 +1,5 @@
 {% set page = { title: 'Program Finder' } %}
+{% set alert = true %}
 {% extends '@layouts/base.html' %}
 
 {% block body %}
@@ -6,7 +7,7 @@
     var jsonUrl = "/json/programs.json";
   </script>
 
-  <div class="absolute top-[5rem] px-s xl:top-[10rem] xl:px-l">
+  <div class="bg-dark px-s xl:bg-opacity-0 xl:px-l xl:-mt-xs">
     <div class="breadcrumbs invert">
       <div class="py-s">
         <ul class="reset cluster">
