@@ -31,9 +31,9 @@
   font-weight: bold;
   color: rgb(var(--blue));
   text-decoration: none;
-  margin: 0;
   display: inline-flex;
   align-items: center;
+  width: 100%;
 
   & .material-symbols-outlined {
     font-size: 2rem;

@@ -1,19 +1,48 @@
 div.form_page input {
   --flow-space: var(--space-3xs);
-  border: none;
-  background-color: rgba(255,255,255,0.2);
   padding: var(--space-xs);
-  width: 100%;
+  border: 1px solid rgb(var(--blue-dark));
+  .invert & {
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+  }
+  .hero & {
+    width: 100%;
+  }
 }
 div.form_page select {
   --flow-space: var(--space-3xs);
-  border: none;
-  background-color: rgba(255,255,255,0.2);
   padding: var(--space-xs);
-  width: 100%;
+  border: 1px solid rgb(var(--blue-dark));
+  .invert & {
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+  }
+  .hero & {
+    width: 100%;
+  }
 }
 .form_button_submit {
   @mixin button;
-  background: rgb(var(--blue));
-  width: 100%;
+  border: 1px solid rgb(var(--blue-dark));
+  .invert & {
+    background: rgb(var(--blue));
+    &:hover {
+      background: rgb(var(--white));
+    }
+  }
+  .hero & {
+    width: 100%;
+  }
+}
+.required {
+  .invert & {
+    @apply text-dark;
+  }
+}
+.form_h1 {
+  @mixin h4;
+}
+#form_description {
+  margin-bottom: 2rem;
 }
