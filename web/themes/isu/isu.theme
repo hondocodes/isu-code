@@ -106,38 +106,45 @@ function isu_preprocess_paragraph(&$variables) {
     $variables['testimonials'] = _isu_testimonial_slider($paragraph);
   } elseif($paragraph->bundle() == 'pt_feature_panel_full_width') {
     $variables['remove_top_margin'] = $paragraph->get('field_p_remove_top_margin')->getString();
-  } elseif($paragraph->bundle() == 'pt_event_headlines_curated') {
-    $variables['events'] = _isu_event_headlines_curated($paragraph);
-  } elseif($paragraph->bundle() == 'pt_event_headlines_by_category') {
-    $variables['events'] = _isu_event_headlines_by_category($paragraph);
+  } elseif($paragraph->bundle() == 'pt_events_two_up_curated') {
+    $variables['events'] = _isu_events_two_up_curated($paragraph);
+  } elseif($paragraph->bundle() == 'pt_events_three_up_curated') {
+    $variables['events'] = _isu_events_three_up_curated($paragraph);
+  } elseif($paragraph->bundle() == 'pt_events_two_up_by_category') {
+    $variables['events'] = _isu_events_two_up_by_category($paragraph);
+  } elseif($paragraph->bundle() == 'pt_events_three_up_by_category') {
+    $variables['events'] = _isu_events_three_up_by_category($paragraph);
   }
 }
 
-function _isu_event_headlines_curated($paragraph){
-  $variation = $paragraph->get('field_p_event_style');
+function _isu_events_two_up_curated($paragraph){
   $events = $paragraph->get('field_p_events');
 
   $events_array = array();
-  if($variation->getString() == '1') {
-    $i = 1;
-    foreach($events->referencedEntities() as $e) {
-      if($i%2 == 0) {
-        $events_array[] = _isu_theme_node($e->id(), 'headline_alt');
-      } else {
-        $events_array[] = _isu_theme_node($e->id(), 'headline');
-      }
-      $i++;
+  foreach($events->referencedEntities() as $e) {
+    $events_array[] = _isu_theme_node($e->id(), 'announcement');
+  }
+
+  return $events_array;
+}
+
+function _isu_events_three_up_curated($paragraph){
+  $events = $paragraph->get('field_p_events');
+
+  $events_array = array();
+
+  foreach($events->referencedEntities() as $e) {
+    if($i%2 == 0) {
+      $events_array[] = _isu_theme_node($e->id(), 'headline_alt');
+    } else {
+      $events_array[] = _isu_theme_node($e->id(), 'headline');
     }
-  } else {
-    foreach($events->referencedEntities() as $e) {
-      $events_array[] = _isu_theme_node($e->id(), 'announcement');
-    }
+    $i++;
   }
   return $events_array;
 }
 
-function _isu_event_headlines_by_category($paragraph){
-  $variation = $paragraph->get('field_p_event_style');
+function _isu_events_two_up_by_category($paragraph){
   $categories = $paragraph->get('field_p_categories');
 
   $category_tids = array();
@@ -152,7 +159,7 @@ function _isu_event_headlines_by_category($paragraph){
     ON n.nid = d.nid";
 
     if(count($category_tids) > 0 ) {
-      $sql .= " INNER JOIN {node__field_event_tags} c
+      $sql .= " INNER JOIN {node__field_event_primary_topic} c
           ON n.nid = c.entity_id";
     }
 
@@ -160,7 +167,7 @@ function _isu_event_headlines_by_category($paragraph){
     AND d.status = 1";
 
     if(count($category_tids) > 0 ) {
-      $sql .= " AND c.field_event_tags_target_id IN (:tids[])";
+      $sql .= " AND c.field_event_primary_topic_target_id IN (:tids[])";
     }
 
     $sql .= " ORDER BY d.title ASC";
@@ -182,20 +189,65 @@ function _isu_event_headlines_by_category($paragraph){
   }
 
   $events_array = array();
-  if($variation->getString() == '1') {
-    $i = 1;
-    foreach($events as $e) {
-      if($i%2 == 0) {
-        $events_array[] = _isu_theme_node($e, 'headline_alt');
-      } else {
-        $events_array[] = _isu_theme_node($e, 'headline');
+  foreach($events as $e) {
+    $events_array[] = _isu_theme_node($e, 'announcement');
+  }
+  return $events_array;
+}
+
+function _isu_events_three_up_by_category($paragraph){
+  $categories = $paragraph->get('field_p_categories');
+
+  $category_tids = array();
+  foreach($categories->referencedEntities() as $cat) {
+    $category_tids[] = $cat->id();
+  }
+
+  $events = array();
+  if(count($category_tids) > 0) {
+    $sql = "SELECT n.nid FROM {node} n
+    INNER JOIN {node_field_data} d
+    ON n.nid = d.nid";
+
+    if(count($category_tids) > 0 ) {
+      $sql .= " INNER JOIN {node__field_event_primary_topic} c
+          ON n.nid = c.entity_id";
+    }
+
+    $sql .= " WHERE n.type = 'event'
+    AND d.status = 1";
+
+    if(count($category_tids) > 0 ) {
+      $sql .= " AND c.field_event_primary_topic_target_id IN (:tids[])";
+    }
+
+    $sql .= " ORDER BY d.title ASC";
+
+    $database = \Drupal::database();
+    if(count($category_tids) > 0) {
+      $result = $database->query($sql, [
+        ':tids[]' => $category_tids
+      ]);
+    } else {
+      $result = $database->query($sql);
+    }
+
+    if($result) {
+      while ($row = $result->fetchAssoc()) {
+        $events[] = $row['nid'];
       }
-      $i++;
     }
-  } else {
-    foreach($events as $e) {
-      $events_array[] = _isu_theme_node($e, 'announcement');
+  }
+
+  $events_array = array();
+  $i = 1;
+  foreach($events as $e) {
+    if($i%2 == 0) {
+      $events_array[] = _isu_theme_node($e, 'headline_alt');
+    } else {
+      $events_array[] = _isu_theme_node($e, 'headline');
     }
+    $i++;
   }
   return $events_array;
 }
