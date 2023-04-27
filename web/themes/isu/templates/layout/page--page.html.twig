@@ -10,7 +10,7 @@
           </div>
         </div>
         {% if not node.field_sidebar_modules.isempty %}
-          <div class="hidden flow flow-space-l lg:block">
+          <div class="hide flow flow-space-l lg:block">
             {{ drupal_field('field_sidebar_modules', 'node', (node.id ? node.id : node)) }}
           </div>
         {% endif %}

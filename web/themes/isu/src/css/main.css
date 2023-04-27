@@ -62,3 +62,11 @@
 @import "components/print";
 
 @import 'tailwindcss/utilities';
+
+@layer utilities {
+	@variants responsive {
+		.hide {
+			display: none;
+		}
+	}
+}
