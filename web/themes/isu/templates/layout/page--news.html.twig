@@ -1,5 +1,8 @@
 {% include '@isu/includes/header-no-hero.html.twig' %}
-{{ drupal_field('field_hero', 'node', (node.id ? node.id : node)) }}
+<h1 class="screen-reader-text">News</h1>
+<div class="px-s xl:px-l normal-crumbs">
+  {{ page.breadcrumb }}
+</div>
 <main id="main-content">
   <div class="wrapper">
     <div class="l-page-sidebar mb-xl lg:my-l">
@@ -9,11 +12,6 @@
             {{ page.sub_nav }}
           </div>
         </div>
-        {% if not node.field_sidebar_modules.isempty %}
-          <div class="hide flow flow-space-l lg:block">
-            {{ drupal_field('field_sidebar_modules', 'node', (node.id ? node.id : node)) }}
-          </div>
-        {% endif %}
         {% if page.context_after_nav|render %}
           <div data-animation="fade-in-up" data-animate>
             {{ page.context_after_nav }}
@@ -43,13 +41,6 @@
               {{ page.tabs }}
               {{ page.context_after_main }}
             </div>
-          </div>
-        </div>
-      {% endif %}
-      {% if not node.field_sidebar_modules.isempty %}
-        <div class="mt-l lg:hidden">
-          <div class="flow flow-space-l">
-            {{ drupal_field('field_sidebar_modules', 'node', (node.id ? node.id : node)) }}
           </div>
         </div>
       {% endif %}
