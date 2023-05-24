@@ -90,6 +90,12 @@ function isu_theme_suggestions_block_alter(array &$suggestions, array $variables
       $suggestions[] = 'block__footer';
     }
   }
+
+  if(isset($variables['elements']['content']['field_subnav_links'])) {
+    if($variables['elements']['content']['field_subnav_links']['#bundle'] == 'sidebar_subnav') {
+      $suggestions[] = 'block__sidebar_subnav';
+    }
+  }
 }
 
 function isu_preprocess_paragraph(&$variables) {
