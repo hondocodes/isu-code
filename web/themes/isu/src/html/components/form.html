@@ -1,0 +1,87 @@
+<form class="webform-submission-form form">
+  <div class="form-item">
+    <label for="email">Email Field</label>
+    <input type="email" id="edit-email" name="email" value="" size="60" maxlength="254" class="form-email">
+  </div>
+  <div class="form-item">
+    <label for="edit-subject">Textbox</label>
+    <input type="text" id="edit-subject" name="subject" value="" size="60" maxlength="255" class="form-text">
+  </div>
+  <div class="form-item">
+    <label for="select">Select Field</label>
+    <select id="select" name="select" class="form-select">
+      <option value="" selected="selected">Please Choose...</option>
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+    </select>
+  </div>
+  <div class="form-item">
+    <label for="message">Text Area</label>
+    <div>
+      <textarea id="message" name="message" rows="5" cols="60"></textarea>
+    </div>
+  </div>
+  <fieldset class="fieldgroup form-wrapper">
+    <legend>
+      <span class="visually-hidden fieldset-legend form-required">Name</span>
+    </legend>
+    <div class="fieldset-wrapper">
+      <div class="webform-flexbox">
+        <div class="webform-flex webform-flex--3">
+          <div class="webform-flex--container">
+            <div class="form-item">
+              <label for="first">First Name</label>
+              <input type="text" id="first" name="first" value="" size="60" maxlength="255" class="form-text">
+            </div>
+          </div>
+        </div>
+        <div class="webform-flex webform-flex--3">
+          <div class="webform-flex--container">
+            <div class="form-item">
+              <label for="edit-name-last">Last Name</label>
+              <input type="text" id="edit-name-last" name="name[last]" value="" size="60" maxlength="255" class="form-text">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="fieldgroup form-item">
+    <legend>
+      <span class="fieldset-legend">Radio Buttons</span>
+    </legend>
+    <div class="fieldset-wrapper">
+      <div>
+        <div class="form-item">
+          <input type="radio" id="yes" name="radio" value="Yes" class="form-radio">
+          <label for="yes" class="option">Yes</label>
+        </div>
+        <div class="form-item">
+          <input type="radio" id="no" name="radio" value="No" class="form-radio">
+          <label for="no" class="option">No</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="fieldgroup form-item">
+    <legend>
+      <span class="fieldset-legend">Checkboxes</span>
+    </legend>
+    <div class="fieldset-wrapper">
+      <div>
+        <div class="form-item">
+          <input type="checkbox" id="checkyes" name="checkbox" value="Yes" class="form-checkbox">
+          <label for="checkyes" class="option">Yes</label>
+        </div>
+        <div class="form-item">
+          <input type="checkbox" id="checkno" name="checkbox" value="No" class="form-checkbox">
+          <label for="checkno" class="option">No</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <div>
+    <input class="webform-button--submit button button--primary" type="submit" id="submit" name="submit" value="Send message">
+  </div>
+</form>

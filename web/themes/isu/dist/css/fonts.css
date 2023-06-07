@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'LubalinGraph';
+  src: url("../fonts/LubalinGraphStd-Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LubalinGraph';
+  src: url("../fonts/LubalinGraphStd-Bold.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jc3MvdXRpbC9mb250cy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoiZm9udHMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiAnTHViYWxpbkdyYXBoJztcbiAgc3JjOiB1cmwoXCIuLi9mb250cy9MdWJhbGluR3JhcGhTdGQtTWVkaXVtLm90ZlwiKTtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xufVxuXG5AZm9udC1mYWNlIHtcbiAgZm9udC1mYW1pbHk6ICdMdWJhbGluR3JhcGgnO1xuICBzcmM6IHVybChcIi4uL2ZvbnRzL0x1YmFsaW5HcmFwaFN0ZC1Cb2xkLm90ZlwiKTtcbiAgZm9udC13ZWlnaHQ6IDkwMDtcbiAgZm9udC1zdHlsZTogbm9ybWFsO1xufVxuIl19 */
