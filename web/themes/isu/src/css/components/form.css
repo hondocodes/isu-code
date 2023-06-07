@@ -76,11 +76,12 @@
 .webform-submission-form>.form-item>input,
 .webform-submission-form>.form-item>div>textarea,
 .webform-submission-form>.form-item>.form-select,
+.webform-submission-form>.form-item .form-item>input,
 .webform-flex--container>.form-item>input,
 .webform-flex--container>.form-item>div>textarea,
 .webform-flex--container>.form-item>.form-select,
 .webform-flex--container>.form-item>div>input,
-.webform-flex--container>.form-item .form-item>input, {
+.webform-flex--container>.form-item .form-item>input {
   padding: 0.85rem 1rem !important;
   border: 0.0625rem solid var(--color-gray) !important;
   background-color: var(--color-white) !important;
@@ -92,6 +93,11 @@
 
 .webform-submission-form .form-item {
   margin-top: 1rem;
+}
+
+[data-drupal-field-elements="date-time"] {
+  display: flex;
+  gap: 1rem;
 }
 
 .webform-submission-form>.form-item>.form-select::before,
