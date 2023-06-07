@@ -80,7 +80,7 @@
 .webform-flex--container>.form-item>div>textarea,
 .webform-flex--container>.form-item>.form-select,
 .webform-flex--container>.form-item>div>input,
-.webform-flex--container>.form-item>div>div>input, {
+.webform-flex--container>.form-item .form-item>input, {
   padding: 0.85rem 1rem !important;
   border: 0.0625rem solid var(--color-gray) !important;
   background-color: var(--color-white) !important;
