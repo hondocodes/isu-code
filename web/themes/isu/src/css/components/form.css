@@ -78,10 +78,11 @@
 .webform-submission-form>.form-item>.form-select,
 .webform-flex--container>.form-item>input,
 .webform-flex--container>.form-item>div>textarea,
-.webform-flex--container>.form-item>.form-select {
+.webform-flex--container>.form-item>.form-select,
+.webform-flex--container>.form-item>div>input, {
   padding: 0.85rem 1rem !important;
   border: 0.0625rem solid var(--color-gray) !important;
-  background-color: $white !important;
+  background-color: var(--color-white) !important;
   max-width: 100%;
   width: 100%;
   display: block;
@@ -134,7 +135,7 @@
 .webform-submission-form .webform-flex {
   margin-top: 1rem;
 
-  @include mq($md) {
+  @media (--md) {
     margin-top: 0;
   }
 }
