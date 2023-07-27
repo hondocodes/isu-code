@@ -1,0 +1,46 @@
+/**
+ * REGION 
+ * Add consistent vertical padding to create regions of content 
+ * Can either be configured by setting --region-space or use a default from the space scale
+ */
+.region {
+  overflow: hidden;
+  padding-top: var(--region-space, var(--space-xl));
+  padding-bottom: var(--region-space, var(--space-xl));
+
+  @media (--lg) {
+    padding-top: var(--region-space, var(--space-3xl));
+    padding-bottom: var(--region-space, var(--space-3xl));
+  }
+
+  &.region--first {
+    padding-top: var(--region-space, var(--space-xl));
+  }
+  &.region--pull {
+    overflow: visible;
+    padding: 0;
+    padding-bottom: 3rem;
+  }
+}
+
+
+.region.bg-light + .region.bg-light {
+  padding-top: 0;
+}
+.region.bg-white + .region.bg-white {
+  padding-top: 0;
+}
+.region.bg-blue + .region.bg-blue {
+  padding-top: 0;
+}
+.region.bg-blue-dark + .region.bg-blue-dark {
+  padding-top: 0;
+}
+.region.content__top-blue + .region.bg-blue {
+  padding-top: 0;
+}
+.region.bg-blue + .region.content__top-blue {
+  padding-top: 0;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jc3MvY29tcG9zaXRpb25zL3JlZ2lvbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoicmVnaW9uLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogUkVHSU9OIFxuICogQWRkIGNvbnNpc3RlbnQgdmVydGljYWwgcGFkZGluZyB0byBjcmVhdGUgcmVnaW9ucyBvZiBjb250ZW50IFxuICogQ2FuIGVpdGhlciBiZSBjb25maWd1cmVkIGJ5IHNldHRpbmcgLS1yZWdpb24tc3BhY2Ugb3IgdXNlIGEgZGVmYXVsdCBmcm9tIHRoZSBzcGFjZSBzY2FsZVxuICovXG4ucmVnaW9uIHtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgcGFkZGluZy10b3A6IHZhcigtLXJlZ2lvbi1zcGFjZSwgdmFyKC0tc3BhY2UteGwpKTtcbiAgcGFkZGluZy1ib3R0b206IHZhcigtLXJlZ2lvbi1zcGFjZSwgdmFyKC0tc3BhY2UteGwpKTtcblxuICBAbWVkaWEgKC0tbGcpIHtcbiAgICBwYWRkaW5nLXRvcDogdmFyKC0tcmVnaW9uLXNwYWNlLCB2YXIoLS1zcGFjZS0zeGwpKTtcbiAgICBwYWRkaW5nLWJvdHRvbTogdmFyKC0tcmVnaW9uLXNwYWNlLCB2YXIoLS1zcGFjZS0zeGwpKTtcbiAgfVxuXG4gICYucmVnaW9uLS1maXJzdCB7XG4gICAgcGFkZGluZy10b3A6IHZhcigtLXJlZ2lvbi1zcGFjZSwgdmFyKC0tc3BhY2UteGwpKTtcbiAgfVxuICAmLnJlZ2lvbi0tcHVsbCB7XG4gICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgcGFkZGluZzogMDtcbiAgICBwYWRkaW5nLWJvdHRvbTogM3JlbTtcbiAgfVxufVxuXG5cbi5yZWdpb24uYmctbGlnaHQgKyAucmVnaW9uLmJnLWxpZ2h0IHtcbiAgcGFkZGluZy10b3A6IDA7XG59XG4ucmVnaW9uLmJnLXdoaXRlICsgLnJlZ2lvbi5iZy13aGl0ZSB7XG4gIHBhZGRpbmctdG9wOiAwO1xufVxuLnJlZ2lvbi5iZy1ibHVlICsgLnJlZ2lvbi5iZy1ibHVlIHtcbiAgcGFkZGluZy10b3A6IDA7XG59XG4ucmVnaW9uLmJnLWJsdWUtZGFyayArIC5yZWdpb24uYmctYmx1ZS1kYXJrIHtcbiAgcGFkZGluZy10b3A6IDA7XG59XG4ucmVnaW9uLmNvbnRlbnRfX3RvcC1ibHVlICsgLnJlZ2lvbi5iZy1ibHVlIHtcbiAgcGFkZGluZy10b3A6IDA7XG59XG4ucmVnaW9uLmJnLWJsdWUgKyAucmVnaW9uLmNvbnRlbnRfX3RvcC1ibHVlIHtcbiAgcGFkZGluZy10b3A6IDA7XG59XG4iXX0= */

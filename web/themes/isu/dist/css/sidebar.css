@@ -1,0 +1,96 @@
+/* 
+SIDEBAR
+More info: https://every-layout.dev/layouts/sidebar/
+A layout that allows you to have a flexible main content area
+and a "fixed" width sidebar that sits on the left or right.
+If there is not enough viewport space to fit both the sidebar
+width *and* the main content minimum width, they will stack
+on top of each other
+
+CUSTOM PROPERTIES AND CONFIGURATION
+--gutter (var(--space-size-1)): This defines the space
+between the sidebar and main content.
+
+--sidebar-target-width (20rem): How large the sidebar should be
+
+--sidebar-content-min-width(50%): The minimum size of the main content area
+
+EXCEPTIONS
+.sidebar[data-direction='rtl']: flips the sidebar to be on the right 
+*/
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, var(--space-s-l));
+}
+
+.sidebar > :first-child {
+  flex-basis: var(--sidebar-target-width, 20rem);
+  flex-grow: 1;
+}
+
+.sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: var(--sidebar-content-min-width, 65%);
+}
+
+/* 
+A flipped version where the sidebar is on the right
+*/
+.sidebar[data-direction='rtl'] {
+  flex-direction: row-reverse;
+}
+
+
+/* TODO Move this to proper place */
+.split-heading {
+  --gutter: var(--space-l);
+  --sidebar-target-width: 20rem;
+  --sidebar-content-min-width: 50%;
+
+  > :last-child {
+    align-self: flex-end;
+    display: flex;
+    /* justify-content: flex-end; */
+  }
+
+  &--home {
+    --sidebar-target-width: 38rem;
+    --sidebar-content-min-width: 50%;
+
+    > :last-child {
+      display: unset;
+    }
+  }
+}
+
+
+.sidebar--border-light {
+  > :first-child {
+    border-bottom: 1px solid rgb(var(--light));
+
+    @media (--lg) {
+      border-bottom: none;
+      border-right: 1px solid rgb(var(--light));
+    }
+  }
+}
+
+
+
+
+.c-program-feature-search {
+  --gutter: var(--space-l);
+  --sidebar-target-width: 62rem;
+  --sidebar-content-min-width: 20%;
+
+  align-items: center;
+
+  input,
+  input::placeholder {
+    color: var(--color-dark);
+    letter-spacing: -0.35px;
+  }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jc3MvY29tcG9zaXRpb25zL3NpZGViYXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6InNpZGViYXIuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogXG5TSURFQkFSXG5Nb3JlIGluZm86IGh0dHBzOi8vZXZlcnktbGF5b3V0LmRldi9sYXlvdXRzL3NpZGViYXIvXG5BIGxheW91dCB0aGF0IGFsbG93cyB5b3UgdG8gaGF2ZSBhIGZsZXhpYmxlIG1haW4gY29udGVudCBhcmVhXG5hbmQgYSBcImZpeGVkXCIgd2lkdGggc2lkZWJhciB0aGF0IHNpdHMgb24gdGhlIGxlZnQgb3IgcmlnaHQuXG5JZiB0aGVyZSBpcyBub3QgZW5vdWdoIHZpZXdwb3J0IHNwYWNlIHRvIGZpdCBib3RoIHRoZSBzaWRlYmFyXG53aWR0aCAqYW5kKiB0aGUgbWFpbiBjb250ZW50IG1pbmltdW0gd2lkdGgsIHRoZXkgd2lsbCBzdGFja1xub24gdG9wIG9mIGVhY2ggb3RoZXJcblxuQ1VTVE9NIFBST1BFUlRJRVMgQU5EIENPTkZJR1VSQVRJT05cbi0tZ3V0dGVyICh2YXIoLS1zcGFjZS1zaXplLTEpKTogVGhpcyBkZWZpbmVzIHRoZSBzcGFjZVxuYmV0d2VlbiB0aGUgc2lkZWJhciBhbmQgbWFpbiBjb250ZW50LlxuXG4tLXNpZGViYXItdGFyZ2V0LXdpZHRoICgyMHJlbSk6IEhvdyBsYXJnZSB0aGUgc2lkZWJhciBzaG91bGQgYmVcblxuLS1zaWRlYmFyLWNvbnRlbnQtbWluLXdpZHRoKDUwJSk6IFRoZSBtaW5pbXVtIHNpemUgb2YgdGhlIG1haW4gY29udGVudCBhcmVhXG5cbkVYQ0VQVElPTlNcbi5zaWRlYmFyW2RhdGEtZGlyZWN0aW9uPSdydGwnXTogZmxpcHMgdGhlIHNpZGViYXIgdG8gYmUgb24gdGhlIHJpZ2h0IFxuKi9cbi5zaWRlYmFyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBnYXA6IHZhcigtLWd1dHRlciwgdmFyKC0tc3BhY2Utcy1sKSk7XG59XG5cbi5zaWRlYmFyID4gOmZpcnN0LWNoaWxkIHtcbiAgZmxleC1iYXNpczogdmFyKC0tc2lkZWJhci10YXJnZXQtd2lkdGgsIDIwcmVtKTtcbiAgZmxleC1ncm93OiAxO1xufVxuXG4uc2lkZWJhciA+IDpsYXN0LWNoaWxkIHtcbiAgZmxleC1iYXNpczogMDtcbiAgZmxleC1ncm93OiA5OTk7XG4gIG1pbi13aWR0aDogdmFyKC0tc2lkZWJhci1jb250ZW50LW1pbi13aWR0aCwgNjUlKTtcbn1cblxuLyogXG5BIGZsaXBwZWQgdmVyc2lvbiB3aGVyZSB0aGUgc2lkZWJhciBpcyBvbiB0aGUgcmlnaHRcbiovXG4uc2lkZWJhcltkYXRhLWRpcmVjdGlvbj0ncnRsJ10ge1xuICBmbGV4LWRpcmVjdGlvbjogcm93LXJldmVyc2U7XG59XG5cblxuLyogVE9ETyBNb3ZlIHRoaXMgdG8gcHJvcGVyIHBsYWNlICovXG4uc3BsaXQtaGVhZGluZyB7XG4gIC0tZ3V0dGVyOiB2YXIoLS1zcGFjZS1sKTtcbiAgLS1zaWRlYmFyLXRhcmdldC13aWR0aDogMjByZW07XG4gIC0tc2lkZWJhci1jb250ZW50LW1pbi13aWR0aDogNTAlO1xuXG4gID4gOmxhc3QtY2hpbGQge1xuICAgIGFsaWduLXNlbGY6IGZsZXgtZW5kO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgLyoganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDsgKi9cbiAgfVxuXG4gICYtLWhvbWUge1xuICAgIC0tc2lkZWJhci10YXJnZXQtd2lkdGg6IDM4cmVtO1xuICAgIC0tc2lkZWJhci1jb250ZW50LW1pbi13aWR0aDogNTAlO1xuXG4gICAgPiA6bGFzdC1jaGlsZCB7XG4gICAgICBkaXNwbGF5OiB1bnNldDtcbiAgICB9XG4gIH1cbn1cblxuXG4uc2lkZWJhci0tYm9yZGVyLWxpZ2h0IHtcbiAgPiA6Zmlyc3QtY2hpbGQge1xuICAgIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCByZ2IodmFyKC0tbGlnaHQpKTtcblxuICAgIEBtZWRpYSAoLS1sZykge1xuICAgICAgYm9yZGVyLWJvdHRvbTogbm9uZTtcbiAgICAgIGJvcmRlci1yaWdodDogMXB4IHNvbGlkIHJnYih2YXIoLS1saWdodCkpO1xuICAgIH1cbiAgfVxufVxuXG5cblxuXG4uYy1wcm9ncmFtLWZlYXR1cmUtc2VhcmNoIHtcbiAgLS1ndXR0ZXI6IHZhcigtLXNwYWNlLWwpO1xuICAtLXNpZGViYXItdGFyZ2V0LXdpZHRoOiA2MnJlbTtcbiAgLS1zaWRlYmFyLWNvbnRlbnQtbWluLXdpZHRoOiAyMCU7XG5cbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcblxuICBpbnB1dCxcbiAgaW5wdXQ6OnBsYWNlaG9sZGVyIHtcbiAgICBjb2xvcjogdmFyKC0tY29sb3ItZGFyayk7XG4gICAgbGV0dGVyLXNwYWNpbmc6IC0wLjM1cHg7XG4gIH1cbn0iXX0= */
