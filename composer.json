@@ -48,7 +48,8 @@
         "drupal/pathauto": "^1.11",
         "drupal/feeds": "^3.0@beta",
         "drupal/editor_advanced_link": "^2.1",
-        "drupal/siteimprove": "^2.0"
+        "drupal/siteimprove": "^2.0",
+        "drupal/xmlfeedviews": "^1.2"
     },
     "require-dev": {
         "drupal/core-dev": "^9.2"
