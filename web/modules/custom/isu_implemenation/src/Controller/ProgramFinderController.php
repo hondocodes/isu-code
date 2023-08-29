@@ -28,6 +28,8 @@ class ProgramFinderController extends ControllerBase {
       $program = new \stdClass();
 
       $program->name = $node->getTitle();
+      $program->description = $node->body;
+
       $program->url = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$nid);
 
 
