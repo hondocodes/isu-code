@@ -28,9 +28,9 @@ class ProgramFinderController extends ControllerBase {
       $program = new \stdClass();
 
       $program->name = $node->getTitle();
-      $program->description = $node->body->value;
+      $program->description = strip_tags($node->body->value);
 
-      $program->url = \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$nid);
+      $program->url = $_SERVER['SERVER_NAME'] . \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$nid);
 
 
       if(!empty($node->get('field_search_keywords')->value)) {
