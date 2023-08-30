@@ -30,7 +30,7 @@ class ProgramFinderController extends ControllerBase {
       $program->name = $node->getTitle();
       $program->description = strip_tags($node->body->value);
 
-      $program->url = $_SERVER['SERVER_NAME'] . \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$nid);
+      $program->url = \Drupal::request()->getHost() . \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$nid);
 
 
       if(!empty($node->get('field_search_keywords')->value)) {
