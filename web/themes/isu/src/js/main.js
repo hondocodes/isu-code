@@ -13,6 +13,7 @@ import './util/animate';
 import './components/accordion';
 import './components/alert';
 import './components/header';
+import './components/hero';
 import './components/image-carousel';
 import './components/menu';
 import './components/_programs';

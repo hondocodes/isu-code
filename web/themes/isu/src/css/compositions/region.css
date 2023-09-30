@@ -1,6 +1,6 @@
 /**
- * REGION 
- * Add consistent vertical padding to create regions of content 
+ * REGION
+ * Add consistent vertical padding to create regions of content
  * Can either be configured by setting --region-space or use a default from the space scale
  */
 .region {
@@ -9,8 +9,8 @@
   padding-bottom: var(--region-space, var(--space-xl));
 
   @media (--lg) {
-    padding-top: var(--region-space, var(--space-3xl));
-    padding-bottom: var(--region-space, var(--space-3xl));
+    padding-top: var(--region-space, var(--space-2xl));
+    padding-bottom: var(--region-space, var(--space-2xl));
   }
 
   &.region--first {

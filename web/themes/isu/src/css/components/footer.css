@@ -1,4 +1,5 @@
 .footer {
+  position: relative;
   background-color: rgb(var(--blue-dark));
   color: rgb(var(--white));
 
@@ -59,7 +60,7 @@
 
 .footer__logo {
   display: block;
-  width: 14.5rem;
+  width: 23rem;
   margin-bottom: 2rem;
   color: rgb(var(--white));
 }
@@ -170,34 +171,23 @@
 }
 
 .footer__arrow {
-  width: 8rem;
-  transform: rotate(180deg);
-
-  @media (--lg) {
-    width: 18rem;
-  }
+  height: 2.5rem;
+  order: 1;
+  width: 2.5rem
 }
 
 .footer__scroll-top {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  font-weight: 700;
   gap: 1rem;
-  transform: translateY(-2rem);
-  transition: transform var(--transition);
-
-  &:hover,
-  &:focus {
-    transform: translateY(-4rem);
-
-    .footer__scroll-text {
-      text-decoration: underline;
-    }
-  }
+  justify-content: center;
+  margin-top: 2rem;
+  position: absolute;
+  right: 2rem;
 }
 .footer__scroll-text {
   display: flex;
@@ -233,4 +223,11 @@
     padding-left: 1rem;
     margin: 0;
   }
+}
+
+.footer-state-logo {
+  flex-shrink: 0;
+  height: 7.565rem;
+  margin: 1rem 0;
+  width: 8.75rem;
 }

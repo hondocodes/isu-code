@@ -4,7 +4,7 @@
   gap: var(--space-s);
 
   color: rgb(var(--blue));
-  
+
   @media (--lg) {
     /* padding: 4rem 0; */
     align-items: center;
@@ -29,27 +29,12 @@
 
 .feature-panel__img {
   position: relative;
-  
-  display: flex;
-  align-self: flex-start;
-
-  /* margin-left: -2.5rem;
-  margin-right: 20vw; */
-
-  .feature-panel--swap & {
-    /* margin-left: 20vw;
-    margin-right: -2.5rem; */
-
-    /* @media (--lg) {
-      margin-left: -2rem;
-      margin-right: -4.75rem;
-    } */
+  @media (--lg) {
+    width: 50%;
   }
 
-  @media (--lg) {
-    /* margin-left: -4.75rem;
-    margin-right: -2rem; */
-    width: 50%;
+  .button-arrow {
+    margin-top: 1rem;
   }
 }
 
