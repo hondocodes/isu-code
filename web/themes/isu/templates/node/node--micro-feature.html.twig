@@ -39,7 +39,7 @@
     <h2 class="feature-panel__heading">{{ label }}</h2>
       {{ content.field_content }}
       {% if content.field_feature_cta|render %}
-        {{ drupal_field('field_feature_cta', 'node', (node.id ? node.id : node), 'full_width_feature') }}
+        {{ drupal_field('field_feature_cta', 'node', (node.id ? node.id : node), 'full_width_program_feature') }}
       {% endif %}
   </div>
 {% else %}

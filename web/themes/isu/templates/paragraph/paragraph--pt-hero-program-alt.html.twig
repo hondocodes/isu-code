@@ -24,7 +24,8 @@
                 <h3>Request Information</h3>
                 <button class="hero__form__content--close"></button>
                 {{ content.field_p_form_embed }}
-                {{ content.field_p_apply_link }}
+                <div><a href="{{ content.field_p_apply_link.0['#url'] }}" class="font-bold">{{ content.field_p_apply_link.0['#title'] }}</a></div>
+                
             </div>
             </div>
 

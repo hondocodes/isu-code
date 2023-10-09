@@ -1,0 +1,68 @@
+{% import "@isu/macros/macros.html.twig" as macros %}
+{% if view_mode == 'home' %}
+  <div class="image-carousel">
+    {{ content.field_p_images }}
+    <div class="image-carousel__nav">
+      <button class="image-carousel__nav__btn image-carousel__previous" aria-label="Previous Slide">
+        {{ macros.inline_svg('icon-arrow') }}
+      </button>
+      <button class="image-carousel__nav__btn image-carousel__next" aria-label="Next Slide">
+        {{ macros.inline_svg('icon-arrow') }}
+      </button>
+    </div>
+  </div>
+{% elseif view_mode == 'full_width' %}
+  <div class="region bg-white">
+    <div class="wrapper">
+      <div class="image-carousel__container">
+        <div class="image-carousel">
+          {{ content.field_p_images }}
+          <div class="image-carousel__nav">
+            <button class="image-carousel__nav__btn image-carousel__previous" aria-label="Previous Slide">
+              {{ macros.inline_svg('icon-arrow') }}
+            </button>
+            <button class="image-carousel__nav__btn image-carousel__next" aria-label="Next Slide">
+              {{ macros.inline_svg('icon-arrow') }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% elseif view_mode == 'full_width_program' %}
+  <div class="wrapper">
+  <div class="flex justify-center">
+  <div class="lg:w-75 flow flow-space-2xl my-xl">
+    <div>{{ content.field_p_is_intro_text }}</div>
+  <div class="image-carousel__container">
+    <div class="image-carousel">
+      {{ content.field_p_images }}
+      <div class="image-carousel__nav">
+        <button class="image-carousel__nav__btn image-carousel__previous" aria-label="Previous Slide">
+          {{ macros.inline_svg('icon-arrow') }}
+        </button>
+        <button class="image-carousel__nav__btn image-carousel__next" aria-label="Next Slide">
+          {{ macros.inline_svg('icon-arrow') }}
+        </button>
+      </div>
+    </div>
+  </div>
+    <div>{{ content.field_p_is_outro_text }}</div>
+  </div>
+  </div>
+  </div>
+{% else %}
+  <div class="image-carousel__container">
+    <div class="image-carousel">
+      {{ content.field_p_images }}
+      <div class="image-carousel__nav">
+        <button class="image-carousel__nav__btn image-carousel__previous" aria-label="Previous Slide">
+          {{ macros.inline_svg('icon-arrow') }}
+        </button>
+        <button class="image-carousel__nav__btn image-carousel__next" aria-label="Next Slide">
+          {{ macros.inline_svg('icon-arrow') }}
+        </button>
+      </div>
+    </div>
+  </div>
+{% endif %}

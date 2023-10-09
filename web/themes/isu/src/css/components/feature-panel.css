@@ -109,3 +109,11 @@
 .feature-panel__heading {
   font-size: var(--size-step-2);
 }
+
+.bg-blue-dark .button{
+  background: rgb(var(--blue));
+}
+
+.bg-blue-dark .button:hover{
+  background: rgb(var(--white));
+}
