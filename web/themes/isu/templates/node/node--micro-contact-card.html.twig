@@ -2,22 +2,25 @@
 
   {% if content.field_heading|render %}
     {% if content.field_heading_tag['#items'].getString() == 'H2' %}
-      <h2 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h2>
+      <h2 class="h4 font-bold underline-full underline-orange">Contact Us</h2>
     {% elseif content.field_heading_tag['#items'].getString() == 'H3' %}
-      <h3 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h3>
+      <h3 class="h4 font-bold underline-full underline-orange">Contact Us</h3>
     {% elseif content.field_heading_tag['#items'].getString() == 'H4' %}
-      <h4 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h4>
+      <h4 class="h4 font-bold underline-full underline-orange">Contact Us</h4>
     {% elseif content.field_heading_tag['#items'].getString() == 'H5' %}
-      <h5 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h5>
+      <h5 class="h4 font-bold underline-full underline-orange">Contact Us</h5>
     {% elseif content.field_heading_tag['#items'].getString() == 'H6' %}
-      <h6 class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</h6>
+      <h6 class="h4 font-bold underline-full underline-orange">Contact Us</h6>
     {% else %}
-      <p class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</p>
+      <p class="h4 font-bold underline-full underline-orange">Contact Us</p>
     {% endif %}
   {% endif %}
 
   <ul>
-    <li><a href="#">Contact Us</a></li>
+    
+    {% if content.field_heading|render %}
+    <li><a href="#">{{ content.field_heading }}</a></li>
+    {% endif %}
     {% if content.field_email|render %}
     <li>Email Us: {{ content.field_email }}</li>
     {% endif %}
