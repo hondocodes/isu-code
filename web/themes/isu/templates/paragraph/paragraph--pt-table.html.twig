@@ -25,6 +25,42 @@
       {% endif %}
     </div>
   </div>
+
+{% elseif view_mode == 'full_width_program'  %}
+
+<div class="wrapper">
+  <div class="flex justify-center lg:my-xl">
+  <div class="lg:w-75 flow flow-space-2xl my-xl">
+  <div class="region bg-white">
+    <div class="wrapper">
+      {% if content.field_p_heading|render %}
+        {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
+          <h2 class="h3">{{ content.field_p_heading }}</h2>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
+          <h3 class="h3">{{ content.field_p_heading }}</h3>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
+          <h4 class="h3">{{ content.field_p_heading }}</h4>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
+          <h5 class="h3">{{ content.field_p_heading }}</h5>
+        {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
+          <h6 class="h3">{{ content.field_p_heading }}</h6>
+        {% else %}
+          <p class="h3">{{ content.field_p_heading }}</p>
+        {% endif %}
+      {% endif %}
+      {% if content.field_p_table_embed|render %}
+        <div>
+          <div class="c-table hscroll">
+            {{ content.field_p_table_embed }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
 {% else %}
   <div>
     {% if content.field_p_heading|render %}

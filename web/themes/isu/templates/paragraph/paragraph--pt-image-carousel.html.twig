@@ -33,6 +33,7 @@
   <div class="wrapper">
   <div class="flex justify-center">
   <div class="lg:w-75 flow flow-space-2xl my-xl">
+    <div>{{ content.field_p_is_intro_text }}</div>
   <div class="image-carousel__container">
     <div class="image-carousel">
       {{ content.field_p_images }}
@@ -46,6 +47,13 @@
       </div>
     </div>
   </div>
+    <div>
+    {{ content.field_p_is_outro_text }}
+    <br>
+    {% if content.field_field_p_is_cta|render  %}
+    <a href="{{ content.field_field_p_is_cta.0['#url'] }}" class="button">{{ content.field_field_p_is_cta.0['#title'] }}</a>
+    {% endif %}
+    </div>
   </div>
   </div>
   </div>

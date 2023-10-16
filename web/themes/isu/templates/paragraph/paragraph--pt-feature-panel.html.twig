@@ -6,6 +6,36 @@
   {% endif %}
     {{ content.field_p_feature }}
   </div>
+
+
+{% elseif view_mode == 'full_width_program'  %}
+
+{% if content.field_p_background_color['#items'].getString() == 'light-blue' %}
+  {% if remove_top_margin %}
+    <div class="content__blue invert py-[75px]">
+  {% else %}
+    <div class="content__blue invert py-[75px] lg:mt-2xl">
+  {% endif %}
+{% else %}
+  {% if remove_top_margin %}
+    <div class="content__blue-dark bg-blue-dark invert py-[75px]">
+  {% else %}
+    <div class="content__blue-dark bg-blue-dark invert py-[75px] lg:mt-2xl">
+  {% endif %}
+{% endif %}
+  <div class="wrapper">
+    {% if content.field_p_image_position['#items'].getString() == 'right' %}
+      <div class="feature-panel feature-panel--swap">
+    {% else %}
+      <div class="feature-panel">
+    {% endif %}
+      {{ content.field_p_feature }}
+    </div>
+  </div>
+</div>
+
+
+
 {% else %}
   <div>
     {% if content.field_p_image_position['#items'].getString() == 'right' %}
