@@ -1,6 +1,9 @@
 {% include '@isu/includes/header.html.twig' %}
 {{ drupal_field('field_hero', 'node', (node.id ? node.id : node)) }}
 <main id="main-content">
+<div class="px-s xl:px-l">
+    {{ drupal_breadcrumb() }}
+  </div>
   <div class="wrapper">
     <div class="l-page-sidebar mb-xl lg:my-l">
       <div>

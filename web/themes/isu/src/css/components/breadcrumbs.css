@@ -75,7 +75,7 @@
   @media (--lg) {
     .hero & {
       margin-bottom: auto;
-      margin-top: 10rem;
+
       /* position: absolute;
       z-index: 1;
       top: var(--space-m); */
