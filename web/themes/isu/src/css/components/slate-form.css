@@ -1,6 +1,6 @@
 div.form_page input {
   --flow-space: var(--space-3xs);
-  padding: var(--space-xs);
+  padding: 0.5rem;
   border: 1px solid rgb(var(--blue-dark));
   .invert & {
     background-color: rgba(255,255,255,0.2);
@@ -12,7 +12,7 @@ div.form_page input {
 }
 div.form_page select {
   --flow-space: var(--space-3xs);
-  padding: var(--space-xs);
+  padding: 0.5rem;
   border: 1px solid rgb(var(--blue-dark));
   .invert & {
     background-color: rgba(255,255,255,0.2);
@@ -21,6 +21,10 @@ div.form_page select {
   .hero & {
     width: 100%;
   }
+}
+
+div.form_question {
+  margin-bottom: 0.75rem !important;
 }
 
 div.form_page .form_birthdate select {
