@@ -70,8 +70,7 @@
   font-size: var(--size-step-4);
   font-family: var(--heading);
   color: rgb(var(--white));
-  letter-spacing: 3.55px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: .9;
   z-index: 1;
   line-height: 1;
