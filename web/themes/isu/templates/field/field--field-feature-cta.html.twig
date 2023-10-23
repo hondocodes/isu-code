@@ -1,4 +1,5 @@
 {% set view_mode = element['#view_mode'] %}
+
 {% if view_mode == 'home' %}
   {% for item in items %}
     {% if item['content']['#title'] %}
@@ -14,6 +15,14 @@
   {% for item in items %}
     {% if item['content']['#title'] %}
       <a href="{{ item['content']['#url'] }}" class="button button--blue">
+        {{ item['content']['#title'] }}
+      </a>
+    {% endif %}
+  {% endfor %}
+{% elseif view_mode == 'full_width_program_feature' %}
+  {% for item in items %}
+    {% if item['content']['#title'] %}
+      <a href="{{ item['content']['#url'] }}" class="button button button-no-outline">
         {{ item['content']['#title'] }}
       </a>
     {% endif %}

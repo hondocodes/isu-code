@@ -1,3 +1,15 @@
+{% if view_mode == 'full_width_program' %}
+<div class="wrapper">
+  <div class="flex justify-center lg:my-xl">
+    <div class="lg:w-75 flow flow-space-2xl my-xl">
+    <div class="testimonial {{ content.field_p_t_listing_bg_color }}">
+      {{ content.field_p_testimonial }}
+    </div>
+    </div>
+  </div>
+</div>
+{% else %}
 <div class="testimonial {{ content.field_p_t_listing_bg_color }}">
   {{ content.field_p_testimonial }}
 </div>
+{% endif %}

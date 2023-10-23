@@ -12,6 +12,11 @@
   text-align: center;
   text-decoration: none;
   transition: all var(--transition);
+  width: 100%;
+
+  @media (--md) {
+    width: auto;
+  }
 
   &:hover {
     color: rgb(var(--blue-dark));
@@ -24,6 +29,10 @@
 
 .button--blue {
   background: rgb(var(--blue));
+  border: none;
+}
+
+.button-no-outline {
   border: none;
 }
 

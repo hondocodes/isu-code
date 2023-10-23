@@ -50,9 +50,7 @@
     <div>
     {{ content.field_p_is_outro_text }}
     <br>
-    {% if content.field_field_p_is_cta|render  %}
     <a href="{{ content.field_field_p_is_cta.0['#url'] }}" class="button">{{ content.field_field_p_is_cta.0['#title'] }}</a>
-    {% endif %}
     </div>
   </div>
   </div>

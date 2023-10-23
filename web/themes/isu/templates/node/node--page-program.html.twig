@@ -1,3 +1,5 @@
+
+
 {% if view_mode == 'related_program' %}
   <li class="routing-panel__block flow">
     <a href="{{ url }}" class="routing-panel__link flow flow-space-md">
@@ -13,6 +15,24 @@
       </p>
     </div>
   </li>
+
+{% elseif view_mode == 'full_width_program' %}
+
+  <li class="routing-panel__block flow">
+    <a href="{{ url }}" class="routing-panel__link flow flow-space-md">
+      <div class="routing-panel__frame">
+        {{ content.field_image }}
+        <div class="routing-panel__box"></div>
+      </div>
+      <h3>{{ label }}</h3>
+    </a>
+    <div class="routing-panel__content flow-space-3xs">
+      <p>
+        {{ content.field_degree_type }}
+      </p>
+    </div>
+  </li>
+
 {% else %}
   {{ content.field_standard_modules }}
 {% endif %}
