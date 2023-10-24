@@ -196,7 +196,7 @@
   @media (--lg) {
     margin-top: 0;
   }
-/* 
+/*
   &:hover,
   &:focus {
     transform: translateY(-4rem);
