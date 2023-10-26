@@ -19,7 +19,7 @@
         </li>
         {% endfor %}
       </ul>
-      <img src="../img/sycamores-logo.png" class="w-[180px] mb-l mx-auto lg:hidden" alt="placeholder">
+
       <ul class="footer__social">
         {% for item in ['youtube', 'instagram', 'facebook','twitter','linkedin'] %}
         <li>
@@ -31,13 +31,7 @@
       </ul>
     </div>
     <div class="footer__block">
-      <img src="../img/sycamores-logo.png" class="lg:block lg:w-[180px] lg:my-l lg:mx-auto lg:my-0" alt="placeholder">
-      <!-- <a href="#main-nav" class="footer__scroll-top">
-        {{ inline_svg('Large-Arrow', 'footer__arrow') }}
-        <span class="footer__scroll-text">
-          Back to Top
-        </span>
-      </a> -->
+      <img src="../img/sycamores-logo.png" class="w-[180px] my-l mx-auto" alt="placeholder">
     </div>
     <div class="footer__bottom footer__block footer__block--full">
        <p class="footer__copy">Copyright © Indiana State University</p>
@@ -53,15 +47,9 @@
         <span class="footer__scroll-text">
           Back to Top
         </span>
-        {{ inline_svg('icon-arrow', 'footer__arrow') }}
+        {{ inline_svg('back-to-top', 'footer__arrow') }}
       </a>
 
     </div>
-    <!-- <a href="#main-nav" class="footer__scroll-top">
-      {{ inline_svg('back-to-top', 'footer__arrow') }}
-      <span class="footer__scroll-text">
-        Back to Top
-      </span>
-    </a> -->
   </div>
 </footer>

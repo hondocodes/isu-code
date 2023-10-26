@@ -78,6 +78,17 @@
       top: -1.25rem;
       width: 0.5rem;
     }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 40rem;
+      height: 40rem;
+      top: -9rem;
+      left: -12rem;
+      @mixin inline-svg maple,
+      rgb(root-var(--white));
+    }
   }
   .intro {
     font-size: 1.125rem;

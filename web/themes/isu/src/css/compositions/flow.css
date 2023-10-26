@@ -10,5 +10,5 @@ Info about this implementation: https://piccalil.li/quick-tip/flow-utility/
 
 .flow > * + * {
   margin-block-start: var(--flow-space, 1.5rem);
-  /* margin-top: var(--flow-space, 1em); */
+  margin-top: var(--flow-space, 1em);
 }
