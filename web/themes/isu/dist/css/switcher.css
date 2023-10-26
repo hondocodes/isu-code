@@ -1,0 +1,54 @@
+/*
+SWITCHER
+More info: https://every-layout.dev/layouts/switcher/
+A layout that allows you to lay **2** items next to each other
+until there is not enough horizontal space to allow that.
+
+CUSTOM PROPERTIES AND CONFIGURATION
+--gutter (var(--space-l)): This defines the space
+between each item
+
+--switcher-target-container-width (40rem): How large the container
+needs to be to allow items to sit inline with each other
+
+--switcher-vertical-alignment How items should align vertically.
+Can be any acceptable flexbox alignment value.
+*/
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, var(--space-l));
+  align-items: var(--switcher-vertical-alignment, flex-start);
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--switcher-target-container-width, 40rem) - 100%) * 999);
+}
+
+/* Max 2 items,
+so we target everything *after* those */
+/* .switcher > :nth-last-child(n + 3),
+.switcher > :nth-last-child(n + 3) ~ * {
+  flex-basis: 100%;
+} */
+
+
+
+
+.switcher-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-l);
+}
+
+.switcher-2 > * {
+  flex-grow: 1;
+  flex-basis: calc(( 20rem - 100%) * 999);
+}
+
+.switcher-2 > :nth-last-child(n + 3),
+.switcher-2 > :nth-last-child(n + 3) ~ * {
+  flex-basis: 100%;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jc3MvY29tcG9zaXRpb25zL3N3aXRjaGVyLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsImZpbGUiOiJzd2l0Y2hlci5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuU1dJVENIRVJcbk1vcmUgaW5mbzogaHR0cHM6Ly9ldmVyeS1sYXlvdXQuZGV2L2xheW91dHMvc3dpdGNoZXIvXG5BIGxheW91dCB0aGF0IGFsbG93cyB5b3UgdG8gbGF5ICoqMioqIGl0ZW1zIG5leHQgdG8gZWFjaCBvdGhlclxudW50aWwgdGhlcmUgaXMgbm90IGVub3VnaCBob3Jpem9udGFsIHNwYWNlIHRvIGFsbG93IHRoYXQuXG5cbkNVU1RPTSBQUk9QRVJUSUVTIEFORCBDT05GSUdVUkFUSU9OXG4tLWd1dHRlciAodmFyKC0tc3BhY2UtbCkpOiBUaGlzIGRlZmluZXMgdGhlIHNwYWNlXG5iZXR3ZWVuIGVhY2ggaXRlbVxuXG4tLXN3aXRjaGVyLXRhcmdldC1jb250YWluZXItd2lkdGggKDQwcmVtKTogSG93IGxhcmdlIHRoZSBjb250YWluZXJcbm5lZWRzIHRvIGJlIHRvIGFsbG93IGl0ZW1zIHRvIHNpdCBpbmxpbmUgd2l0aCBlYWNoIG90aGVyXG5cbi0tc3dpdGNoZXItdmVydGljYWwtYWxpZ25tZW50IEhvdyBpdGVtcyBzaG91bGQgYWxpZ24gdmVydGljYWxseS5cbkNhbiBiZSBhbnkgYWNjZXB0YWJsZSBmbGV4Ym94IGFsaWdubWVudCB2YWx1ZS5cbiovXG4uc3dpdGNoZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIGdhcDogdmFyKC0tZ3V0dGVyLCB2YXIoLS1zcGFjZS1sKSk7XG4gIGFsaWduLWl0ZW1zOiB2YXIoLS1zd2l0Y2hlci12ZXJ0aWNhbC1hbGlnbm1lbnQsIGZsZXgtc3RhcnQpO1xufVxuXG4uc3dpdGNoZXIgPiAqIHtcbiAgZmxleC1ncm93OiAxO1xuICBmbGV4LWJhc2lzOiBjYWxjKCh2YXIoLS1zd2l0Y2hlci10YXJnZXQtY29udGFpbmVyLXdpZHRoLCA0MHJlbSkgLSAxMDAlKSAqIDk5OSk7XG59XG5cbi8qIE1heCAyIGl0ZW1zLFxuc28gd2UgdGFyZ2V0IGV2ZXJ5dGhpbmcgKmFmdGVyKiB0aG9zZSAqL1xuLyogLnN3aXRjaGVyID4gOm50aC1sYXN0LWNoaWxkKG4gKyAzKSxcbi5zd2l0Y2hlciA+IDpudGgtbGFzdC1jaGlsZChuICsgMykgfiAqIHtcbiAgZmxleC1iYXNpczogMTAwJTtcbn0gKi9cblxuXG5cblxuLnN3aXRjaGVyLTIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIGdhcDogdmFyKC0tc3BhY2UtbCk7XG59XG5cbi5zd2l0Y2hlci0yID4gKiB7XG4gIGZsZXgtZ3JvdzogMTtcbiAgZmxleC1iYXNpczogY2FsYygoIDIwcmVtIC0gMTAwJSkgKiA5OTkpO1xufVxuXG4uc3dpdGNoZXItMiA+IDpudGgtbGFzdC1jaGlsZChuICsgMyksXG4uc3dpdGNoZXItMiA+IDpudGgtbGFzdC1jaGlsZChuICsgMykgfiAqIHtcbiAgZmxleC1iYXNpczogMTAwJTtcbn0iXX0= */
