@@ -1,7 +1,7 @@
 {% import "@isu/macros/macros.html.twig" as macros %}
 <div class="stats__card flow flow-space-3xs">
     <div class="stats__card-banner" aria-hidden="true">
-        {% set icon = content.field_p_icon|render|trim %}
+        {% set icon = 'icon-' ~ content.field_p_icon|render|trim %}
         {{ macros.inline_svg(icon) }}
     </div>
     <div class="h2">{{ content.field_p_stat }}</div>
