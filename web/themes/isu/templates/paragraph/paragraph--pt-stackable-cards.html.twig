@@ -1,0 +1,21 @@
+{% import "@isu/macros/macros.html.twig" as macros %}
+<div class="card-stack">
+  <div class="split-heading sidebar">
+    <div class="card-stack__title">
+        {% set icon = content.field_p_logo|render|trim %}
+      {{ macros.inline_svg(icon) }}
+      <h2>{{ content.field_p_heading }}</h2>
+    </div>
+    {{ content.field_p_intro_text }}
+  </div>
+
+  <div id="card-stack__cards">
+    {% for card in cards %}
+        {% set id = 'card-stack__card' ~ loop.index %}
+        <div class="card-stack__card" id="{{ id }}">
+            {{ card }}
+        </div>
+    {% endfor %}
+    <div class="card-stack__card-spacer"></div>
+  </div>
+</div>
