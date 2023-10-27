@@ -1,23 +1,27 @@
-<div class="feature-carousel">
-  <div class="split-heading sidebar invert">
-    {% if content.field_p_heading|render %}
-        {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
-        <h2>{{ content.field_p_heading }}</h2>
-        {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
-        <h3 class="h2">{{ content.field_p_heading }}</h3>
-        {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
-        <h4 class="h2">{{ content.field_p_heading }}</h4>
-        {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
-        <h5 class="h2">{{ content.field_p_heading }}</h5>
-        {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
-        <h6 class="h2">{{ content.field_p_heading }}</h6>
-        {% else %}
-        <p class="h2">{{ content.field_p_heading }}</p>
-        {% endif %}
-    {% endif %}
-    {{ content.field_p_intro_text }}
-  </div>
-  <div class="feature-carousel__carousel">
-    {{ content.field_p_feature_cards }}
-  </div>
+<div class="region bg-blue-dark bg-shield invert pt-[600px] lg:pt-[600px] z-0 relative">
+    <div class="wrapper">
+        <div class="feature-carousel">
+            <div class="split-heading sidebar invert">
+                {% if content.field_p_heading|render %}
+                    {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
+                    <h2>{{ content.field_p_heading }}</h2>
+                    {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
+                    <h3 class="h2">{{ content.field_p_heading }}</h3>
+                    {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
+                    <h4 class="h2">{{ content.field_p_heading }}</h4>
+                    {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
+                    <h5 class="h2">{{ content.field_p_heading }}</h5>
+                    {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
+                    <h6 class="h2">{{ content.field_p_heading }}</h6>
+                    {% else %}
+                    <p class="h2">{{ content.field_p_heading }}</p>
+                    {% endif %}
+                {% endif %}
+                {{ content.field_p_intro_text }}
+            </div>
+            <div class="feature-carousel__carousel">
+                {{ content.field_p_feature_cards }}
+            </div>
+        </div>
+    </div>
 </div>
