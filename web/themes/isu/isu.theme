@@ -67,7 +67,6 @@ function isu_theme_suggestions_page_alter(array &$suggestions, array $variables)
   } elseif ($node = \Drupal::routeMatch()->getParameter('node')) {
     $content_type = $node->bundle();
     $suggestions[] = 'page__'.$content_type;
-    print_r($suggestions);
   }
 
   if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical' && $tid = \Drupal::routeMatch()->getRawParameter('taxonomy_term')) {
