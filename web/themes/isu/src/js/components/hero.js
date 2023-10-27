@@ -20,6 +20,6 @@ if (toggle) {
 
   close.addEventListener('click', () => {
     body.classList.remove('form-active');
-    // focusTrapViewForm.deactivate();
+    focusTrapViewForm.deactivate();
   });
 }

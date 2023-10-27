@@ -28,7 +28,7 @@ div.form_question {
 }
 
 div.form_page .form_birthdate select {
-  width: 32.3%;
+  width: auto;
 }
 
 .form_button_submit {
