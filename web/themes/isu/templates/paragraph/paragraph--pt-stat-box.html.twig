@@ -1,0 +1,10 @@
+<div class="stats__card flow flow-space-3xs">
+    <div class="stats__card-banner" aria-hidden="true">
+        <img src="/svg/icon-{% spaceless %}{{ content.field_p_icon }}{% endspacesless %}.svg">
+    </div>
+    <div class="h2">{{ content.field_p_stat }}</div>
+    {% if content.field_p_heading|render %}
+        <div class="h4">{{ content.field_p_heading }}</div>
+    {% endif %}
+    {{ content.field_p_content }}
+</div>
