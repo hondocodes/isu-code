@@ -1,0 +1,14 @@
+    <div class="feature-carousel__item">
+      <div class="feature-carousel__item-content flow flow-space-xs">
+        {% if content.field_p_heading|render %}
+            <h3>{{ content.field_p_heading }}</h3>
+        {% endif %}
+        {{ content.field_p_content }}
+        {% if content.field_p_feature_card_cta|render %}
+            <p>{{ content.field_p_feature_card_cta }}</p>
+        {% endif %}
+      </div>
+      <div class="feature-carousel__item-image">
+        {{ content.field_p_image }}
+      </div>
+    </div>
