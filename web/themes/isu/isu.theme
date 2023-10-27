@@ -131,7 +131,7 @@ function _isu_stackable_cards($paragraph){
 
   $cards_array = array();
   foreach($cards->referencedEntities() as $c) {
-    $cards_array[] = _isu_theme_node($c->id(), 'default');
+    $cards_array[] = _isu_theme_node($c->id());
   }
 
   return $cards_array;
