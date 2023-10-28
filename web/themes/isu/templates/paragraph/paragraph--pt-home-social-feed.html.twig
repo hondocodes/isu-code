@@ -1,1 +1,25 @@
-<script async src='https://www.tintup.com/app/dist/embedded.js'></script><div class="tintup" data-id="moretoblue" data-columns="" data-expand="true" style="height: 500px; width: 100%;" data-personalization-id="965990" data-infinitescroll="true"></div>
+<div class="region bg-light">
+    <div class="wrapper">
+        <div class="split-heading sidebar">
+            {% if content.field_p_heading|render %}
+                {% if content.field_p_heading_tag['#items'].getString() == 'H2' %}
+                    <h2>{{ content.field_p_heading }}</h2>
+                {% elseif content.field_p_heading_tag['#items'].getString() == 'H3' %}
+                    <h3 class="h2">{{ content.field_p_heading }}</h3>
+                {% elseif content.field_p_heading_tag['#items'].getString() == 'H4' %}
+                    <h4 class="h2">{{ content.field_p_heading }}</h4>
+                {% elseif content.field_p_heading_tag['#items'].getString() == 'H5' %}
+                    <h5 class="h2">{{ content.field_p_heading }}</h5>
+                {% elseif content.field_p_heading_tag['#items'].getString() == 'H6' %}
+                    <h6 class="h2">{{ content.field_p_heading }}</h6>
+                {% else %}
+                    <p class="h2">{{ content.field_p_heading }}</p>
+                {% endif %}
+            {% endif %}
+            {{ content.field_p_intro_text }}
+        </div>
+        <div class="mt-xl">
+            <script async src='https://www.tintup.com/app/dist/embedded.js'></script><div class="tintup" data-id="moretoblue" data-columns="" data-expand="true" style="height: 500px; width: 100%;" data-personalization-id="965990" data-infinitescroll="true"></div>
+        </div>
+    </div>
+</div>
