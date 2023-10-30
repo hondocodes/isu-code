@@ -1,12 +1,12 @@
 .button {
   --outline-color: rgb(var(--dark));
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.2;
   font-family: var(--body);
-  font-weight: normal;
+  font-weight: 700;
   border: 2px rgb(var(--blue-dark)) solid;
   display: inline-block;
-  padding: 1rem 3rem;
+  padding: 1rem;
   background: rgb(var(--blue-dark));
   color: rgb(var(--white));
   text-align: center;
@@ -22,13 +22,14 @@
     color: rgb(var(--blue-dark));
     background: rgb(var(--white));
   }
-  @media (--lg) {
+  /* @media (--lg) {
     min-width: 13.4375rem;
-  }
+  } */
 }
 
 .button--blue {
   background: rgb(var(--blue));
+  border: none;
 }
 
 .button-no-outline {

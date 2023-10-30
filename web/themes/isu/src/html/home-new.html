@@ -1,0 +1,46 @@
+{% set page = { title: 'Home' } %}
+{% extends '@layouts/base.html' %}
+
+{% block body %}
+
+<h1 class="screen-reader-text">Indiana State University</h1>
+
+<main id="main-content">
+  {% include '@components/splash.html' %}
+
+  {% include '@components/explore.html' %}
+
+  <div class="region stats-bg" style="background-image: url('../img/stats-bg.jpg');">
+    <div class="wrapper">
+      {% include '@components/stats.html' %}
+    </div>
+  </div>
+
+  <div class="region overflow-visible bg-curve-down-2 bg-blue-robins-egg -mb-[100px] z-10 relative">
+    <div class="wrapper -mb-[450px] lg:-mb-[600px]">
+      {% include '@components/card-stack.html' %}
+    </div>
+    <div class="bottom-curve"></div>
+  </div>
+
+  <div class="region bg-blue-dark bg-shield invert pt-[600px] lg:pt-[600px] z-0 relative">
+    <div class="wrapper">
+      {% include '@components/feature-carousel.html' %}
+    </div>
+  </div>
+
+  <div class="region bg-light">
+    <div class="wrapper">
+      <div class="split-heading sidebar">
+        <h2>#WEARBLUE</h2>
+        <p>Follow and share. And tag. That’s one great way to see just how broad and diverse the opportunity is at Indiana State.</p>
+      </div>
+      <div class="mt-xl">
+        <div class="tintup" data-id="moretoblue" data-columns="" data-mobilescroll="true" data-infinitescroll="true" data-personalization-id="1030220" style="height: 625px; width: 100%; position: relative;" data-finishedloadingmoreposts="true"><div class="a5b5e4-inner" style="height: 100%; width: 100%; overflow: hidden;"><iframe src="https://cdn.hypemarks.com/t/moretoblue?width=1086&amp;infiniteScroll=true&amp;personalization_id=1030220" style="border:none;height:100%;width:100%;" scrolling="yes" frameborder="0" allowtransparency="true" title="Social Feed" data-embed-id=""></iframe></div></div>
+      </div>
+    </div>
+  </div>
+
+  {% include '@components/splash-panel.html' %}
+</main>
+{% endblock %}

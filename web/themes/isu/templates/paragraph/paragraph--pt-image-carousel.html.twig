@@ -33,7 +33,7 @@
   <div class="wrapper">
   <div class="flex justify-center">
   <div class="lg:w-75 flow flow-space-xl my-xl">
-    <div>{{ content.field_p_is_intro_text }}</div>
+    <div class="flow flow-space-s">{{ content.field_p_is_intro_text }}</div>
   <div class="image-carousel__container">
     <div class="image-carousel">
       {{ content.field_p_images }}
@@ -47,7 +47,7 @@
       </div>
     </div>
   </div>
-    <div>
+    <div class="flow flow-space-s">
     {{ content.field_p_is_outro_text }}
     <br>
     {% if content.field_field_p_is_cta|render  %}

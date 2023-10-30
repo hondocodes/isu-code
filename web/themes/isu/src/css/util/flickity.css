@@ -29,7 +29,8 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  color: transparent;
+  color: transparent !important;
+  overflow: hidden;
 }
 
 .flickity-page-dots .is-selected {

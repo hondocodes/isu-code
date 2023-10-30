@@ -64,7 +64,6 @@
   .hero__headline {
     flex: 0;
     font-size: 3rem;
-    font-weight: 400;
     letter-spacing: normal;
     position: relative;
     text-shadow: none;
@@ -78,6 +77,18 @@
       position: absolute;
       top: -1.25rem;
       width: 0.5rem;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 40rem;
+      height: 40rem;
+      top: -9rem;
+      left: -12rem;
+      @mixin inline-svg maple,
+      rgb(root-var(--white));
+      pointer-events: none;
     }
   }
   .intro {
@@ -121,8 +132,7 @@
   font-size: var(--size-step-4);
   font-family: var(--heading);
   color: rgb(var(--white));
-  letter-spacing: 3.55px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: .9;
   z-index: 1;
   line-height: 1;
