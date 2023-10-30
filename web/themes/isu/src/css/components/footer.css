@@ -60,9 +60,14 @@
 
 .footer__logo {
   display: block;
-  width: 22rem;
+  width: 100%;
+  max-width: 22rem;
   margin-bottom: 2rem;
   color: rgb(var(--white));
+
+  @media (--md) {
+    width: 22rem;
+  }
 }
 
 .footer__location {
@@ -181,6 +186,11 @@
   align-items: center;
   gap: 0.5rem;
   margin-left: auto;
+  text-decoration: underline !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
 
   @media (--lg) {
     margin-top: 0;
@@ -189,7 +199,7 @@
 .footer__scroll-text {
   display: flex;
   align-items: center;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .footer__copy {
   padding-block: 1rem;
