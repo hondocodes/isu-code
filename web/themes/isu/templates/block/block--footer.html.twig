@@ -5,22 +5,22 @@
     <div class="footer__block">
       <a href="#" class="footer__logo">
         <span class="screen-reader-text">Indiana State University home page</span>
-         {{ macros.inline_svg('logo') }}
+        {{ macros.inline_svg('logo') }}
       </a>
 
-      {% if content.field_address|render %}
-        <p class="footer__location">
-          {{ content.field_address }}
-        </p>
-      {% endif %}
-      
+      <p class="footer__location">
+        {{ content.field_address }}
+      </p>
+
       {% if content.field_cta_button|render %}
         {{ content.field_cta_button }}
       {% endif %}
-      
     </div>
     <div class="footer__block">
-      {{ content.field_footer_links }}
+
+        {{ content.field_footer_links }}
+
+
       <ul class="footer__social">
         <li>
           <a href="{% spaceless %}{{ content.field_youtube_link }}{% endspaceless %}" class="footer__social__link footer__social__link--youtube">
@@ -50,19 +50,22 @@
       </ul>
     </div>
     <div class="footer__block">
-      <img src="/sites/default/files/2023-10/footer-state-logo.png" class="footer-state-logo" alt="Sycamores" />
+      <img src="/sites/default/files/2023-10/footer-state-logo.png" class="w-[180px] my-l mx-auto"  alt="Sycamores" />
     </div>
-    <div class="footer__block footer__block--full">
+    <div class="footer__bottom footer__block footer__block--full">
        <p class="footer__copy">Copyright © Indiana State University</p>
        <ul class="footer__links">
          {{ content.field_bottom_links }}
        </ul>
+
+      <a href="#main-nav" class="footer__scroll-top">
+        <span class="footer__scroll-text">
+          Back to Top
+        </span>
+       {{ macros.inline_svg('back-to-top', 'footer__arrow') }}
+      </a>
+
     </div>
-    <a href="#main-nav" class="footer__scroll-top">
-      {{ macros.inline_svg('back-to-top', 'footer__arrow') }}
-      <span class="footer__scroll-text">
-        Back to Top
-      </span>
-    </a>
   </div>
 </footer>
+
