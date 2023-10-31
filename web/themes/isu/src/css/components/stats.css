@@ -55,4 +55,7 @@
     flex: 1;
     max-width: 4.5rem;
   }
+  & .svg {
+    width: 4.5rem;
+  }
 }
