@@ -1,5 +1,5 @@
 import { h, render, Component } from 'preact';
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { getQueryParams, setQueryParams } from './getQueryParams';
 
 import Result from './Result';
@@ -37,6 +37,15 @@ if (finderPage) {
         queryParams.preFilterSearch || '',
       );
 
+      useEffect(() => {
+        window.onpopstate = () => {
+          const newQueryParams = getQueryParams();
+          setFiltersActual(newQueryParams.preFilterFilters);
+          setSearchActual(newQueryParams.preFilterSearch);
+        };
+      });
+
+
       const setFilters = (newFilters) => {
         setQueryParams(newFilters, search);
         setFiltersActual(newFilters);
@@ -50,6 +59,7 @@ if (finderPage) {
       const resetFiltersAndSearch = () => {
         setFilters({});
         setSearch('');
+        setQueryParams({}, '');
       };
 
       const handleToggle = (e) => {

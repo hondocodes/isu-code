@@ -43,7 +43,7 @@
       --outline-color: rgb(var(--dark));
       color: rgb(var(--dark));
       /* background-color: var(--color-blue); */
-  
+
       h1, h2, h3, h4, h5, h6,
       a h1, a h2, a h3, a h4, a h5, a h6 {
         color: rgb(var(--dark));
@@ -61,4 +61,17 @@
     display: none !important;
   }
 
+
+  .hero__headline::before,
+  .hero__headline::after {
+    display: none;
+  }
+
+  .hero__form__content {
+    display: none;
+  }
+
+  .image-carousel__container {
+    display: none;
+  }
 }
