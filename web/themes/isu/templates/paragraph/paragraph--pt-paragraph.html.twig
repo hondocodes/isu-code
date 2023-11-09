@@ -6,6 +6,18 @@
       </div>
     </div>
   </div>
+{% elseif view_mode == 'full_width_program'  %}
+<div class="wrapper">
+<div class="flex justify-center">
+<div class="lg:w-75 flow flow-space-xl my-xl">
+<div>
+<div class="flow flow-space-s">
+{{ content.field_p_content }}
+</div>
+</div>
+</div>
+</div>
+</div>
 {% else %}
   <div>
     <div class="flow flow-space-s">

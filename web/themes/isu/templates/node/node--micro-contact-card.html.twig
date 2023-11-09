@@ -1,3 +1,38 @@
+{% if view_mode == 'teaser' %}
+
+  {% if content.field_heading|render %}
+    {% if content.field_heading_tag['#items'].getString() == 'H2' %}
+      <h2 class="h4 font-bold underline-full underline-orange">Contact Us</h2>
+    {% elseif content.field_heading_tag['#items'].getString() == 'H3' %}
+      <h3 class="h4 font-bold underline-full underline-orange">Contact Us</h3>
+    {% elseif content.field_heading_tag['#items'].getString() == 'H4' %}
+      <h4 class="h4 font-bold underline-full underline-orange">Contact Us</h4>
+    {% elseif content.field_heading_tag['#items'].getString() == 'H5' %}
+      <h5 class="h4 font-bold underline-full underline-orange">Contact Us</h5>
+    {% elseif content.field_heading_tag['#items'].getString() == 'H6' %}
+      <h6 class="h4 font-bold underline-full underline-orange">Contact Us</h6>
+    {% else %}
+      <p class="h4 font-bold underline-full underline-orange">Contact Us</p>
+    {% endif %}
+  {% endif %}
+
+  <ul>
+    
+    {% if content.field_heading|render %}
+    <li><a href="#">{{ content.field_heading }}</a></li>
+    {% endif %}
+    {% if content.field_email|render %}
+    <li>Email Us: {{ content.field_email }}</li>
+    {% endif %}
+    {% if content.field_phone|render %}
+    <li>Phone: {{ content.field_phone }}</li>
+    {% endif %}
+    {% if content.field_fax|render %}
+    <li>Fax: {{ content.field_fax }}</li>
+    {% endif %}
+  </ul>
+
+{% else %}
 <div class="box bg-blue-robins-egg text-blue-dark border-radius shadow-md p-l" data-animation="fade-in-up" data-animate>
   <div class="flow">
     {% if content.field_heading|render %}
@@ -15,6 +50,7 @@
         <p class="h4 font-bold underline-full underline-orange">{{ content.field_heading }}</p>
       {% endif %}
     {% endif %}
+
 
     <div class="bordered">
       <div class="flow flow-space-m">
@@ -43,3 +79,4 @@
 
   </div>
 </div>
+{% endif %}

@@ -106,6 +106,10 @@
 <header class="sticky-header">
   <nav aria-label="Main Navigation">
     <div class="sticky-header__interior">
+      <a href="#" class="header__logo-sticky">
+        <span class="screen-reader-text">Indiana State University</span>
+        {{ inline_svg('logo-mark') }}
+      </a>
       <a href="#" class="header__logo">
         <span class="screen-reader-text">Indiana State University</span>
         {{ inline_svg('logo') }}
@@ -118,6 +122,14 @@
         </button>
       </li>
     </ul>
+    <button class="header__toggle header__toggle--menu menu--open" aria-expanded="false" data-expand="popup" data-expand-lock>
+      <span class="screen-reader-text">Toggle Navigation</span>
+      <span class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </span>
+    </button>
   </div>
 </nav>
 </header>

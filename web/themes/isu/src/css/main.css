@@ -57,6 +57,12 @@
 @import "components/testimonial-carousel";
 @import "components/video";
 @import "components/slate-form";
+@import "components/splash";
+@import "components/explore";
+@import "components/stats";
+@import "components/card-stack";
+@import "components/feature-carousel";
+@import "components/splash-panel";
 
 
 @import "components/print";
@@ -70,3 +76,9 @@
 		}
 	}
 }
+
+
+/* .card-stack__card-content {
+	animation-timeline: --cards-element-scrolls-in-body;
+	animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+} */

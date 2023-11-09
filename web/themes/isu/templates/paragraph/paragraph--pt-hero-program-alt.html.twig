@@ -1,0 +1,40 @@
+<div class="hero hero--program invert">
+<div class="wrapper">
+    <div class="hero__container">
+    <div class="lg:z-10 lg:flex lg:items-center lg:gap-xl">
+        <div class="flow flow-space-2xl">
+        <div class="lg:flex">
+            <div class="flex flex-col justify-center mt-l">
+            <h1 class="hero__headline">
+                {{ content.field_p_h1 }}
+            </h1>
+            <p class="intro lg:w-75">
+                {{ content.field_p_intro_text }}
+            </p>
+
+            <div class="contact__list">
+                 {{ content.field_p_contact_card }}
+            </div>
+
+            <button class="hero__form__toggle button button--blue">Request Information Form</button>
+            </div>
+
+            <div class="p-xl invert lg:mb-0 lg:min-w-[474px] lg:-top-[50%] hero__form__content">
+            <div class="flow flow-space-xs">
+                <h3>Request Information</h3>
+                <button class="hero__form__content--close"><span class="screen-reader-text">Close</span></button>
+                {{ content.field_p_form_embed }}
+                <div><a href="{{ content.field_p_apply_link.0['#url'] }}" class="font-bold">{{ content.field_p_apply_link.0['#title'] }}</a></div>
+                
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+    <div class="lg:z-10 lg:fex lg:items-center lg:gap-xl">
+        {{ content.field_p_sub_nav_links }}
+    </div>
+    </div>
+</div>
+</div>

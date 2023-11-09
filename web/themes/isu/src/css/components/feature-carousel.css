@@ -1,0 +1,144 @@
+.bg-shield {
+  background-image: url('../img/logo-shield.png');
+  background-repeat: no-repeat;
+  background-position: top 500px center;
+  background-size: 125vw;
+
+  @media (--md) {
+    background-position: left bottom;
+    background-size: unset;
+  }
+}
+
+.feature-carousel__carousel {
+  position: relative;
+}
+
+.feature-carousel__carousel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-xl);
+
+  & .flickity-viewport {
+    overflow: hidden;
+    width: 100%;
+
+    @media (--md) {
+      margin: 0;
+    }
+  }
+
+  & .flickity-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media (--md) {
+      justify-content: flex-end;
+      margin-left: auto;
+      width: calc(50% - var(--space-m));
+
+    }
+  }
+
+  & .flickity-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    border: none;
+    background-color: var(--color-blue);
+
+    position: absolute;
+    right: -1rem;
+    top: 25vw;
+
+    &.previous {
+      right: unset;
+      left: -1rem;
+      margin-right: var(--space-xs);
+    }
+
+    @media (--md) {
+      position: relative;
+      right: unset;
+      top: unset;
+
+      &.previous {
+        left: unset;
+      }
+    }
+  }
+
+  & .flickity-button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  & .flickity-page-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2xs);
+    flex: 1;
+    /* margin-right: 6rem; */
+
+    @media (--md) {
+      justify-content: center;
+      margin-left: 100px;
+    }
+  }
+
+  & .flickity-page-dot {
+    background-color: transparent;
+    border: 1px solid white;
+    height: 1rem;
+    width: 1rem;
+    overflow: hidden;
+
+    &.is-selected {
+      background-color: white;
+    }
+  }
+}
+
+.feature-carousel__item {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+
+  @media (--md) {
+    flex-direction: row;
+    gap: var(--space-xl);
+  }
+}
+
+.feature-carousel__item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  & .button {
+    margin-top: 0.5rem;
+    width: 100%;
+
+    @media (--md) {
+      width: auto;
+    }
+  }
+}
+
+.feature-carousel__item-image {
+  flex: 1;
+  margin-bottom: 1rem;
+
+  @media (--md) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}

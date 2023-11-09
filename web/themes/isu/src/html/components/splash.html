@@ -1,0 +1,49 @@
+<div class="splash__wrapper">
+  <div class="splash bg-curve-down">
+    <div class="splash__inner">
+      <div class="splash__content">
+        <div class="splash__title">
+          Your Journey Starts Here
+        </div>
+        <a href="https://www.youtube.com/watch?v=xdPUtUs2q_4" data-minimodal class="button button--blue">Watch Video</a>
+      </div>
+      <div class="splash__media">
+        <img src="../img/image1.jpg" alt="placeholder" class="absolute">
+          <video src="../img/october-banner-v1_0.mp4" autoplay loop muted playsinline></video>
+          <!-- <iframe id="splashVideo" src="https://www.youtube.com/embed/xdPUtUs2q_4?&amp;autoplay=1&amp;controls=0&amp;mute=1&amp;playsinline=1&amp;playlist=xdPUtUs2q_4&amp;loop=1&amp;enablejsapi=1"></iframe> -->
+      </div>
+      <button class="splash__control">
+        <span class="screen-reader-text">Toggle video</span>
+        <span class="material-symbols-outlined">
+          pause
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const controls = document.querySelectorAll('.splash__control');
+
+  for (const control of controls) {
+    const video = control.parentNode?.querySelector('video');
+
+    if (video) {
+      video.addEventListener('pause', () => {
+        control.querySelector('.material-symbols-outlined').innerHTML = "play_arrow";
+      });
+
+      video.addEventListener('play', () => {
+        control.querySelector('.material-symbols-outlined').innerHTML = "pause";
+      });
+
+      control.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    }
+  }
+</script>
