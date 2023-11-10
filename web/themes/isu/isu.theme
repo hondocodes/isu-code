@@ -120,7 +120,20 @@ function isu_preprocess_paragraph(&$variables) {
     $variables['events'] = _isu_events_two_up_by_category($paragraph);
   } elseif($paragraph->bundle() == 'pt_events_three_up_by_category') {
     $variables['events'] = _isu_events_three_up_by_category($paragraph);
+  } elseif($paragraph->bundle() == 'pt_stackable_cards') {
+    $variables['cards'] = _isu_stackable_cards($paragraph);
   }
+}
+
+function _isu_stackable_cards($paragraph){
+  $cards = $paragraph->get('field_p_stackable_cards');
+
+  $cards_array = array();
+  foreach($cards->referencedEntities() as $c) {
+    $cards_array[] = _isu_theme_paragraph($c->id());
+  }
+
+  return $cards_array;
 }
 
 function _isu_events_two_up_curated($paragraph){
@@ -283,5 +296,14 @@ function _isu_theme_node($nid, $view_mode = 'default') {
   $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
   $node = $storage->load($nid);
   $build = $view_builder->view($node, $view_mode);
+  return render($build);
+}
+
+function _isu_theme_paragraph($pid, $view_mode = 'default') {
+  $entity_type = 'paragraph';
+  $view_builder = \Drupal::entityTypeManager()->getViewBuilder($entity_type);
+  $storage = \Drupal::entityTypeManager()->getStorage($entity_type);
+  $paragraph = $storage->load($pid);
+  $build = $view_builder->view($paragraph, $view_mode);
   return render($build);
 }

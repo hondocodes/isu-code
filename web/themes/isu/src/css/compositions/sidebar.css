@@ -46,8 +46,9 @@ A flipped version where the sidebar is on the right
 /* TODO Move this to proper place */
 .split-heading {
   --gutter: var(--space-s);
-  --sidebar-target-width: 40rem;
+  --sidebar-target-width: 42rem;
   --sidebar-content-min-width: 30%;
+  align-items: center;
 
   > :last-child {
     align-self: flex-end;

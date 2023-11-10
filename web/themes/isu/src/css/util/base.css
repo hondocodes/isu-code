@@ -151,6 +151,10 @@ h1, .h1 {
 
 h2, .h2 {
   @mixin h2;
+
+  .home-page & {
+    font-size: 3.5rem;
+  }
 }
 
 h3, .h3 {

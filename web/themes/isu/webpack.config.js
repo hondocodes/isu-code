@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 // const host = 'site.localhost';
-const pages = ['index', 'home', 'secondary', 'secondary-no-announcement', 'tertiary', 'tertiary-no-hero', 'admissions', 'cost-aid', 'student-life', 'program-finder', 'program', 'college-landing', 'faculty-listing', 'faculty-bio', 'news-post', 'program-alt'];
+const pages = ['index', 'home', 'home-new', 'secondary', 'secondary-no-announcement', 'tertiary', 'tertiary-no-hero', 'admissions', 'cost-aid', 'student-life', 'program-finder', 'program', 'college-landing', 'faculty-listing', 'faculty-bio', 'news-post', 'program-alt'];
 
 const config = {
   entry: {

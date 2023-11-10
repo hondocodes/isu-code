@@ -10,6 +10,8 @@
       play_arrow
     </span>
   </a>
+{% elseif view_mode == 'home_hero' %} 
+  <a href="{% spaceless %}{{ content.field_media_oembed_video_1 }}{% endspaceless %}" data-minimodal class="button button--blue">Watch Video</a>
 {% elseif view_mode == 'full_width' %}
   <div class="frame border-radius relative" data-ratio="3:2">
     {{ content.field_media_placeholder_image }}

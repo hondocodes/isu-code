@@ -34,6 +34,11 @@
   text-align: center;
   padding-bottom: 3rem;
   padding-inline: 2rem;
+
+  & .h2 {
+    font-size: 3.5rem;
+  }
+
 }
 
 .stats__card-banner {
@@ -49,5 +54,8 @@
   & img {
     flex: 1;
     max-width: 4.5rem;
+  }
+  & .svg {
+    width: 4.5rem;
   }
 }
