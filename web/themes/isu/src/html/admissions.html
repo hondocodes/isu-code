@@ -4,21 +4,56 @@
 {% block body %}
 
 <main id="main-content">
-  {% set vars = {
-    'pageTitle': 'Admissions',
-    'image': '../img/admissions-hero.jpg',
-    'announcement': 'true'
-  }
-  %}
-  {% include
-  '@components/hero-secondary.html' with vars %}
+<div class="hero hero--sub invert" style="background-image: url('{{ image ?? 'img/hero-secondary.jpg' }}');">
+  <div class="px-s xl:px-l">
+    {% include '@components/breadcrumbs.html' %}
+  </div>
+  <div class="wrapper">
+    <div class="hero__container">
+      <div class="lg:z-10 lg:flex lg:items-center lg:gap-xl">
+        <div class="flow flow-space-2xl">
+          <div class="flow lg:flex">
+            <h1 class="hero__headline">
+              Admissions
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-blue invert py-l">
+  <div class="wrapper">
+    <div>
+      <div class="flow flow-space-m">
+        <p class="intro">Shape the future you want by applying to Indiana State University. Our accredited, hands-on academic programs will
+        unleash your potential and inspire your dreams. Apply today, and get ready to make a difference in your life, your
+        career, and the world!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="region bg-white py-l">
+  <div class="wrapper">
+    <div class="flow">
+      <p>At Indiana State University, education starts in the classroom and goes beyond. You'll build knowledge and
+        skills with our expert professors through our many undergraduate and graduate programs. Our emphasis on hands-on
+        learning will teach you to apply them to real-world situations. You'll also connect with students from all over
+        the country and the world. Their experiences will help you broaden your perspectives, and your friendships can
+        last a lifetime. Finally, we offer online options for students who need to complete a few classes or an entire
+        degree remotely. Whatever your needs and goals, we'll help you reach them. At Indiana State, you'll achieve your
+        potential with Blue.</p>
+    </div>
+  </div>
+</div>
 
-  <div class="bg-blue-dark invert py-[75px]">
+
+  <div class="bg-blue-dark invert py-[50px]">
     <div class="wrapper">
       <div class="feature-panel feature-panel--swap">
-        <div class="feature-panel__img feature-panel__img--pull overlay-gradient-blue-dark">
+        <div class="feature-panel__img">
            <img src="../img/feature1.jpg" alt="placeholder">
-           <a class="button-arrow button-arrow--white button-arrow--play absolute z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+           <a class="button-arrow button-arrow--white button-arrow--play z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
             <span class="material-symbols-outlined icon-fill" aria-hidden="true">
               play_arrow
             </span>
@@ -28,9 +63,9 @@
         <div class="feature-panel__content">
           <h2 class="feature-panel__heading">Welcome to Your Future</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan in nisl nisi. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan in nisl nisi.
             </p>
-          
+
             <a href="#" class="button button--blue">
               Clubs & Activities
             </a>
@@ -39,12 +74,12 @@
     </div>
   </div>
 
-  <div class="region content__top-blue">
+  <div class="region content__top-blue py-[50px]">
     <div class="routing-panel__container">
       <h2 class="routing-panel__heading text-blue-dark">Headline (2-Up Panel)</h2>
       <ul class="routing-panel invert">
         <li class="routing-panel__block flow flow flow-space-m">
-          <div class="routing-panel__frame overlay-gradient-blue">
+          <div class="routing-panel__frame">
             <img src="../img/headline-panel1.jpg" alt="placehold">
           </div>
           <h3>World Class Experience</h3>
@@ -62,7 +97,7 @@
           </div>
         </li>
         <li class="routing-panel__block flow flow flow-space-m">
-          <div class="routing-panel__frame overlay-gradient-blue">
+          <div class="routing-panel__frame">
             <img src="../img/headline-panel2.jpg" alt="placehold">
           </div>
           <h3>Four-Year Guarantee</h3>
@@ -83,7 +118,7 @@
     </div>
   </div>
 
-  <div class="region bg-white">
+  <div class="region bg-white py-[50px]">
     <div class="routing-panel__container">
       <h2 class="routing-panel__heading text-blue-dark">
         Visual Router Grid Variation 2
@@ -183,7 +218,7 @@
     </div>
   </div>
 
-  <div class="region bg-white">
+  <div class="region bg-white py-[50px]">
     <div class="wrapper">
       <div class="flow flow-space-l">
         <div class="flex flex-col gap-s lg:flex-row lg:justify-between lg:items-center" data-animation="fade-in-up" data-animate>
@@ -213,7 +248,7 @@
               </div>
             </div>
           </a>
-          <a href="#" class="event flow bg-blue-light py-l px-l">
+          <a href="#" class="event flow bg-blue invert py-l px-l">
             <div class="event__date h3">May 10</div>
             <h3 class="event__title font-base text-step-0">
               Announcement Heading (8-10 Words) — Lorem Ipsum Dolor sit

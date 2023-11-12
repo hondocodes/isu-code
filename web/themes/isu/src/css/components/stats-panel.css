@@ -4,7 +4,7 @@
   padding-bottom: var(--space-xl);
   @media (--lg) {
     min-height: 500px;
-    padding-bottom: 10rem;
+    padding-bottom: 0;
   }
 }
 .stats-panel__image {

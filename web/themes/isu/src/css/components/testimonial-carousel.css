@@ -1,6 +1,6 @@
 .testimonial-carousel__container {
   position: relative;
-  margin: 5rem 0;
+  margin: 50px 0;
   @mixin container;
 
   /* @media (--xl) {

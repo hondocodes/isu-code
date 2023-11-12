@@ -1,6 +1,6 @@
 {% set page = { title: 'College Landing' } %} {% extends '@layouts/base.html' %} {%
   block body %}
-  
+
   {%
     set vars = {
       'pageTitle': 'College of Arts &amp; Sciences',
@@ -8,15 +8,30 @@
     }
   %}
   {% include '@components/hero-landing.html' with vars %}
-  
+
   <main id="main-content">
-  
-    <div class="bg-blue-dark invert py-[75px]">
+    <div class="region bg-white py-[50px]">
+      <div class="wrapper">
+        <div class="flow">
+          <h2>Welcome to the Honors College!</h2>
+
+          <p>The Honors College at Indiana State University offers classes and experiences to enrich students’ education,
+            expand their global and cultural perspectives, and prepare them for advanced academic work and rewarding
+            professional careers.</p>
+
+          <p>Honors students participate in a core of small, powerful classes, led by committed faculty who are passionate
+            about their disciplines and dedicated to helping students learn, grow, and achieve.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-blue-dark invert py-[50px]">
       <div class="wrapper">
         <div class="feature-panel feature-panel--swap">
-          <div class="feature-panel__img feature-panel__img--pull overlay-gradient-blue-dark">
+          <div class="feature-panel__img">
              <img src="../img/feature1.jpg" alt="placeholder">
-             <a class="button-arrow button-arrow--white button-arrow--play absolute z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+             <a class="button-arrow button-arrow--white button-arrow--play z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
               <span class="material-symbols-outlined icon-fill" aria-hidden="true">
                 play_arrow
               </span>
@@ -26,9 +41,9 @@
           <div class="feature-panel__content">
             <h2 class="feature-panel__heading">Explore Our Programs</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan in nisl nisi. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan in nisl nisi.
               </p>
-            
+
               <a href="#" class="button button--blue">
                 Program Finder
               </a>
@@ -36,12 +51,12 @@
         </div>
       </div>
     </div>
-  
+
     {% include '@components/stats-panel.html' %}
-  
+
     {% include '@components/testimonial-carousel.html' %}
-  
-    <div class="region bg-white">
+
+    <div class="region bg-white py-[50px]">
       <div class="wrapper">
         <div class="flow flow-space-l">
           <h3 data-animation="fade-in-up" data-animate>Headline (List of Posts)</h3>
@@ -78,7 +93,7 @@
         </div>
       </div>
     </div>
-  
+
     <div class="region bg-white">
       <div class="wrapper">
         <div class="flow flow-space-l">
@@ -153,15 +168,14 @@
         </div>
       </div>
     </div>
-  
+
     {% include '@components/cta-panel.html' %}
-  
+
     {# <div class="region bg-blue-dark invert">
       <h2>Explore Our Programs</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan in nisl nisi. </p>
       <a href="#" class="button button--blue">Program Finder</a>
     </div> #}
   </main>
-  
+
   {% endblock %}
-  
