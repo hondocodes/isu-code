@@ -74,4 +74,16 @@
   .image-carousel__container {
     display: none;
   }
+
+  .hero--sub {
+    min-height: auto;
+  }
+
+  .hero--sub .hero__container {
+    min-height: auto;
+  }
+
+  .hero__headline {
+    text-shadow: none;
+  }
 }
