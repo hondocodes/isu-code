@@ -140,7 +140,7 @@
 
 .event--alt {
   display: flex;
-  
+
   .event__date {
     position: relative;
     z-index: 1;
@@ -157,7 +157,7 @@
     font-weight: 900;
     line-height: 1;
     text-transform: uppercase;
-  
+
     span {
       display: block;
       font-size: 3.75rem;

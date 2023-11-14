@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: var(--space-s);
 
-  color: rgb(var(--blue));
+  color: rgb(var(--blue-dark));
 
   @media (--lg) {
     /* padding: 4rem 0; */
@@ -30,35 +30,15 @@
 .feature-panel__img {
   position: relative;
   @media (--lg) {
-    width: 50%;
+    width: 47%;
   }
 
   .button-arrow {
-    margin-top: 1rem;
+    background-color: rgba(18, 51, 93, 0.75);
+    bottom: 0;
+    padding: 1rem;
   }
 }
-
-.feature-panel__img--pull {
-  /* align-self: flex-start; */
-  /* margin: -6rem -1rem 0 -1rem; */
-  @media (--lg) {
-    margin: -7rem -2rem 0 -2rem;
-  }
-  + .feature-panel__content {
-    @media (--lg) {
-      padding: var(--space-xl) 0;
-    }
-  }
-}
-
-/* .feature-panel__img--wide {
-  margin-left: -1rem;
-  margin-right: -1rem;
-  @media (--lg) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-} */
 
 .feature-panel__video {
   position: absolute;
@@ -116,4 +96,28 @@
 
 .bg-blue-dark .button:hover{
   background: rgb(var(--white));
+}
+
+.advantage__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @media (--md) {
+    flex-direction: row;
+  }
+  span {
+    display: block;
+    height: 8.375rem;
+    width: 8.375rem;
+    flex-shrink: 0;
+    @mixin inline-svg advantage-logo,
+  rgb(root-var(--blue-dark));
+    .content__blue &,
+    .content__blue-dark & {
+      @mixin inline-svg advantage-logo,
+      rgb(root-var(--white));
+    }
+  }
 }

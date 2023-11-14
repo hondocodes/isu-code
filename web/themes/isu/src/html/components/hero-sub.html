@@ -1,4 +1,4 @@
-<div class="hero hero--sub invert" style="background-image: url('{{ image ?? 'img/hero-secondary.jpg' }}');">
+<div class="hero hero--sub hero--img invert" style="background-image: url('{{ image ?? 'img/hero-secondary.jpg' }}');">
   <div class="px-s xl:px-l">
     {% include '@components/breadcrumbs.html' %}
   </div>
@@ -11,9 +11,6 @@
               <h1 class="hero__headline" style="flex: 0;">
                 {{ pageTitle ?? 'Current Page' }}
               </h1>
-              <p class="intro lg:w-75">
-                Intro Text — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Viverra accumsan.
-              </p>
             </div>
             {% if form %}
             <div class="p-xl mb-xl bg-blue-dark invert lg:mb-0 lg:min-w-[474px] lg:-top-[50%]">

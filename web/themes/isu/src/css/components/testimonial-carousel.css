@@ -16,6 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  gap: var(--space-xs);
 
   color: rgb(var(--white));
 
@@ -29,19 +30,19 @@
   }
 
   & .flickity-page-dots {
-    flex-grow: 1;
-    order: 1;
-    height: 4.688rem;
-    background-color: rgb(var(--blue-dark));
-
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    @media (--md) {
-      justify-content: flex-start;
-      flex-grow: 0;
-      padding-left: 3rem;
-      padding-right: 3rem;
+  }
+
+  & .flickity-page-dot {
+    background-color: transparent;
+    border: 1px solid var(--color-blue);
+    height: 1rem;
+    width: 1rem;
+    overflow: hidden;
+
+    &.is-selected {
+      background-color: var(--color-blue);
     }
   }
 }
@@ -56,37 +57,35 @@
 }
 
 .testimonial-carousel__nav {
-  order: 1;
+  order: 2;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
 }
 
 .testimonial-carousel__nav__btn {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 4.688rem;
-  width: 4.688rem;
-  border: 0;
-  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--color-blue);
+  z-index: 1;
 
-  background-color: rgba(var(--blue), .75);
-  transition: var(--transition);
-
-  @media (--xl) {
-    width: 6.375rem;
-  }
-
-  &:hover {
-    background-color: rgb(var(--blue));
+  &.testimonial-carousel__previous {
+    margin-right: var(--space-xs);
   }
 
   span {
     width: 1.25rem;
-    height: 1rem;
+    height: 1.25rem;
   }
 }
 
-.testimonial-carousel__previous {
+.testimonial-carousel__next {
   & span {
     transform: rotate(180deg);
   }

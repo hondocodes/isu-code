@@ -1,4 +1,4 @@
-<div class="content__blue invert py-[50px] lg:mt-xl">
+<div class="content__blue-dark bg-blue-dark invert py-[50px]">
   <div class="wrapper">
     <div class="feature-panel">
       <div
@@ -6,7 +6,7 @@
       >
         <img src="../img/feature-panel1.jpg" alt="placeholder">
         <a
-          class="button-arrow button-arrow--white button-arrow--play z-10 bottom-xs left-xs"
+          class="button-arrow button-arrow--white button-arrow--play absolute z-10"
           href="https://www.youtube.com/watch?v=oklVBLlQs5k"
           data-minimodal=""
           data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -30,7 +30,7 @@
   </div>
 </div>
 
-<div class="content__blue-dark bg-blue-dark invert py-[50px] lg:mt-xl">
+<div class="content__blue invert py-[50px]">
   <div class="wrapper">
     <div class="feature-panel feature-panel--swap">
       <div
@@ -56,13 +56,13 @@
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
 
-        <a href="#" class="button button--blue"> CTA </a>
+        <a href="#" class="button"> CTA </a>
       </div>
     </div>
   </div>
 </div>
 
-<div class="content__blue bg-blue invert py-[50px] lg:mt-l">
+<div class="content__blue bg-blue invert py-[50px]">
   <div class="wrapper">
     <div class="feature-panel feature-panel--swap">
       <div class="feature-panel__img">
@@ -113,7 +113,7 @@
   </div>
 </div>
 
-<div class="content__blue bg-blue-dark invert py-[75px] lg:py-[50px]">
+<div class="content__blue bg-blue-dark invert py-[50px]">
   <div class="wrapper">
     <div class="feature-panel">
       <div class="feature-panel__img">
@@ -645,7 +645,11 @@
 
 {% include '@components/testimonial-carousel-plain.html' %}
 
-{% include '@components/stats-panel.html' %}
+<div class="region stats-bg" style="background-image: url('../img/stats-bg.jpg');">
+  <div class="wrapper">
+    {% include '@components/stats.html' %}
+  </div>
+</div>
 
 <div class="region bg-white py-[50px]">
   <div class="wrapper">

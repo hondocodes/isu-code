@@ -5,10 +5,11 @@
 }
 
 .pullquote {
-  margin: 0 auto;
+  margin: 0;
 
   @media (--lg) {
     max-width: 60rem;
+    margin-left: auto;
   }
 
   blockquote {
@@ -17,21 +18,9 @@
     color: rgb(var(--white));
     @media (--xl) {
       margin: 5rem 0;
-      margin-left: 14.5rem;
-    }
-    &::before {
-      content: '';
-      display: block;
-      width: 6.75rem;
-      height: 6.75rem;
-      @mixin inline-svg Large-Quote, rgb(root-var(--white));
 
-      @media (--xl) {
-        position: absolute;
-        left: -14.5rem;
-        top: -5rem;
-        height: 11.813rem;
-        width: 11.813rem;
+      .testimonial-carousel__container & {
+        margin-bottom: 0;
       }
     }
   }
@@ -44,6 +33,7 @@
 }
 
 .pullquote--alt {
+  margin: 0 auto;
   blockquote {
     padding: var(--space-m);
     @media (--xl) {
@@ -96,7 +86,7 @@
     padding: 1rem 1rem 5rem;
     @media (--md) {
       width: 70%;
-      padding: 7rem 5rem 5rem;
+      padding: 6rem 4rem 4rem;
     }
     &::before {
       left: auto;
@@ -109,26 +99,16 @@
 }
 
 .pullquote--white {
-  margin-left: auto;
-  margin-right: 0;
   blockquote {
     background-color: rgb(var(--white));
-    margin-left: auto;
-    margin-right: 0;
     color: rgb(var(--blue));
     padding: 1rem 1rem 5rem;
     @media (--md) {
       background-color: rgba(var(--white), .8);
       width: 70%;
-      padding: 7rem 5rem 5rem;
-    }
-    &::before {
-      left: auto;
-      margin-top: -3.5rem;
-      @mixin inline-svg Large-Quote, rgb(root-var(--blue));
-      @media (--lg) {
-        margin-top: 0;
-      }
+      padding: 4rem;
+      margin-left: auto;
+      margin-right: 0;
     }
   }
 }

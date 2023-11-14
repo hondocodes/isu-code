@@ -1,7 +1,7 @@
 .testimonial {
   color: rgb(var(--blue-dark));
   position: relative;
-  padding: 0 var(--space-2xl);
+  padding: var(--space-l) var(--space-2xl);
   blockquote {
     @mixin h4;
   }
@@ -18,9 +18,9 @@
     content: " ";
     display: block;
     position: relative;
-    width: 6.25rem;
-    height: 5.625rem;
-    top: -2.25rem;
+    width: 3.125rem;
+    height: 2.8125rem;
+    top: -1rem;
     @mixin inline-svg Large-Quote, rgb(root-var(--blue-dark));
     @media (--lg) {
       margin-top: 0;
@@ -30,12 +30,12 @@
     content: " ";
     display: block;
     position: relative;
-    width: 6.25rem;
-    height: 5.625rem;
+    width: 3.125rem;
+    height: 2.8125rem;
     margin-left: auto;
     @mixin inline-svg Large-Quote, rgb(root-var(--blue-dark));
     transform: rotate(180deg);
-    bottom: -2.25rem;
+    bottom: -1rem;
     @media (--lg) {
       margin-top: 0;
     }

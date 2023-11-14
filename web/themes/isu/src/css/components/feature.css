@@ -3,10 +3,16 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: var(--space-m-l);
+
+  .button-arrow {
+    background-color: rgba(18, 51, 93, 0.75);
+    bottom: 0;
+    padding: 1rem;
+  }
 }
 
 .feature > :last-child {
-  flex-basis: 300px; 
+  flex-basis: 300px;
   flex-grow: 1;
   order: 0;
 
@@ -56,7 +62,7 @@
   }
 }
 
-/* 
+/*
   A flipped version where the sidebar is on the right
 */
 .feature[data-direction='rtl'] {
@@ -64,7 +70,7 @@
 }
 
 
-/* 
+/*
   Small version
 */
 .feature--s {
@@ -78,12 +84,12 @@
   }
 }
 
-/* 
+/*
   Extra Small version
 */
 .feature--xs {
   > :last-child {
-    flex-basis: 60%; 
+    flex-basis: 60%;
   }
   > :first-child {
     flex-basis: 0;

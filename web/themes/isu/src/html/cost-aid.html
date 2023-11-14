@@ -13,17 +13,18 @@
   {% include
   '@components/hero-secondary.html' with vars %}
 
-  {% include '@components/stats-panel.html' %}
+  <div class="region stats-bg" style="background-image: url('../img/stats-bg.jpg');">
+    <div class="wrapper">
+      {% include '@components/stats.html' %}
+    </div>
+  </div>
 
-  <div class="content__blue bg-blue-dark invert py-[75px] lg:py-[200px]">
+  <div class="content__blue bg-blue-dark invert py-[50px]">
     <div class="wrapper">
       <div class="feature-panel">
         <div class="feature-panel__img">
           <div class="frame relative" data-ratio="1:1">
             <img src="../img/router-panel2.jpg" alt="placeholder">
-          </div>
-          <div class="image__arrow" data-animation="slide-left-fade" data-animate>
-            {{ inline_svg('Large-Arrow') }}
           </div>
         </div>
         <div class="feature-panel__content">
@@ -128,11 +129,11 @@
     <div class="wrapper">
       <div class="feature-panel">
         <div
-          class="feature-panel__img feature-panel__img--wide"
+          class="feature-panel__img"
         >
           <img src="../img/feature-panel1.jpg" alt="placeholder">
           <a
-            class="button-arrow button-arrow--white button-arrow--play z-10 bottom-xs left-xs"
+            class="button-arrow button-arrow--white button-arrow--play z-10 absolute"
             href="https://www.youtube.com/watch?v=oklVBLlQs5k"
             data-minimodal=""
             data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -144,6 +145,10 @@
           </a>
         </div>
         <div class="feature-panel__content">
+          <div class="advantage__title">
+            <span></span>
+            <h2>The Indiana State Advantage</h2>
+          </div>
           <h2 class="feature-panel__heading">Feature Panel Variation 1</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -160,11 +165,11 @@
     <div class="wrapper">
       <div class="feature-panel feature-panel--swap">
         <div
-          class="feature-panel__img feature-panel__img--wide"
+          class="feature-panel__img"
         >
           <img src="../img/feature-panel2.jpg" alt="placeholder">
           <a
-            class="button-arrow button-arrow--white button-arrow--play z-10 bottom-xs left-xs"
+            class="button-arrow button-arrow--white button-arrow--play z-10 absolute"
             href="https://www.youtube.com/watch?v=oklVBLlQs5k"
             data-minimodal=""
             data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -176,6 +181,10 @@
           </a>
         </div>
         <div class="feature-panel__content">
+          <div class="advantage__title">
+            <span></span>
+            <h2>The Indiana State Advantage</h2>
+          </div>
           <h2 class="feature-panel__heading">Feature Panel Variation 2</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -183,6 +192,36 @@
           </p>
 
           <a href="#" class="button button--blue"> CTA </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-[50px]">
+    <div class="wrapper">
+      <div class="feature-panel feature-panel--swap">
+        <div class="feature-panel__img">
+          <img src="../img/feature-panel2.jpg" alt="placeholder">
+          <a class="button-arrow button-arrow--white button-arrow--play z-10 absolute"
+            href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal=""
+            data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+            <span class="material-symbols-outlined icon-fill" aria-hidden="true">
+              play_arrow
+            </span>
+            Watch Video
+          </a>
+        </div>
+        <div class="feature-panel__content">
+          <div class="advantage__title">
+            <span></span>
+            <h2>The Indiana State Advantage</h2>
+          </div>
+          <h2 class="feature-panel__heading">Feature Panel Variation 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <a href="#" class="button"> CTA </a>
         </div>
       </div>
     </div>

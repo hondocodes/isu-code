@@ -98,40 +98,6 @@
   overflow: hidden;
 }
 
-.overlay-gradient-white {
-  position: relative;
-  &::after {
-    content: " ";
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(180deg, rgba(255,255,255, 0) 20%, #ffffff 100%);
-  }
-}
-.overlay-gradient-blue {
-  position: relative;
-  &::after {
-    content: " ";
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(180deg, rgba(41, 98, 150, 0) 20%, #0066B3 100%);
-  }
-}
-.overlay-gradient-blue-dark {
-  position: relative;
-  &::after {
-    content: " ";
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(180deg, rgba(41, 98, 150, 0) 20%, #12335D 100%);
-  }
-}
-
 .icon-fill {
   font-variation-settings:
   'FILL' 1;

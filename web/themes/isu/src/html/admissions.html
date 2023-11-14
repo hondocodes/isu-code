@@ -4,7 +4,7 @@
 {% block body %}
 
 <main id="main-content">
-<div class="hero hero--sub invert" style="background-image: url('{{ image ?? 'img/hero-secondary.jpg' }}');">
+<div class="hero hero--sub hero--img invert" style="background-image: url('{{ image ?? 'img/hero-secondary.jpg' }}');">
   <div class="px-s xl:px-l">
     {% include '@components/breadcrumbs.html' %}
   </div>
@@ -53,7 +53,7 @@
       <div class="feature-panel feature-panel--swap">
         <div class="feature-panel__img">
            <img src="../img/feature1.jpg" alt="placeholder">
-           <a class="button-arrow button-arrow--white button-arrow--play z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+           <a class="button-arrow button-arrow--play z-10 absolute" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
             <span class="material-symbols-outlined icon-fill" aria-hidden="true">
               play_arrow
             </span>

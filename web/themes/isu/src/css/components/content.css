@@ -137,7 +137,7 @@
 .content__img-alt {
   padding: 0;
   @media (--md) {
-    padding: 4rem 0;
+    padding: 4rem 0 0;
   }
 }
 

@@ -1,5 +1,5 @@
 <div class="feature-panel{% if swap %} feature-panel--swap{% endif %}">
-  <div class="feature-panel__img{% if imgWide %} feature-panel__img--wide {% endif %}{% if imgPull %} feature-panel__img--pull {% endif %}{% if overlayWhite %} overlay-gradient-white {% endif %}">
+  <div class="feature-panel__img">
     {% if square %}
     <div class="frame relative" data-ratio="1:1">
       <img src="{{ image ?? '//placehold.mstoner.com/600' }}" alt="placeholder">
@@ -17,7 +17,7 @@
       </a>
     {% endif %}
     {% if videoAlt %}
-      <a class="button-arrow absolute z-10 bottom-xs left-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+      <a class="button-arrow absolute z-10 bottom-xs" href="https://www.youtube.com/watch?v=oklVBLlQs5k" data-minimodal="" data-minimodal-caption="Caption — Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
         <span class="material-symbols-outlined" aria-hidden="true">
           arrow_forward
         </span>
