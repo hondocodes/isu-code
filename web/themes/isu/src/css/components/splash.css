@@ -134,7 +134,7 @@
   color: var(--color-light);
   font-family: var(--heading);
   font-weight: var(--font-semibold);
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.1;
   text-transform: uppercase;
   text-align: center;
@@ -146,6 +146,6 @@
   @media (--lg) {
     /* display: inline-block;
     width: fit-content; */
-    font-size: 56px;
+    font-size: 4rem;
   }
 }

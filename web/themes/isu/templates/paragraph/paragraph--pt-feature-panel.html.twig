@@ -12,15 +12,15 @@
 
 {% if content.field_p_background_color['#items'].getString() == 'light-blue' %}
   {% if remove_top_margin %}
-    <div class="content__blue invert py-[75px]">
+    <div class="content__blue-dark bg-blue-dark invert py-[50px]">
   {% else %}
-    <div class="content__blue invert py-[75px] lg:mt-2xl">
+    <div class="content__blue-dark bg-blue-dark invert py-[50px] lg:mt-2xl">
   {% endif %}
 {% else %}
   {% if remove_top_margin %}
-    <div class="content__blue-dark bg-blue-dark invert py-[75px]">
+    <div class="content__blue-dark bg-blue-dark invert py-[50px]">
   {% else %}
-    <div class="content__blue-dark bg-blue-dark invert py-[75px] lg:mt-2xl">
+    <div class="content__blue-dark bg-blue-dark invert py-[50px] lg:mt-2xl">
   {% endif %}
 {% endif %}
   <div class="wrapper">

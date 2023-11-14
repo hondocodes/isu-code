@@ -172,6 +172,7 @@
     font-weight: 700;
     color: rgb(var(--blue-dark));
     letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   & .button {

@@ -1,0 +1,13 @@
+<div class="card-stack__card-content">
+    <div class="card-stack__card-details">
+        <div class="t-eyebrow">{{ content.field_p_heading }}</div>
+        <h3>{{ content.field_p_title }}</h3>
+        {{ content.field_p_content }}
+        {% if content.field_p_stackable_cta|render %}
+            <p>{{ content.field_p_stackable_cta }}</p>
+        {% endif %}
+    </div>
+    <figure class="card-stack__card-image">
+        {{ content.field_p_image }}
+    </figure>
+</div>
