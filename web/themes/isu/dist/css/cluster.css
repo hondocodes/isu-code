@@ -1,8 +1,0 @@
-.cluster {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space, 1rem);
-  justify-content: flex-start;
-  align-items: center;
-}
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9jc3MvY29tcG9zaXRpb25zL2NsdXN0ZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBIiwiZmlsZSI6ImNsdXN0ZXIuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNsdXN0ZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG4gIGdhcDogdmFyKC0tc3BhY2UsIDFyZW0pO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59Il19 */
